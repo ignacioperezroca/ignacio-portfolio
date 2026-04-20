@@ -86,7 +86,7 @@ export const personalInfo = {
   displayName: "Ignacio Perez Roca",
   title: "Senior Product Manager",
   location: "Buenos Aires, Argentina",
-  email: "replace-with-your-email@example.com",
+  email: "ignacio.perezroca@gmail.com",
   linkedinUrl: "https://github.com/ignacioperezroca",
   githubUrl: "https://github.com/ignacioperezroca/ignacio-portfolio",
   resumeUrl: "/resume/ignacio-perez-roca-product-manager-cv.pdf",
