@@ -1,0 +1,23 @@
+<svg width="960" height="1200" viewBox="0 0 960 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Profile placeholder for Ignacio Perez Roca</title>
+  <desc id="desc">A premium editorial portrait placeholder with a monogram and product-system lines.</desc>
+  <rect width="960" height="1200" fill="#12110F"/>
+  <path d="M0 0H960V1200H0V0Z" fill="#12110F"/>
+  <path d="M115 140H845V1060H115V140Z" fill="#1D1A16" stroke="#EEE6D8" stroke-opacity=".16" stroke-width="2"/>
+  <path d="M180 246H780" stroke="#EEE6D8" stroke-opacity=".16" stroke-width="2"/>
+  <path d="M180 954H780" stroke="#EEE6D8" stroke-opacity=".16" stroke-width="2"/>
+  <path d="M252 246V954" stroke="#EEE6D8" stroke-opacity=".08" stroke-width="2"/>
+  <path d="M708 246V954" stroke="#EEE6D8" stroke-opacity=".08" stroke-width="2"/>
+  <circle cx="480" cy="430" r="134" fill="#EEE6D8" fill-opacity=".92"/>
+  <path d="M284 920C302 767 387 676 480 676C573 676 658 767 676 920H284Z" fill="#EEE6D8" fill-opacity=".92"/>
+  <path d="M196 810C301 730 383 615 425 462" stroke="#4E6CFF" stroke-opacity=".9" stroke-width="4"/>
+  <path d="M764 810C659 730 577 615 535 462" stroke="#0F6B5A" stroke-opacity=".95" stroke-width="4"/>
+  <path d="M320 866H640" stroke="#A76F3F" stroke-opacity=".9" stroke-width="4"/>
+  <circle cx="196" cy="810" r="10" fill="#4E6CFF"/>
+  <circle cx="764" cy="810" r="10" fill="#0F6B5A"/>
+  <circle cx="480" cy="676" r="10" fill="#A76F3F"/>
+  <rect x="361" y="1012" width="238" height="86" rx="6" fill="#EEE6D8"/>
+  <path d="M415 1074V1036H424V1074H415ZM443 1074V1036H459C467 1036 473 1038 477 1042C481 1046 483 1050 483 1056C483 1062 481 1067 477 1070C473 1073 467 1074 459 1074H443ZM452 1066H459C464 1066 467 1065 469 1063C472 1061 473 1059 473 1056C473 1053 472 1050 469 1048C467 1046 464 1045 459 1045H452V1066ZM505 1074V1036H514V1074H505ZM535 1074V1036H548L559 1062L570 1036H583V1074H574V1050L564 1074H554L544 1050V1074H535Z" fill="#12110F"/>
+  <path d="M180 190H262" stroke="#EEE6D8" stroke-opacity=".3" stroke-width="2"/>
+  <path d="M698 1010H780" stroke="#EEE6D8" stroke-opacity=".3" stroke-width="2"/>
+</svg>
