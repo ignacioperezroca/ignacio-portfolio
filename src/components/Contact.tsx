@@ -1,29 +1,9 @@
-"use client";
-
-import { FormEvent, useMemo, useState } from "react";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { SectionHeader } from "@/components/SectionHeader";
-import { contactIntents, personalInfo } from "@/data/portfolio";
+import { personalInfo } from "@/data/portfolio";
 
 export function Contact() {
-  const [intent, setIntent] = useState(contactIntents[0]);
-  const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
-
-  const mailtoHref = useMemo(() => {
-    const subject = encodeURIComponent(`${intent} inquiry for ${personalInfo.displayName}`);
-    const body = encodeURIComponent(
-      [`Hi Nacho,`, "", message || "I would like to connect about...", "", name ? `- ${name}` : ""].join("\n")
-    );
-    return `mailto:${personalInfo.email}?subject=${subject}&body=${body}`;
-  }, [intent, message, name]);
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    window.location.href = mailtoHref;
-  }
-
   return (
     <section className="py-20 sm:py-28" id="contact">
       <div className="section-shell grid gap-10 lg:grid-cols-[0.84fr_1.16fr] lg:items-start">
@@ -49,62 +29,48 @@ export function Contact() {
           </div>
         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="rounded-md border border-ink/10 bg-white/70 p-5 shadow-line dark:border-paper/10 dark:bg-paper/5 sm:p-6"
-        >
-          <div className="grid gap-5">
-            <div>
-              <label htmlFor="intent" className="text-sm font-semibold text-ink dark:text-paper">
-                What should we discuss?
-              </label>
-              <select
-                id="intent"
-                value={intent}
-                onChange={(event) => setIntent(event.target.value)}
-                className="focus-ring mt-2 h-12 w-full rounded-md border border-ink/12 bg-paper px-3 text-sm font-medium text-ink dark:border-paper/15 dark:bg-ink dark:text-paper"
+        <aside className="spotlight-card motion-surface overflow-hidden rounded-md border border-ink/10 bg-white/70 p-6 shadow-line dark:border-paper/10 dark:bg-paper/5">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-green dark:text-paper-warm">
+            Direct connection
+          </p>
+          <p className="mt-5 text-2xl font-semibold leading-tight text-ink dark:text-paper">
+            For product roles, advisory conversations, and collaborations where
+            trust-critical growth matters.
+          </p>
+          <div className="mt-8 grid gap-3">
+            {[
+              {
+                label: personalInfo.email,
+                href: `mailto:${personalInfo.email}`,
+                icon: Mail
+              },
+              {
+                label: "LinkedIn",
+                href: personalInfo.linkedinUrl,
+                icon: Linkedin
+              },
+              {
+                label: "GitHub",
+                href: personalInfo.githubUrl,
+                icon: Github
+              }
+            ].map(({ label, href, icon: Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noreferrer" : undefined}
+                className="focus-ring group flex items-center justify-between gap-4 rounded-md border border-ink/10 bg-paper/65 px-4 py-4 text-sm font-semibold text-ink transition hover:border-ink/25 hover:bg-white dark:border-paper/10 dark:bg-ink/50 dark:text-paper dark:hover:border-paper/25 dark:hover:bg-paper/10"
               >
-                {contactIntents.map((item) => (
-                  <option key={item}>{item}</option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="name" className="text-sm font-semibold text-ink dark:text-paper">
-                Your name
-              </label>
-              <input
-                id="name"
-                value={name}
-                onChange={(event) => setName(event.target.value)}
-                className="focus-ring mt-2 h-12 w-full rounded-md border border-ink/12 bg-paper px-3 text-sm font-medium text-ink placeholder:text-ink-muted/60 dark:border-paper/15 dark:bg-ink dark:text-paper dark:placeholder:text-paper/35"
-                placeholder="Name and company"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="text-sm font-semibold text-ink dark:text-paper">
-                Message
-              </label>
-              <textarea
-                id="message"
-                value={message}
-                onChange={(event) => setMessage(event.target.value)}
-                className="focus-ring mt-2 min-h-40 w-full resize-y rounded-md border border-ink/12 bg-paper px-3 py-3 text-sm font-medium leading-6 text-ink placeholder:text-ink-muted/60 dark:border-paper/15 dark:bg-ink dark:text-paper dark:placeholder:text-paper/35"
-                placeholder="Share the role, product context, company stage, or collaboration idea."
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-ink px-5 py-3 text-sm font-semibold text-paper transition hover:bg-accent-green dark:bg-paper dark:text-ink dark:hover:bg-paper-warm"
-            >
-              <Send className="h-4 w-4" aria-hidden />
-              Open email draft
-            </button>
+                <span className="inline-flex items-center gap-3">
+                  <Icon className="h-4 w-4 text-accent-bronze dark:text-paper-warm" aria-hidden />
+                  {label}
+                </span>
+                <ArrowUpRight className="h-4 w-4 text-ink-muted transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 dark:text-paper/55" />
+              </a>
+            ))}
           </div>
-        </form>
+        </aside>
       </div>
     </section>
   );

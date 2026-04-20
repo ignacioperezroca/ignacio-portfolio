@@ -838,14 +838,6 @@ export const thoughts = [
   }
 ];
 
-export const contactIntents = [
-  "Senior Product role",
-  "Product leadership",
-  "Advisory",
-  "Consulting",
-  "Collaboration"
-];
-
 export const trustThemes = [
   {
     label: "Trust-critical products",
