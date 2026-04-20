@@ -82,14 +82,14 @@ export type Testimonial = {
 };
 
 export const personalInfo = {
-  name: 'Ignacio "Nacho" Pérez Roca',
-  displayName: 'Ignacio "Nacho" Pérez Roca',
+  name: "Ignacio Perez Roca",
+  displayName: "Ignacio Perez Roca",
   title: "Senior Product Manager",
   location: "Buenos Aires, Argentina",
   email: "replace-with-your-email@example.com",
-  linkedinUrl: "https://www.linkedin.com/in/ignacio-perez-roca-10101010/",
+  linkedinUrl: "https://github.com/ignacioperezroca",
   githubUrl: "https://github.com/ignacioperezroca/ignacio-portfolio",
-  resumeUrl: "/resume",
+  resumeUrl: "/resume/ignacio-perez-roca-product-manager-cv.pdf",
   profileImage: "/images/profile-placeholder.svg",
   heroEyebrow: "Senior Product Manager - fintech, identity, onboarding, growth",
   heroHeadline:
@@ -113,17 +113,18 @@ export const navItems = [
 
 export const heroMetrics: Metric[] = [
   {
-    value: "10+ yrs",
-    label: "Product, design, and growth",
-    detail: "Replace with confirmed total experience."
+    value: "16+ yrs",
+    label: "Product, design, and development",
+    detail:
+      "I've acquired a wide range of tools, tactics, and experience across various roles and industries."
   },
   {
-    value: "MM+",
+    value: "12MM+",
     label: "Users impacted",
     detail: "Use actual active users, verified users, or accounts reached."
   },
   {
-    value: "LATAM+",
+    value: "12+ American",
     label: "Markets and regions",
     detail: "Adjust to the exact countries and segments you have served."
   },
