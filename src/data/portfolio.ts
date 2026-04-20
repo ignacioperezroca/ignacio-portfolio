@@ -129,7 +129,7 @@ export const heroMetrics: Metric[] = [
     detail: "Adjust to the exact countries and segments you have served."
   },
   {
-    value: "2x",
+    value: "262%",
     label: "Growth systems",
     detail: "Replace with a verified activation, conversion, or revenue metric."
   }
