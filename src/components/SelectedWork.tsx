@@ -1,8 +1,9 @@
 "use client";
 
+import type { PointerEvent } from "react";
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, SlidersHorizontal } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { caseStudies } from "@/data/portfolio";
@@ -19,6 +20,18 @@ export function SelectedWork() {
     activeFilter === "All"
       ? caseStudies
       : caseStudies.filter((study) => study.topics.includes(activeFilter));
+
+  function handlePointerMove(event: PointerEvent<HTMLElement>) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    event.currentTarget.style.setProperty(
+      "--spotlight-x",
+      `${event.clientX - rect.left}px`
+    );
+    event.currentTarget.style.setProperty(
+      "--spotlight-y",
+      `${event.clientY - rect.top}px`
+    );
+  }
 
   return (
     <section className="py-20 sm:py-28" id="work">
@@ -42,32 +55,42 @@ export function SelectedWork() {
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
                   className={cn(
-                    "focus-ring rounded-md border px-3 py-2 text-sm font-semibold transition",
+                    "focus-ring relative overflow-hidden rounded-md border px-3 py-2 text-sm font-semibold transition",
                     activeFilter === filter
-                      ? "border-ink bg-ink text-paper dark:border-paper dark:bg-paper dark:text-ink"
+                      ? "border-ink text-paper dark:border-paper dark:text-ink"
                       : "border-ink/10 bg-white/55 text-ink-muted hover:border-ink/25 hover:text-ink dark:border-paper/10 dark:bg-paper/5 dark:text-paper/60 dark:hover:border-paper/25 dark:hover:text-paper"
                   )}
                 >
-                  {filter}
+                  {activeFilter === filter ? (
+                    <motion.span
+                      layoutId="case-filter"
+                      className="absolute inset-0 bg-ink dark:bg-paper"
+                      transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                    />
+                  ) : null}
+                  <span className="relative">{filter}</span>
                 </button>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-2">
-          {filteredStudies.map((study, index) => (
-            <motion.article
-              key={study.slug}
-              layout
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.5, delay: index * 0.04 }}
-              className="group overflow-hidden rounded-md border border-ink/10 bg-white/72 shadow-line transition hover:-translate-y-1 hover:border-ink/24 hover:shadow-lift dark:border-paper/10 dark:bg-paper/5 dark:hover:border-paper/25"
-            >
-              <Link href={`/case-studies/${study.slug}`} className="focus-ring block h-full">
-                <div className={cn("min-h-48 bg-gradient-to-br p-6", study.accentClass)}>
+        <motion.div layout className="mt-12 grid gap-5 lg:grid-cols-2">
+          <AnimatePresence mode="popLayout">
+            {filteredStudies.map((study, index) => (
+              <motion.article
+                key={study.slug}
+                layout
+                initial={{ opacity: 0, y: 28, scale: 0.98, filter: "blur(8px)" }}
+                animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+                exit={{ opacity: 0, y: 12, scale: 0.98, filter: "blur(8px)" }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.46, delay: index * 0.035, ease: [0.22, 1, 0.36, 1] }}
+                onPointerMove={handlePointerMove}
+                className="spotlight-card motion-surface group overflow-hidden rounded-md border border-ink/10 bg-white/72 shadow-line hover:border-ink/24 hover:shadow-lift dark:border-paper/10 dark:bg-paper/5 dark:hover:border-paper/25"
+              >
+                <Link href={`/case-studies/${study.slug}`} className="focus-ring block h-full">
+                  <div className={cn("min-h-48 bg-gradient-to-br p-6 transition duration-500 group-hover:scale-[1.015]", study.accentClass)}>
                   <div className="flex items-start justify-between gap-4">
                     <p className="rounded-md bg-white/70 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink shadow-line dark:bg-ink/70 dark:text-paper">
                       {study.artifact.label}
@@ -77,8 +100,8 @@ export function SelectedWork() {
                     </p>
                   </div>
                   <div className="mt-14 grid grid-cols-[1fr_auto_1fr] items-center gap-4 text-ink dark:text-ink">
-                    <div className="h-px bg-ink/20" />
-                    <div className="rounded-md bg-ink px-4 py-3 text-center text-paper shadow-line">
+                    <div className="h-px origin-left scale-x-75 bg-ink/20 transition duration-500 group-hover:scale-x-100" />
+                    <div className="rounded-md bg-ink px-4 py-3 text-center text-paper shadow-line transition duration-500 group-hover:-translate-y-1">
                       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/55">
                         {study.artifact.primary}
                       </p>
@@ -86,7 +109,7 @@ export function SelectedWork() {
                         {study.artifact.secondary}
                       </p>
                     </div>
-                    <div className="h-px bg-ink/20" />
+                    <div className="h-px origin-right scale-x-75 bg-ink/20 transition duration-500 group-hover:scale-x-100" />
                   </div>
                 </div>
 
@@ -129,10 +152,11 @@ export function SelectedWork() {
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </div>
-              </Link>
-            </motion.article>
-          ))}
-        </div>
+                </Link>
+              </motion.article>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );

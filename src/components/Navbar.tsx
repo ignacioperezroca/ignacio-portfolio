@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, useScroll } from "framer-motion";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { Github, Linkedin, Mail, Menu, Moon, Sun, X } from "lucide-react";
 import { navItems, personalInfo } from "@/data/portfolio";
 
@@ -29,11 +29,21 @@ function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-md border border-ink/10 bg-paper/70 text-ink shadow-line backdrop-blur transition hover:border-ink/25 dark:border-paper/15 dark:bg-ink/70 dark:text-paper dark:hover:border-paper/35"
+      className="focus-ring motion-surface inline-flex h-10 w-10 items-center justify-center rounded-md border border-ink/10 bg-paper/70 text-ink shadow-line backdrop-blur transition hover:border-ink/25 dark:border-paper/15 dark:bg-ink/70 dark:text-paper dark:hover:border-paper/35"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       title={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
-      {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.span
+          key={isDark ? "sun" : "moon"}
+          initial={{ opacity: 0, rotate: -40, scale: 0.72 }}
+          animate={{ opacity: 1, rotate: 0, scale: 1 }}
+          exit={{ opacity: 0, rotate: 40, scale: 0.72 }}
+          transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+        >
+          {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+        </motion.span>
+      </AnimatePresence>
     </button>
   );
 }
@@ -69,7 +79,7 @@ export function Navbar() {
             className="focus-ring group inline-flex items-center gap-3 rounded-md"
             aria-label="Go to homepage"
           >
-            <span className="grid h-9 w-9 place-items-center rounded-md border border-ink/12 bg-ink text-xs font-bold text-paper transition group-hover:bg-accent-green dark:border-paper/15 dark:bg-paper dark:text-ink">
+            <span className="motion-surface grid h-9 w-9 place-items-center rounded-md border border-ink/12 bg-ink text-xs font-bold text-paper transition group-hover:bg-accent-green dark:border-paper/15 dark:bg-paper dark:text-ink">
               IP
             </span>
             <span className="hidden text-sm font-semibold text-ink dark:text-paper sm:block">
@@ -82,9 +92,10 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={hrefFor(item.href)}
-                className="focus-ring rounded-md px-3 py-2 text-sm font-medium text-ink-muted transition hover:bg-ink/5 hover:text-ink dark:text-paper/65 dark:hover:bg-paper/10 dark:hover:text-paper"
+                className="focus-ring group relative rounded-md px-3 py-2 text-sm font-medium text-ink-muted transition hover:bg-ink/5 hover:text-ink dark:text-paper/65 dark:hover:bg-paper/10 dark:hover:text-paper"
               >
                 {item.label}
+                <span className="absolute inset-x-3 bottom-1 h-px origin-left scale-x-0 bg-accent-green transition-transform duration-300 group-hover:scale-x-100 dark:bg-paper-warm" />
               </Link>
             ))}
           </div>
@@ -95,7 +106,7 @@ export function Navbar() {
                 href={personalInfo.linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-md text-ink-muted transition hover:bg-ink/5 hover:text-ink dark:text-paper/65 dark:hover:bg-paper/10 dark:hover:text-paper"
+                className="focus-ring motion-surface inline-flex h-10 w-10 items-center justify-center rounded-md text-ink-muted transition hover:bg-ink/5 hover:text-ink dark:text-paper/65 dark:hover:bg-paper/10 dark:hover:text-paper"
                 aria-label="LinkedIn"
                 title="LinkedIn"
               >
@@ -105,7 +116,7 @@ export function Navbar() {
                 href={personalInfo.githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-md text-ink-muted transition hover:bg-ink/5 hover:text-ink dark:text-paper/65 dark:hover:bg-paper/10 dark:hover:text-paper"
+                className="focus-ring motion-surface inline-flex h-10 w-10 items-center justify-center rounded-md text-ink-muted transition hover:bg-ink/5 hover:text-ink dark:text-paper/65 dark:hover:bg-paper/10 dark:hover:text-paper"
                 aria-label="GitHub"
                 title="GitHub"
               >
@@ -113,7 +124,7 @@ export function Navbar() {
               </a>
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-md text-ink-muted transition hover:bg-ink/5 hover:text-ink dark:text-paper/65 dark:hover:bg-paper/10 dark:hover:text-paper"
+                className="focus-ring motion-surface inline-flex h-10 w-10 items-center justify-center rounded-md text-ink-muted transition hover:bg-ink/5 hover:text-ink dark:text-paper/65 dark:hover:bg-paper/10 dark:hover:text-paper"
                 aria-label="Email"
                 title="Email"
               >
@@ -123,7 +134,7 @@ export function Navbar() {
             <ThemeToggle />
             <button
               type="button"
-              className="focus-ring inline-flex h-10 w-10 items-center justify-center rounded-md border border-ink/10 bg-paper/70 text-ink shadow-line backdrop-blur transition hover:border-ink/25 dark:border-paper/15 dark:bg-ink/70 dark:text-paper dark:hover:border-paper/35 lg:hidden"
+              className="focus-ring motion-surface inline-flex h-10 w-10 items-center justify-center rounded-md border border-ink/10 bg-paper/70 text-ink shadow-line backdrop-blur transition hover:border-ink/25 dark:border-paper/15 dark:bg-ink/70 dark:text-paper dark:hover:border-paper/35 lg:hidden"
               aria-label={open ? "Close navigation" : "Open navigation"}
               aria-expanded={open}
               onClick={() => setOpen((value) => !value)}
@@ -134,41 +145,58 @@ export function Navbar() {
         </nav>
       </header>
 
-      {open ? (
-        <div className="fixed inset-x-0 top-16 z-30 origin-top border-b border-ink/10 bg-paper/96 px-5 pb-6 pt-4 shadow-lift backdrop-blur-xl transition lg:hidden dark:border-paper/10 dark:bg-ink/96">
-          <div className="grid gap-2">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={hrefFor(item.href)}
-                className="focus-ring rounded-md border border-ink/10 px-4 py-3 text-sm font-semibold text-ink transition hover:bg-ink/5 dark:border-paper/10 dark:text-paper dark:hover:bg-paper/10"
-                onClick={() => setOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-          <div className="mt-4 grid grid-cols-3 gap-2">
-            {[
-              { label: "LinkedIn", href: personalInfo.linkedinUrl, Icon: Linkedin },
-              { label: "GitHub", href: personalInfo.githubUrl, Icon: Github },
-              { label: "Email", href: `mailto:${personalInfo.email}`, Icon: Mail }
-            ].map(({ label, href, Icon }) => (
-              <a
-                key={label}
-                href={href}
-                target={href.startsWith("http") ? "_blank" : undefined}
-                rel={href.startsWith("http") ? "noreferrer" : undefined}
-                className="focus-ring inline-flex items-center justify-center gap-2 rounded-md border border-ink/10 px-3 py-3 text-sm font-semibold text-ink transition hover:bg-ink/5 dark:border-paper/10 dark:text-paper dark:hover:bg-paper/10"
-                onClick={() => setOpen(false)}
-              >
-                <Icon className="h-4 w-4" />
-                {label}
-              </a>
-            ))}
-          </div>
-        </div>
-      ) : null}
+      <AnimatePresence>
+        {open ? (
+          <motion.div
+            initial={{ opacity: 0, y: -18, scaleY: 0.96, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, scaleY: 1, filter: "blur(0px)" }}
+            exit={{ opacity: 0, y: -12, scaleY: 0.98, filter: "blur(8px)" }}
+            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-x-0 top-16 z-30 origin-top border-b border-ink/10 bg-paper px-5 pb-6 pt-4 shadow-lift backdrop-blur-xl lg:hidden dark:border-paper/10 dark:bg-ink"
+          >
+            <div className="grid gap-2">
+              {navItems.map((item, index) => (
+                <motion.div
+                  key={item.href}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.24, delay: 0.04 + index * 0.025 }}
+                >
+                  <Link
+                    href={hrefFor(item.href)}
+                    className="focus-ring motion-surface block rounded-md border border-ink/10 px-4 py-3 text-sm font-semibold text-ink transition hover:bg-ink/5 dark:border-paper/10 dark:text-paper dark:hover:bg-paper/10"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+            <div className="mt-4 grid grid-cols-3 gap-2">
+              {[
+                { label: "LinkedIn", href: personalInfo.linkedinUrl, Icon: Linkedin },
+                { label: "GitHub", href: personalInfo.githubUrl, Icon: Github },
+                { label: "Email", href: `mailto:${personalInfo.email}`, Icon: Mail }
+              ].map(({ label, href, Icon }, index) => (
+                <motion.a
+                  key={label}
+                  href={href}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={href.startsWith("http") ? "noreferrer" : undefined}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.24, delay: 0.13 + index * 0.03 }}
+                  className="focus-ring motion-surface inline-flex items-center justify-center gap-2 rounded-md border border-ink/10 px-3 py-3 text-sm font-semibold text-ink transition hover:bg-ink/5 dark:border-paper/10 dark:text-paper dark:hover:bg-paper/10"
+                  onClick={() => setOpen(false)}
+                >
+                  <Icon className="h-4 w-4" />
+                  {label}
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </>
   );
 }

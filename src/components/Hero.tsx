@@ -11,10 +11,10 @@ export function Hero() {
       <div className="section-shell grid items-center gap-8 py-5 lg:min-h-[calc(74svh-4rem)] lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:py-8">
         <div>
           <FadeIn>
-            <p className="mb-5 inline-flex rounded-md border border-ink/10 bg-white/60 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent-green shadow-line backdrop-blur dark:border-paper/10 dark:bg-paper/5 dark:text-paper-warm sm:mb-6 sm:tracking-[0.2em]">
+            <p className="text-reveal mb-5 inline-flex rounded-md border border-ink/10 bg-white/60 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent-green shadow-line backdrop-blur dark:border-paper/10 dark:bg-paper/5 dark:text-paper-warm sm:mb-6 sm:tracking-[0.2em]">
               {personalInfo.heroEyebrow}
             </p>
-            <h1 className="max-w-4xl font-serif text-[2.65rem] leading-[0.98] text-ink dark:text-paper sm:text-6xl lg:text-7xl 2xl:text-8xl">
+            <h1 className="text-reveal max-w-4xl font-serif text-[2.65rem] leading-[0.98] text-ink dark:text-paper sm:text-6xl lg:text-7xl 2xl:text-8xl">
               {personalInfo.displayName}
             </h1>
             <p className="mt-5 max-w-3xl text-balance text-xl font-semibold leading-tight text-ink dark:text-paper sm:mt-6 sm:text-3xl">
@@ -68,9 +68,9 @@ export function Hero() {
 
         <FadeIn delay={0.12} className="relative">
           <div className="relative mx-auto max-w-[480px]">
-            <div className="absolute -left-3 top-10 h-24 w-1 bg-accent-green" />
-            <div className="absolute -right-3 bottom-12 h-24 w-1 bg-accent-blue" />
-            <figure className="relative overflow-hidden rounded-md border border-ink/10 bg-ink shadow-lift dark:border-paper/10">
+            <div className="line-draw absolute -left-3 top-10 h-24 w-1 bg-accent-green" />
+            <div className="line-draw absolute -right-3 bottom-12 h-24 w-1 bg-accent-blue [animation-delay:180ms]" />
+            <figure className="float-slow motion-surface relative overflow-hidden rounded-md border border-ink/10 bg-ink shadow-lift dark:border-paper/10">
               <Image
                 src={personalInfo.profileImage}
                 alt={`${personalInfo.displayName} profile placeholder`}
@@ -78,7 +78,7 @@ export function Hero() {
                 height={1200}
                 priority
                 unoptimized
-                className="aspect-[4/5] w-full object-cover"
+                className="aspect-[4/5] w-full object-cover transition duration-700 ease-out will-change-transform hover:scale-[1.025]"
               />
               <figcaption className="absolute inset-x-0 bottom-0 border-t border-white/10 bg-ink/86 p-5 text-paper backdrop-blur">
                 <div className="flex items-start justify-between gap-4">
@@ -99,7 +99,7 @@ export function Hero() {
               {trustThemes.map(({ label, icon: Icon }) => (
                 <div
                   key={label}
-                  className="rounded-md border border-ink/10 bg-white/65 p-3 text-sm font-semibold text-ink shadow-line backdrop-blur dark:border-paper/10 dark:bg-paper/5 dark:text-paper"
+                  className="motion-surface rounded-md border border-ink/10 bg-white/65 p-3 text-sm font-semibold text-ink shadow-line backdrop-blur dark:border-paper/10 dark:bg-paper/5 dark:text-paper"
                 >
                   <Icon className="mb-3 h-5 w-5 text-accent-green dark:text-paper-warm" aria-hidden />
                   {label}
