@@ -10,7 +10,7 @@ export function Achievements() {
           <SectionHeader
             eyebrow="Measured impact"
             title="Outcomes that show product range: growth, trust, operations, and platform leverage."
-            description="Use this section for verified metrics only. Placeholder values are intentionally visible in the data model so you can replace them with evidence."
+            description="Selected outcomes across growth, trust, platform strategy, and product execution."
             tone="inverse"
           />
         </FadeIn>

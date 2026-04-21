@@ -782,34 +782,40 @@ export const caseStudies: CaseStudy[] = [
 
 export const achievements: Metric[] = [
   {
-    value: "+24%",
-    label: "Activation lift",
-    detail: "Placeholder for product-led onboarding or first-value improvement."
+    value: "+262%",
+    label: "onboarding conversion",
+    detail:
+      "Improved onboarding conversion from 8% to 29% through experimentation, sharper diagnosis, and cleaner funnel design."
   },
   {
-    value: "+18%",
-    label: "KYC completion",
-    detail: "Placeholder for identity verification completion improvement."
+    value: "60K to 2M",
+    label: "users",
+    detail:
+      "Supported onboarding and trust infrastructure during one of LatAm crypto’s fastest growth phases."
   },
   {
-    value: "-35%",
-    label: "Operational handling time",
-    detail: "Placeholder for backoffice or manual review efficiency."
+    value: "2.5M+",
+    label: "user ecosystem",
+    detail:
+      "Leading product strategy for identity, authentication, and trust infrastructure across a large financial ecosystem."
   },
   {
-    value: "1 platform",
-    label: "Unified identity model",
-    detail: "Placeholder for platform consolidation across product surfaces."
+    value: "16+",
+    label: "years",
+    detail:
+      "Across product, UX, and software development, with unusual leverage between strategy, design, and technical execution."
   },
   {
-    value: "MM+",
-    label: "Users touched",
-    detail: "Placeholder for verified, onboarded, or active users impacted."
+    value: "7",
+    label: "countries",
+    detail:
+      "Experience across onboarding and product delivery in Argentina, Brazil, Mexico, Peru, Colombia, Uruguay, and Ecuador."
   },
   {
-    value: "X markets",
-    label: "Regional complexity",
-    detail: "Placeholder for country, regulatory, or segment coverage."
+    value: "Trust-critical",
+    label: "product focus",
+    detail:
+      "Specialized in onboarding, KYC, authentication, identity, platform migration, and activation under regulatory and operational constraints."
   }
 ];
 
