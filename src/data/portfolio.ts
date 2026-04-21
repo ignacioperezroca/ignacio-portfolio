@@ -115,24 +115,26 @@ export const navItems = [
 export const heroMetrics: Metric[] = [
   {
     value: "16+ yrs",
-    label: "Product, design, and development",
+    label: "Building digital products",
+    detail: "Across product, UX, and software development."
+  },
+  {
+    value: "12M+ users",
+    label: "Fintech, crypto & identity",
     detail:
-      "I've acquired a wide range of tools, tactics, and experience across various roles and industries."
+      "Built and scaled onboarding journeys across high-growth platforms."
   },
   {
-    value: "12MM+",
-    label: "Users impacted",
-    detail: "Use actual active users, verified users, or accounts reached."
+    value: "7 countries",
+    label: "LatAm expansion",
+    detail:
+      "Launched onboarding products across Argentina, Brazil, Mexico, Peru, Colombia, Uruguay, and Ecuador."
   },
   {
-    value: "12+ American",
-    label: "Markets and regions",
-    detail: "Adjust to the exact countries and segments you have served."
-  },
-  {
-    value: "+262%",
-    label: "Impact-led resume",
-    detail: "Impact-led: +262% Conversion @Bitso | 2M Users @Lemon | 2.5M @UNID"
+    value: "+262% conversion",
+    label: "Bitso onboarding uplift",
+    detail:
+      "Improved onboarding conversion from 8% to 29% through experimentation and product optimization."
   }
 ];
 
