@@ -28,6 +28,7 @@ export type TimelineRole = {
   logoText: string;
   logoSrc: string;
   logoAlt: string;
+  detailTitle?: string;
   role: string;
   dates: string;
   mission: string;
@@ -142,10 +143,11 @@ export const heroMetrics: Metric[] = [
 
 export const timelineRoles: TimelineRole[] = [
   {
-    company: "UNID (itti / Grupo Vazquez)",
-    logoText: "UNID",
+    company: "Itti",
+    logoText: "ITTI",
     logoSrc: "/logos/unid.svg",
-    logoAlt: "UNID logo",
+    logoAlt: "Itti logo",
+    detailTitle: "Current scope",
     role: "Product Lead for UNID",
     dates: "2024 - Present",
     mission:
@@ -159,8 +161,10 @@ export const timelineRoles: TimelineRole[] = [
       "Align product, design, engineering, operations, legal, and leadership around migration sequencing."
     ],
     details: [
-      "Current focus: unified authentication, account access, identity verification, and scalable trust infrastructure.",
-      "Best proof points to add next: migrated users, auth success rate, recovery friction, and identity platform adoption."
+      "Leading product strategy for a shared identity and authentication layer across a multi-brand financial ecosystem.",
+      "Translating compliance, fraud, access, and onboarding needs into reusable platform capabilities.",
+      "Defining migration sequencing across products, teams, and operational dependencies.",
+      "Building the foundation for more consistent authentication, identity verification, and account recovery experiences."
     ]
   },
   {

@@ -159,7 +159,7 @@ export function Timeline() {
                               </div>
                               <div>
                                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-bronze dark:text-paper-warm">
-                                  Proof points
+                                  {item.detailTitle ?? "Proof points"}
                                 </p>
                                 <ul className="mt-4 grid gap-3">
                                   {item.details.map((detail) => (
