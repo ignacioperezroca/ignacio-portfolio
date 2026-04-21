@@ -1,20 +1,19 @@
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeader } from "@/components/SectionHeader";
-import { personalInfo } from "@/data/portfolio";
 
 const leveragePoints = [
   {
-    title: "A PM who speaks React, designs in Figma, and leads with Data",
+    title: "Product judgment with technical fluency",
     body: "I can frame the bet, pressure-test the UX, and reason through technical consequences before the team commits."
   },
   {
-    title: "Growth without ignoring risk",
-    body: "I improve activation and conversion in environments where user quality, compliance, and trust are part of the metric."
+    title: "Growth where trust is part of the metric",
+    body: "I improve activation and conversion in environments where user quality, compliance, and confidence cannot be treated as secondary concerns."
   },
   {
-    title: "Identity expertise with human clarity",
-    body: "KYC, authentication, and recovery flows are complex systems. I make them legible to users and operable for teams."
+    title: "Identity systems made legible",
+    body: "KYC, authentication, recovery, and access are complex systems. I make them clearer for users and more operable for teams."
   }
 ];
 
@@ -25,8 +24,8 @@ export function About() {
         <FadeIn>
           <SectionHeader
             eyebrow="About / positioning"
-            title="The Full-Stack PM: Strategy, Design Systems, and Frontend Logic"
-            description={personalInfo.shortPositioning}
+            title="Product leadership for identity, onboarding, and trust-critical systems"
+            description="I work at the intersection of product strategy, UX, technical systems, and regulated user journeys."
           />
         </FadeIn>
 
@@ -34,25 +33,28 @@ export function About() {
           <FadeIn delay={0.05}>
             <div className="border-l-2 border-accent-green pl-6">
               <p className="text-xl leading-9 text-ink dark:text-paper">
-                Senior PM with a CS-mindset and a Designer&apos;s eye. My path
-                combines product strategy, UX/UI craft, frontend fluency,
-                data-driven growth, and deep exposure to identity and verification
-                problems. That mix gives me unusual leverage in cross-functional
-                rooms: I can connect user trust, business outcomes, design quality,
-                engineering constraints, and regulated operating reality.
+                My edge is not just shipping features. It is helping teams make
+                better product decisions when growth, trust, compliance, risk,
+                and technical constraints all matter at the same time.
               </p>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.12}>
             <p className="text-base leading-8 text-ink-muted dark:text-paper/70">
-              I am most useful when a team is working through ambiguity: where the
-              funnel is leaking but the reasons are unclear, where compliance or
-              security constraints are real but the user journey is breaking, or
-              where a platform decision needs to translate into a better product
-              experience. I reduce friction between Design and Dev through
-              technical Product Leadership without losing product judgment, risk
-              discipline, or UX quality.
+              I&apos;m most useful in environments where the funnel is leaking but
+              the reason is unclear, where identity or security requirements create
+              friction, or where a platform decision needs to improve the user
+              experience instead of just adding complexity underneath it.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.18}>
+            <p className="text-base leading-8 text-ink-muted dark:text-paper/70">
+              My background across design, frontend, analytics, onboarding, KYC,
+              authentication, and platform work lets me connect the layers that
+              often stay fragmented across teams: user trust, business outcomes,
+              product clarity, technical feasibility, and operational reality.
             </p>
           </FadeIn>
 
