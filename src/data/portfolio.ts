@@ -94,11 +94,11 @@ export const personalInfo = {
   resumeUrl: "/resume/ignacio-perez-roca-product-manager-cv.pdf",
   profileImage: "/images/profile-placeholder.svg",
   heroEyebrow:
-    "Senior Product Manager | Scaling Identity & Trust in Fintech",
+    "Senior Product Manager | Identity, Onboarding, KYC, Authentication",
   heroHeadline:
-    "Leading Identity for 2.5M+ users and scaling platforms from 60K to 2M",
+    "I build trust-critical product systems that scale growth without breaking security, compliance, or UX.",
   heroSubheadline:
-    "Bridging the gap between Engineering constraints and High-Conversion UX",
+    "Senior Product Manager with 16+ years across fintech, crypto, and digital identity. I’ve helped scale onboarding and trust infrastructure for millions of users across LatAm, bridging product strategy, UX clarity, technical constraints, and measurable business impact.",
   shortPositioning:
     "I design and build the infrastructure of digital trust",
   availability:

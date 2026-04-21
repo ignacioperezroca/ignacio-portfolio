@@ -80,10 +80,10 @@ export function Navbar() {
       />
       <header
         className={cn(
-          "sticky top-0 z-40 border-b transition-all duration-300",
+          "sticky top-0 z-40 transition-all duration-300",
           hasScrolled || open
-            ? "border-ink/12 bg-paper/96 shadow-line backdrop-blur-2xl dark:border-paper/12 dark:bg-ink/96"
-            : "border-transparent bg-paper/72 backdrop-blur-md dark:bg-ink/72"
+            ? "bg-paper/80 backdrop-blur-2xl dark:bg-ink/80"
+            : "bg-transparent"
         )}
       >
         <nav
