@@ -160,7 +160,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Bitso",
     logoText: "BIT",
-    role: "Product Manager - Acquisition / Onboarding | CSPO",
+    role: "Product Manager - Onboarding | CSPO",
     dates: "Oct 2022 - 2024",
     mission:
       "Redesign crypto onboarding and acquisition flows across a large exchange user base.",
@@ -180,7 +180,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Lemon Cash",
     logoText: "LEM",
-    role: "Product Manager - Onboarding | CSPO",
+    role: "Product Manager - Acquisition | CSPO",
     dates: "Oct 2021 - Oct 2022",
     mission:
       "Scale onboarding infrastructure during one of LATAM crypto's fastest growth moments.",
