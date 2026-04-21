@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="80" viewBox="0 0 160 80" role="img" aria-labelledby="title">
+  <title id="title">Lemon Cash</title>
+  <rect width="160" height="80" rx="18" fill="#f7ffe8"/>
+  <path d="M20 42c0-14 10-24 24-24 6 0 11 2 16 5-1 18-12 36-33 36-4 0-7-1-7-1V42z" fill="#c8ff1a"/>
+  <path d="M45 22c8 4 12 10 12 18 0 10-8 18-18 18-8 0-15-5-18-12 22 0 24-17 24-24z" fill="#151515" opacity=".9"/>
+  <text x="67" y="49" fill="#151515" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="850" letter-spacing="-1">lemon</text>
+</svg>

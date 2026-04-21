@@ -1,11 +1,40 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, TrendingUp } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
-import { timelineRoles } from "@/data/portfolio";
+import { timelineRoles, type TimelineRole } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
+
+function CompanyLogo({
+  item,
+  className
+}: {
+  item: TimelineRole;
+  className?: string;
+}) {
+  return (
+    <span
+      className={cn(
+        "grid h-14 w-14 shrink-0 place-items-center overflow-hidden rounded-md border border-ink/10 bg-white p-2 shadow-line dark:border-paper/15",
+        className
+      )}
+    >
+      <Image
+        src={item.logoSrc}
+        alt={item.logoAlt}
+        width={120}
+        height={60}
+        sizes="56px"
+        className="h-auto max-h-full w-auto max-w-full object-contain"
+        loading="lazy"
+        unoptimized
+      />
+    </span>
+  );
+}
 
 export function Timeline() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -43,9 +72,10 @@ export function Timeline() {
                     transition={{ duration: 0.55, delay: index * 0.05 }}
                     className="relative md:pl-16"
                   >
-                    <div className="absolute left-0 top-5 z-10 hidden h-14 w-14 place-items-center rounded-md border border-ink/10 bg-ink text-xs font-bold text-paper shadow-line dark:border-paper/15 dark:bg-paper dark:text-ink md:grid">
-                      {item.logoText}
-                    </div>
+                    <CompanyLogo
+                      item={item}
+                      className="absolute left-0 top-5 z-10 hidden md:grid"
+                    />
 
                     <button
                       type="button"
@@ -59,21 +89,24 @@ export function Timeline() {
                       onClick={() => setOpenIndex(isOpen ? -1 : index)}
                     >
                       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                        <div>
-                          <div className="flex flex-wrap items-center gap-2">
-                            <span className="rounded-md bg-accent-green/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-accent-green dark:bg-paper/10 dark:text-paper-warm">
-                              {item.specialty}
-                            </span>
-                            <span className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted dark:text-paper/45">
-                              {item.dates}
-                            </span>
+                        <div className="flex items-start gap-4">
+                          <CompanyLogo item={item} className="md:hidden" />
+                          <div>
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span className="rounded-md bg-accent-green/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-accent-green dark:bg-paper/10 dark:text-paper-warm">
+                                {item.specialty}
+                              </span>
+                              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted dark:text-paper/45">
+                                {item.dates}
+                              </span>
+                            </div>
+                            <h3 className="mt-4 text-2xl font-semibold text-ink dark:text-paper">
+                              {item.role}
+                            </h3>
+                            <p className="mt-1 text-sm font-semibold text-ink-muted dark:text-paper/60">
+                              {item.company}
+                            </p>
                           </div>
-                          <h3 className="mt-4 text-2xl font-semibold text-ink dark:text-paper">
-                            {item.role}
-                          </h3>
-                          <p className="mt-1 text-sm font-semibold text-ink-muted dark:text-paper/60">
-                            {item.company}
-                          </p>
                         </div>
                         <ChevronDown
                           className={cn(

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="80" viewBox="0 0 160 80" role="img" aria-labelledby="title">
+  <title id="title">Thet Studio</title>
+  <rect width="160" height="80" rx="18" fill="#f6f3ef"/>
+  <rect x="22" y="24" width="38" height="32" rx="8" fill="#171615"/>
+  <text x="31" y="47" fill="#f6f3ef" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="850">th</text>
+  <text x="70" y="38" fill="#171615" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="850">thet</text>
+  <text x="70" y="56" fill="#786f64" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">studio</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="80" viewBox="0 0 160 80" role="img" aria-labelledby="title">
+  <title id="title">UNID</title>
+  <rect width="160" height="80" rx="18" fill="#f8faf7"/>
+  <circle cx="30" cy="40" r="14" fill="#1f7a4d"/>
+  <path d="M24 40c0-7 5-12 12-12 3 0 5 1 7 2-2-6-7-10-14-10-8 0-15 6-15 14 0 7 4 13 10 15-1-2 0-5 0-9z" fill="#b7d66b"/>
+  <text x="52" y="48" fill="#17211b" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="1">UNID</text>
+</svg>

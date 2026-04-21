@@ -26,6 +26,8 @@ export type Metric = {
 export type TimelineRole = {
   company: string;
   logoText: string;
+  logoSrc: string;
+  logoAlt: string;
   role: string;
   dates: string;
   mission: string;
@@ -142,6 +144,8 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "UNID (itti / Grupo Vazquez)",
     logoText: "UNID",
+    logoSrc: "/logos/unid.svg",
+    logoAlt: "UNID logo",
     role: "Product Lead for UNID",
     dates: "2024 - Present",
     mission:
@@ -162,6 +166,8 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Bitso",
     logoText: "BIT",
+    logoSrc: "/logos/bitso.svg",
+    logoAlt: "Bitso logo",
     role: "Product Manager - Onboarding | CSPO",
     dates: "Oct 2022 - 2024",
     mission:
@@ -182,6 +188,8 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Lemon Cash",
     logoText: "LEM",
+    logoSrc: "/logos/lemon-cash.svg",
+    logoAlt: "Lemon Cash logo",
     role: "Product Manager - Acquisition | CSPO",
     dates: "Oct 2021 - Oct 2022",
     mission:
@@ -202,6 +210,8 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Personal Pay",
     logoText: "PAY",
+    logoSrc: "/logos/personal-pay.svg",
+    logoAlt: "Personal Pay logo",
     role: "Product Manager",
     dates: "Jul 2020 - Oct 2021",
     mission:
@@ -222,6 +232,8 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "IUNIGO",
     logoText: "IUN",
+    logoSrc: "/logos/iunigo.svg",
+    logoAlt: "IUNIGO logo",
     role: "Product Manager",
     dates: "Jul 2019 - Jul 2020",
     mission:
@@ -242,6 +254,8 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Ripio",
     logoText: "RIP",
+    logoSrc: "/logos/ripio.svg",
+    logoAlt: "Ripio logo",
     role: "Product Owner - Credit Crypto Product",
     dates: "Sep 2017 - Jul 2019",
     mission:
@@ -262,6 +276,8 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Personal - Telecom",
     logoText: "TEL",
+    logoSrc: "/logos/personal-telecom.svg",
+    logoAlt: "Personal Telecom logo",
     role: "Designer & Frontend Developer",
     dates: "Mar 2015 - Sep 2017",
     mission:
@@ -282,6 +298,8 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Thet Studio",
     logoText: "TH",
+    logoSrc: "/logos/thet-studio.svg",
+    logoAlt: "Thet Studio logo",
     role: "Designer & Frontend Developer",
     dates: "Feb 2011 - Mar 2015",
     mission:

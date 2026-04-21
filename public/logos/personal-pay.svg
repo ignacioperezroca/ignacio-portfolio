@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="80" viewBox="0 0 160 80" role="img" aria-labelledby="title">
+  <title id="title">Personal Pay</title>
+  <rect width="160" height="80" rx="18" fill="#f5f7ff"/>
+  <circle cx="34" cy="40" r="17" fill="#3f63ff"/>
+  <path d="M28 31h9c7 0 11 4 11 10s-4 10-11 10h-3v7h-6V31zm9 15c3 0 5-2 5-5s-2-5-5-5h-3v10h3z" fill="#fff"/>
+  <text x="61" y="37" fill="#16224c" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800">Personal</text>
+  <text x="61" y="58" fill="#3f63ff" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="850">Pay</text>
+</svg>

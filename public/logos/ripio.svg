@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="80" viewBox="0 0 160 80" role="img" aria-labelledby="title">
+  <title id="title">Ripio</title>
+  <rect width="160" height="80" rx="18" fill="#f3f7ff"/>
+  <circle cx="35" cy="40" r="18" fill="#2367ff"/>
+  <path d="M26 40h18M35 31v18" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+  <text x="62" y="50" fill="#12275c" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="850" letter-spacing="-1">ripio</text>
+</svg>

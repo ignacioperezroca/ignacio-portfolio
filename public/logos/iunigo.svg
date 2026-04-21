@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="80" viewBox="0 0 160 80" role="img" aria-labelledby="title">
+  <title id="title">IUNIGO</title>
+  <rect width="160" height="80" rx="18" fill="#eefbff"/>
+  <path d="M25 51V29h8v22h-8zm14-22h8v13c0 5 2 8 7 8s7-3 7-8V29h8v14c0 10-6 16-15 16s-15-6-15-16V29z" fill="#008fb3"/>
+  <text x="78" y="50" fill="#102733" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="850" letter-spacing=".5">IUNIGO</text>
+</svg>
