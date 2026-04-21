@@ -9,9 +9,9 @@ export function Thoughts() {
       <div className="section-shell">
         <FadeIn>
           <SectionHeader
-            eyebrow="Writing placeholder"
-            title="Future thinking on trust, onboarding, and product systems."
-            description="A quiet section for essays or selected writing when you want the site to become a stronger executive signal over time."
+            eyebrow="Product thinking"
+            title="Identity, onboarding, growth, and full-stack product leadership."
+            description="A visible library of future essays, case-study angles, and product theses for recruiters and founders who want to understand how I think."
           />
         </FadeIn>
 

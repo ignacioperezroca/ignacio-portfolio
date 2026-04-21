@@ -10,7 +10,7 @@ export function Contact() {
         <div>
           <SectionHeader
             eyebrow="Contact"
-            title="Let's talk about products where trust and growth both matter."
+            title="Let's discuss scaling your next identity platform"
             description={personalInfo.availability}
           />
           <div className="mt-8 flex flex-wrap gap-3">
@@ -34,8 +34,9 @@ export function Contact() {
             Direct connection
           </p>
           <p className="mt-5 text-2xl font-semibold leading-tight text-ink dark:text-paper">
+            Building the Infrastructure of Trust: Ready for the next 2M users.
             For product roles, advisory conversations, and collaborations where
-            trust-critical growth matters.
+            Identity strategy, KYC friction, and conversion quality matter.
           </p>
           <div className="mt-8 grid gap-3">
             {[

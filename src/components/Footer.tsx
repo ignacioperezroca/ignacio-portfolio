@@ -15,8 +15,7 @@ export function Footer() {
               <span className="text-sm font-semibold">{personalInfo.displayName}</span>
             </Link>
             <p className="mt-4 max-w-md text-sm leading-6 text-paper/58">
-              Product strategy for fintech, crypto, identity, onboarding,
-              authentication, and growth products where user trust is part of the system.
+              Building the Infrastructure of Trust: Ready for the next 2M users.
             </p>
           </div>
 
@@ -74,7 +73,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-paper/10 pt-5 text-xs text-paper/45 sm:flex-row sm:items-center sm:justify-between">
           <p>Copyright 2026 {personalInfo.displayName}. All rights reserved.</p>
-          <p>Built for high-signal product conversations.</p>
+          <p>Built with React/Tailwind by a PM who knows the stack.</p>
         </div>
       </div>
     </footer>

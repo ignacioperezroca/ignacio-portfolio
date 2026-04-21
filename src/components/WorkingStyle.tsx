@@ -16,8 +16,8 @@ export function WorkingStyle() {
         <FadeIn>
           <SectionHeader
             eyebrow="How I operate"
-            title="Calm product leadership for ambiguous, high-consequence work."
-            description="I help teams move from scattered inputs to shared judgment: what matters, what is risky, what we can learn next, and what is worth shipping now."
+            title="Reducing friction between Design and Dev through technical Product Leadership"
+            description="I help teams bridge Engineering constraints and High-Conversion UX: what matters, what is risky, what we can learn next, and what is worth shipping now."
           />
         </FadeIn>
 

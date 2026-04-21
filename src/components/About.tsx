@@ -5,8 +5,8 @@ import { personalInfo } from "@/data/portfolio";
 
 const leveragePoints = [
   {
-    title: "Product strategy with implementation taste",
-    body: "I can frame the bet, pressure-test the UX, and reason through the technical consequences before the team commits."
+    title: "A PM who speaks React, designs in Figma, and leads with Data",
+    body: "I can frame the bet, pressure-test the UX, and reason through technical consequences before the team commits."
   },
   {
     title: "Growth without ignoring risk",
@@ -25,7 +25,7 @@ export function About() {
         <FadeIn>
           <SectionHeader
             eyebrow="About / positioning"
-            title="A product leader for moments where trust, growth, and complexity collide."
+            title="The Full-Stack PM: Strategy, Design Systems, and Frontend Logic"
             description={personalInfo.shortPositioning}
           />
         </FadeIn>
@@ -34,7 +34,8 @@ export function About() {
           <FadeIn delay={0.05}>
             <div className="border-l-2 border-accent-green pl-6">
               <p className="text-xl leading-9 text-ink dark:text-paper">
-                My path combines product strategy, UX/UI craft, frontend fluency,
+                Senior PM with a CS-mindset and a Designer&apos;s eye. My path
+                combines product strategy, UX/UI craft, frontend fluency,
                 data-driven growth, and deep exposure to identity and verification
                 problems. That mix gives me unusual leverage in cross-functional
                 rooms: I can connect user trust, business outcomes, design quality,
@@ -49,9 +50,9 @@ export function About() {
               funnel is leaking but the reasons are unclear, where compliance or
               security constraints are real but the user journey is breaking, or
               where a platform decision needs to translate into a better product
-              experience. I do not treat complexity as a reason to slow down. I
-              use it as the raw material for sharper sequencing, clearer systems,
-              and better adoption.
+              experience. I reduce friction between Design and Dev through
+              technical Product Leadership without losing product judgment, risk
+              discipline, or UX quality.
             </p>
           </FadeIn>
 

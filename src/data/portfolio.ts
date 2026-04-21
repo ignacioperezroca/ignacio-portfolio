@@ -91,15 +91,16 @@ export const personalInfo = {
   githubUrl: "https://github.com/ignacioperezroca/ignacio-portfolio",
   resumeUrl: "/resume/ignacio-perez-roca-product-manager-cv.pdf",
   profileImage: "/images/profile-placeholder.svg",
-  heroEyebrow: "Senior Product Manager - fintech, identity, onboarding, growth",
+  heroEyebrow:
+    "Senior Product Manager | Scaling Identity & Trust in Fintech",
   heroHeadline:
-    "Senior Product Manager for trust-critical fintech, identity, onboarding, and growth products.",
+    "Leading Identity for 2.5M+ users and scaling platforms from 60K to 2M",
   heroSubheadline:
-    "I turn regulated complexity into clear product systems: onboarding journeys, KYC flows, authentication, digital identity, and activation loops that balance conversion, risk, UX, and operational scale.",
+    "Bridging the gap between Engineering constraints and High-Conversion UX",
   shortPositioning:
-    "I build the product infrastructure that helps users prove who they are, trust what they are using, and get to value faster.",
+    "I design and build the infrastructure of digital trust",
   availability:
-    "Open to senior product roles, product leadership, advisory, and select consulting work in fintech, crypto, AI, identity, and platform teams."
+    "Let's discuss scaling your next identity platform"
 };
 
 export const navItems = [
@@ -129,20 +130,20 @@ export const heroMetrics: Metric[] = [
     detail: "Adjust to the exact countries and segments you have served."
   },
   {
-    value: "262%",
-    label: "Growth systems",
-    detail: "Replace with a verified activation, conversion, or revenue metric."
+    value: "+262%",
+    label: "Impact-led resume",
+    detail: "Impact-led: +262% Conversion @Bitso | 2M Users @Lemon | 2.5M @UNID"
   }
 ];
 
 export const timelineRoles: TimelineRole[] = [
   {
-    company: "Fintech / Crypto Scale-up",
-    logoText: "FX",
-    role: "Senior Product Manager",
+    company: "UNID (itti / Grupo Vazquez)",
+    logoText: "UNID",
+    role: "Product Lead for UNID",
     dates: "2023 - Present",
     mission:
-      "Own high-trust product surfaces where onboarding, compliance, authentication, and growth directly affect business performance.",
+      "Centralizing identity for Paraguay's largest financial ecosystem.",
     scope: "Growth, identity, regulated onboarding, cross-functional execution",
     specialty: "Trust-critical growth",
     impacts: [
@@ -221,10 +222,10 @@ export const timelineRoles: TimelineRole[] = [
 export const caseStudies: CaseStudy[] = [
   {
     slug: "kyc-onboarding-optimization",
-    title: "Reducing identity friction in regulated onboarding",
+    title: "Case Study: Migrating 2.5M users to a Unified Authentication Hub",
     kicker: "KYC / Onboarding / Conversion",
     summary:
-      "A structured redesign of onboarding and verification states to increase completion while preserving compliance and risk controls.",
+      "Centralizing authentication and identity into a scalable trust layer for a multi-brand financial ecosystem.",
     topics: ["KYC", "Onboarding", "Growth"],
     stage: "Scale-up optimization",
     scope: "Consumer fintech / crypto",
@@ -315,10 +316,10 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "authentication-trust-platform",
-    title: "Designing a unified authentication and trust layer",
+    title: "Case Study: Scaling a Crypto-Wallet to 2M users in hyper-growth",
     kicker: "Authentication / Security / Platform",
     summary:
-      "A platform-oriented approach to authentication that made security decisions more consistent while improving user recovery and product velocity.",
+      "Managing identity infrastructure and onboarding quality while Lemon Cash scaled from 60K to 2M users.",
     topics: ["Authentication", "Identity", "Platform"],
     stage: "Platform consolidation",
     scope: "Multi-surface product ecosystem",
@@ -405,10 +406,10 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "activation-growth-system",
-    title: "Building an activation system for product-led growth",
+    title: "Case Study: A data-driven approach to a +262% conversion increase",
     kicker: "Growth / Experimentation / Activation",
     summary:
-      "A disciplined growth program that connected funnel analytics, user insight, and product changes to improve time-to-value.",
+      "Redesigning the Bitso onboarding funnel with sharper diagnosis, cleaner UX, and conversion-focused execution.",
     topics: ["Growth", "Experimentation", "Onboarding"],
     stage: "Growth acceleration",
     scope: "Self-serve and assisted onboarding",
@@ -495,10 +496,10 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "kyc-operations-backoffice",
-    title: "Redesigning KYC operations tooling for speed and consistency",
+    title: "Deconstructing the \"Perfect\" KYC flow: A PM/Designer perspective",
     kicker: "Backoffice / Operations / Risk",
     summary:
-      "An internal product effort to reduce ambiguity in manual review, improve decision quality, and expose better signals to frontline teams.",
+      "Breaking down the product logic behind KYC flows that balance AML security, clarity, and user conversion.",
     topics: ["KYC", "Operations", "Platform"],
     stage: "Operational scale",
     scope: "Manual review and escalation tooling",
@@ -585,10 +586,10 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "crypto-account-trust-recovery",
-    title: "Improving account trust and recovery in crypto products",
+    title: "Scaling Design: Building a modular UI library for Fintech apps",
     kicker: "Crypto / Trust / Account Recovery",
     summary:
-      "A recovery and trust-state product model for high-anxiety account moments where security, access, and confidence must coexist.",
+      "Turning reusable identity and onboarding patterns into a modular UI system for faster fintech delivery.",
     topics: ["Crypto", "Authentication", "Trust"],
     stage: "Trust and safety",
     scope: "Account access, recovery, and user communication",
@@ -784,9 +785,9 @@ export const workingPrinciples = [
       "The more complex the regulation, risk, or platform architecture, the more carefully the user-facing model has to be designed."
   },
   {
-    title: "Execution should clarify strategy",
+    title: "Reducing friction between Design and Dev",
     description:
-      "Good product teams do not choose between thinking and shipping. They ship in a way that produces cleaner decisions."
+      "Reducing friction between Design and Dev through technical Product Leadership."
   }
 ];
 
@@ -822,19 +823,179 @@ export const socialProof = {
 
 export const thoughts = [
   {
-    title: "Designing onboarding for trust, not just completion",
+    title: "The Architecture of Onboarding: Balancing AML Security and User Conversion",
     description:
-      "A future essay on why regulated onboarding needs to optimize confidence, proof, quality, and conversion together."
+      "How regulated onboarding can protect the business while preserving momentum for legitimate users."
   },
   {
-    title: "What KYC teaches product teams about state models",
+    title: "The +262% Conversion Lift: Redesigning the Bitso Onboarding Funnel",
     description:
-      "A placeholder for writing about identity systems, compliance constraints, and how to keep users oriented."
+      "A product story about diagnosis, UX clarity, experimentation, and measurable funnel impact."
   },
   {
-    title: "Growth in products where risk matters",
+    title: "Building Compliance into UX: How to make KYC feel invisible",
     description:
-      "A future note on experimentation when every funnel improvement must be weighed against abuse, risk, and user trust."
+      "Making verification feel understandable without hiding the seriousness of identity and risk controls."
+  },
+  {
+    title: "Identity as a Defense Layer: Fighting fraud through Biometric UX",
+    description:
+      "Why biometric flows need product judgment across security, accessibility, trust, and conversion."
+  },
+  {
+    title: "Centralizing 2.5M Identities: The Roadmap for a Nationwide Auth Platform",
+    description:
+      "The strategic product questions behind a unified identity system across a major financial ecosystem."
+  },
+  {
+    title: "Implementing FaceID/Liveness: Technical trade-offs for mass adoption",
+    description:
+      "How to evaluate vendor behavior, failure states, device limits, and user comprehension at scale."
+  },
+  {
+    title: "Scaling Lemon Cash: Managing Identity infrastructure during 30x growth",
+    description:
+      "What hyper-growth teaches product teams about onboarding, risk, and platform readiness."
+  },
+  {
+    title: "The Future of Digital Identity: From Web2 Auth to Web3 Sovereignty",
+    description:
+      "A product lens on portability, ownership, recovery, and trust in the next generation of identity."
+  },
+  {
+    title: "Beyond the ID Photo: The next generation of digital identity verification",
+    description:
+      "Where onboarding moves when static document capture is no longer enough."
+  },
+  {
+    title: "Building Fintech for LATAM: Navigating volatility through Product Logic",
+    description:
+      "How regional complexity shapes product decisions across trust, adoption, and resilience."
+  },
+  {
+    title: "Project: Building a Custom Analytics Dashboard with React & Tailwind",
+    description:
+      "A technical product exercise in turning funnel questions into a focused interface for decisions."
+  },
+  {
+    title: "The Product/Legal/Dev Triangle: Aligning on Compliance Features",
+    description:
+      "How to make regulated delivery faster by clarifying constraints, ownership, and decision rules."
+  },
+  {
+    title: "Testing Trust: How small UI changes impact biometric success rates",
+    description:
+      "A practical look at how microcopy, framing, and state design influence verification outcomes."
+  },
+  {
+    title: "Retention through Trust: Why Onboarding is the first step of LTV",
+    description:
+      "Why the first identity flow sets expectations for long-term confidence and product usage."
+  },
+  {
+    title: "Transforming Legacy Banking into Digital Identity Leaders",
+    description:
+      "A roadmap view of moving from fragmented auth to modern, scalable identity infrastructure."
+  },
+  {
+    title: "Why PMs who code and design ship products 3x faster",
+    description:
+      "The Full-Stack PM advantage: faster alignment, sharper tradeoffs, and more precise execution."
+  },
+  {
+    title: "Engineering-First PRDs: How to write specs that developers actually love",
+    description:
+      "Writing requirements that clarify states, edge cases, instrumentation, and implementation intent."
+  },
+  {
+    title: "Design as a Communication Tool: Using High-Fi prototypes to align stakeholders",
+    description:
+      "Using visual fidelity to resolve product ambiguity before it becomes engineering rework."
+  },
+  {
+    title: "SQL for PMs: How to find the 'Drop-off' in your KYC funnel",
+    description:
+      "A practical framing for turning event data into product hypotheses and prioritization."
+  },
+  {
+    title: "Logic-First Design: Architecture before Aesthetics",
+    description:
+      "Why strong interface work starts with state, hierarchy, constraints, and user intent."
+  },
+  {
+    title: "Reducing Dev Waste: Validating Fintech flows with 1:1 prototypes",
+    description:
+      "How realistic prototypes help teams catch risk, complexity, and UX issues before build."
+  },
+  {
+    title: "A PM's Guide to Technical Debt: When to build for speed vs. scale",
+    description:
+      "A product-led view on when debt is strategic, when it is dangerous, and how to make the call."
+  },
+  {
+    title: "Travel Ops for PMs: How meticulous logistics improve product roadmaps",
+    description:
+      "What operational discipline teaches about sequencing, dependencies, and resilience."
+  },
+  {
+    title: "The Continuous Learner: Mastering the stack to lead the team",
+    description:
+      "Why technical fluency helps product leaders ask better questions and make better tradeoffs."
+  },
+  {
+    title: "Building the \"Golden Archive\": A knowledge system for Product Teams",
+    description:
+      "How durable documentation improves onboarding, decisions, and cross-functional memory."
+  },
+  {
+    title: "My 2030 Vision: How Passkeys will redefine the Fintech UX",
+    description:
+      "A future-facing view on passwordless authentication, trust, and financial product adoption."
+  },
+  {
+    title: "Fighting Deepfakes: The Role of Identity PMs in the AI Era",
+    description:
+      "How product teams can think about liveness, fraud, and user trust as synthetic media improves."
+  },
+  {
+    title: "Turning Regulation into a UX Competitive Advantage",
+    description:
+      "Why the best regulated products make constraints feel clear, fair, and confidence-building."
+  },
+  {
+    title: "Maintaining Product Quality during a 60K to 2M user scale-up",
+    description:
+      "The product operating principles that keep onboarding and trust systems healthy during growth."
+  },
+  {
+    title: "Mentoring the next generation of Design-Led Product Managers",
+    description:
+      "Lessons from teaching and coaching product thinkers who use design as strategic leverage."
+  },
+  {
+    title: "Identity as an Entry Point: How better KYC enables financial inclusion",
+    description:
+      "How verification design can either block access or unlock safer participation in financial services."
+  },
+  {
+    title: "Open Identity: The architecture of the next financial revolution",
+    description:
+      "A product perspective on identity portability, open banking, and trusted ecosystems."
+  },
+  {
+    title: "The 80/20 of Product: Focusing on high-impact Identity features",
+    description:
+      "How to prioritize the few trust features that unlock the most user and business value."
+  },
+  {
+    title: "Lessons from Vietnam & Japan: Global standards for Digital Onboarding",
+    description:
+      "Benchmarking onboarding expectations across markets to sharpen product judgment in LATAM."
+  },
+  {
+    title: "Building the Infrastructure of Trust: Ready for the next 2M users",
+    description:
+      "The closing product thesis: scalable identity, better UX, and trusted growth belong together."
   }
 ];
 

@@ -36,7 +36,7 @@ export function Hero() {
             </ButtonLink>
             <ButtonLink href="#contact" variant="ghost">
               <Mail className="h-4 w-4" aria-hidden />
-              Contact me
+              Let&apos;s discuss scaling your next identity platform
             </ButtonLink>
           </FadeIn>
 
