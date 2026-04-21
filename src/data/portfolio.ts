@@ -141,80 +141,160 @@ export const timelineRoles: TimelineRole[] = [
     company: "UNID (itti / Grupo Vazquez)",
     logoText: "UNID",
     role: "Product Lead for UNID",
-    dates: "2023 - Present",
+    dates: "2024 - Present",
     mission:
-      "Centralizing identity for Paraguay's largest financial ecosystem.",
-    scope: "Growth, identity, regulated onboarding, cross-functional execution",
-    specialty: "Trust-critical growth",
+      "Centralizing authentication and identity for Paraguay's largest financial ecosystem.",
+    scope: "Unified identity, authentication, KYC, platform strategy",
+    specialty: "Identity platform",
     impacts: [
-      "Led discovery and prioritization across onboarding, identity verification, and activation opportunities.",
-      "Balanced conversion goals with risk, compliance, support load, and user trust.",
-      "Created clearer product decision loops between data, UX, engineering, and operations.",
-      "Shipped measurable improvements to key funnels. Replace with confirmed metric."
+      "Own the product strategy for UNID as a shared authentication and digital identity hub.",
+      "Translate KYC, compliance, fraud, and access needs into reusable platform capabilities.",
+      "Design trust flows for a 2.5M+ user ecosystem where security and adoption have to move together.",
+      "Align product, design, engineering, operations, legal, and leadership around migration sequencing."
     ],
     details: [
-      "Ideal place to add your real company, market, user scale, team size, and owned KPIs.",
-      "Add 2-3 representative launches, such as KYC redesign, authentication improvements, account recovery, onboarding experiments, or operational tooling."
+      "Current focus: unified authentication, account access, identity verification, and scalable trust infrastructure.",
+      "Best proof points to add next: migrated users, auth success rate, recovery friction, and identity platform adoption."
     ]
   },
   {
-    company: "Identity / KYC Platform",
-    logoText: "ID",
+    company: "Bitso",
+    logoText: "BIT",
+    role: "Product Manager - Acquisition / Onboarding | CSPO",
+    dates: "Oct 2022 - 2024",
+    mission:
+      "Redesign crypto onboarding and acquisition flows across a large exchange user base.",
+    scope: "Onboarding, acquisition, activation, experimentation",
+    specialty: "Conversion at scale",
+    impacts: [
+      "Improved onboarding conversion from 8% to 29%, a +262% lift in one year.",
+      "Supported annual user growth from 4M to nearly 7M users.",
+      "Developed a new exchange home screen for an 8M+ user product, increasing activation by 35%.",
+      "Connected acquisition, UX, analytics, and product education into a clearer growth system."
+    ],
+    details: [
+      "Strong portfolio angle: The +262% Conversion Lift: Redesigning the Bitso Onboarding Funnel.",
+      "Best artifacts: funnel diagnosis, experiment roadmap, onboarding state model, home activation metrics."
+    ]
+  },
+  {
+    company: "Lemon Cash",
+    logoText: "LEM",
+    role: "Product Manager - Onboarding | CSPO",
+    dates: "Oct 2021 - Oct 2022",
+    mission:
+      "Scale onboarding infrastructure during one of LATAM crypto's fastest growth moments.",
+    scope: "Crypto onboarding, regional launches, KYC, activation",
+    specialty: "Hyper-growth crypto",
+    impacts: [
+      "Scaled Lemon from 60K to 1.5M users, a +2500% growth period.",
+      "Launched onboarding for Argentina, Brazil, Mexico, Peru, Colombia, Uruguay, and Ecuador in 6 months.",
+      "Helped acquire more than 1M users in the first year of regional onboarding expansion.",
+      "Increased onboarding conversion from 50% to 80% within a year."
+    ],
+    details: [
+      "Strong portfolio angle: Scaling Lemon Cash: Managing identity infrastructure during 30x growth.",
+      "Best artifacts: country launch plan, KYC requirements matrix, onboarding metrics, launch sequencing."
+    ]
+  },
+  {
+    company: "Personal Pay",
+    logoText: "PAY",
     role: "Product Manager",
-    dates: "2021 - 2023",
+    dates: "Jul 2020 - Oct 2021",
     mission:
-      "Simplify complex identity, verification, and security flows so legitimate users can move faster while risk remains controlled.",
-    scope: "KYC, authentication, fraud/risk collaboration, platform thinking",
-    specialty: "Identity systems",
+      "Build consumer fintech experiences where account creation, activation, and trust shape adoption.",
+    scope: "Fintech onboarding, payments, activation, UX strategy",
+    specialty: "Consumer fintech",
     impacts: [
-      "Mapped fragmented verification journeys and redesigned them around user intent and risk state.",
-      "Reduced operational ambiguity by clarifying rules, escalation states, and backoffice signals.",
-      "Improved stakeholder alignment across product, engineering, compliance, support, and data.",
-      "Established reusable flow patterns for future onboarding and trust products."
+      "Worked on fintech product surfaces that required clear UX, account readiness, and reliable user progression.",
+      "Translated business and regulatory needs into product flows that users could understand.",
+      "Partnered with design and engineering to move from ambiguous requirements to buildable releases.",
+      "Strengthened the bridge between product strategy, financial services constraints, and mobile UX."
     ],
     details: [
-      "Replace with your actual role title, company, and dates.",
-      "Use this entry for work involving verification vendors, document review, liveness checks, risk tiers, support tooling, or compliance constraints."
+      "Strong portfolio angle: Transforming legacy banking and telco distribution into modern financial products.",
+      "Best artifacts: onboarding maps, payments flows, activation metrics, product requirements."
     ]
   },
   {
-    company: "Product-Led Growth Team",
-    logoText: "PLG",
-    role: "Product / Growth Lead",
-    dates: "2019 - 2021",
+    company: "IUNIGO",
+    logoText: "IUN",
+    role: "Product Manager",
+    dates: "Jul 2019 - Jul 2020",
     mission:
-      "Improve activation by identifying where users lose confidence, intent, or momentum before reaching core product value.",
-    scope: "Experimentation, analytics, onboarding, activation, UX strategy",
-    specialty: "Activation systems",
+      "Move deeper into product ownership across digital insurance and financial-service workflows.",
+    scope: "Product ownership, UX, agile delivery, digital services",
+    specialty: "Digital product ownership",
     impacts: [
-      "Translated funnel data into sharper hypotheses, UX changes, and experiment roadmaps.",
-      "Partnered with design and engineering to ship lower-friction entry points and clearer product education.",
-      "Instrumented success metrics beyond click-through, including trust, completion, and downstream retention.",
-      "Created repeatable rituals for learning from experiments and qualitative feedback."
+      "Owned product discovery and delivery work in a regulated digital-services environment.",
+      "Used UX and frontend fluency to clarify requirements before engineering execution.",
+      "Coordinated stakeholders around roadmap priorities, delivery tradeoffs, and user impact.",
+      "Built the operating muscle that connected design craft with product management."
     ],
     details: [
-      "Add experiment names, before/after conversion, confidence levels, and business outcomes.",
-      "This is a strong place to show product-led growth depth beyond generic acquisition language."
+      "Strong portfolio angle: Engineering-first PRDs and high-fidelity prototypes for regulated product teams.",
+      "Best artifacts: PRDs, discovery notes, prototypes, sprint plans, stakeholder decision records."
     ]
   },
   {
-    company: "UX / Frontend Foundations",
-    logoText: "UX",
-    role: "UX/UI and Frontend-Oriented Product Builder",
-    dates: "Earlier career",
+    company: "Ripio",
+    logoText: "RIP",
+    role: "Product Owner - Credit Crypto Product",
+    dates: "Sep 2017 - Jul 2019",
     mission:
-      "Build the craft foundation that now strengthens product judgment: interface quality, implementation tradeoffs, and user empathy.",
-    scope: "Design systems, UI execution, frontend fluency, prototyping",
-    specialty: "Design-to-engineering bridge",
+      "Own product work for crypto credit and blockchain-based financial infrastructure.",
+    scope: "Crypto credit, DeFi, blockchain, product ownership",
+    specialty: "Crypto product",
     impacts: [
-      "Built a strong working model for translating ambiguous problems into usable interfaces.",
-      "Developed enough technical fluency to reason with engineering teams about feasibility, quality, and tradeoffs.",
-      "Learned to connect visual hierarchy, interaction detail, and measurable product outcomes.",
-      "Carried design craft into product leadership without becoming design-led at the expense of business goals."
+      "Worked at the intersection of blockchain, credit, frontend execution, and product strategy.",
+      "Contributed to Ripio Credit Network as crypto lending infrastructure evolved in LATAM.",
+      "Brought hands-on development understanding into product decisions for complex financial technology.",
+      "Built product judgment around trust, transparency, and usability in emerging crypto rails."
     ],
     details: [
-      "Replace with actual early roles, projects, agencies, startups, or independent work.",
-      "Use artifacts here: Figma explorations, prototypes, design systems, frontend projects, or shipped UI."
+      "Public references identify Ignacio Perez Roca as a Frontend & dApp developer on Ripio Credit Network.",
+      "Best artifacts: credit-flow models, dApp interfaces, product specs, blockchain UX decisions."
+    ]
+  },
+  {
+    company: "Personal - Telecom",
+    logoText: "TEL",
+    role: "Designer & Frontend Developer",
+    dates: "Mar 2015 - Sep 2017",
+    mission:
+      "Design and build digital interfaces inside a large-scale telecom environment.",
+    scope: "UX/UI, frontend development, design systems, large-company delivery",
+    specialty: "Enterprise UX",
+    impacts: [
+      "Shipped interface work where visual hierarchy, usability, and implementation quality mattered.",
+      "Built practical frontend fluency across HTML, CSS, JavaScript, and design-system patterns.",
+      "Learned to navigate stakeholder complexity inside a large established organization.",
+      "Developed the technical empathy that later became a product leadership advantage."
+    ],
+    details: [
+      "Strong portfolio angle: reducing friction between design and development through technical product leadership.",
+      "Best artifacts: UI components, responsive layouts, frontend prototypes, design-system work."
+    ]
+  },
+  {
+    company: "Thet Studio",
+    logoText: "TH",
+    role: "Designer & Frontend Developer",
+    dates: "Feb 2011 - Mar 2015",
+    mission:
+      "Build the creative and technical foundation behind later product leadership.",
+    scope: "Graphic design, web development, UI craft, client delivery",
+    specialty: "Design + code foundation",
+    impacts: [
+      "Worked hands-on across design, web interfaces, frontend execution, and client-facing delivery.",
+      "Built the craft base for turning abstract needs into usable, shippable digital experiences.",
+      "Developed strong taste for typography, hierarchy, interaction detail, and implementation constraints.",
+      "Started the multidisciplinary path that now connects strategy, design systems, and frontend logic."
+    ],
+    details: [
+      "Strong portfolio angle: Logic-first design, architecture before aesthetics.",
+      "Best artifacts: early web projects, design systems, UI explorations, responsive builds."
     ]
   }
 ];

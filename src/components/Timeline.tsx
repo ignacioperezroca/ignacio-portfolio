@@ -17,14 +17,14 @@ export function Timeline() {
           <div className="lg:sticky lg:top-28 lg:self-start">
             <SectionHeader
               eyebrow="Career timeline"
-              title="Increasing scope across growth, identity, trust, and platform work."
-              description="This timeline is designed to become your proof of progression: broader systems, sharper constraints, higher-stakes outcomes."
+              title="From design and frontend to product leadership in identity, crypto, and fintech."
+              description="A LinkedIn-aligned progression showing increasing scope: hands-on interface craft, crypto infrastructure, fintech onboarding, growth at scale, and unified identity platforms."
             />
             <div className="mt-8 hidden rounded-md border border-ink/10 bg-paper/70 p-5 text-sm leading-6 text-ink-muted shadow-line dark:border-paper/10 dark:bg-ink/60 dark:text-paper/65 lg:block">
               <TrendingUp className="mb-4 h-5 w-5 text-accent-green dark:text-paper-warm" />
-              Replace each placeholder with your real company, dates, owned KPIs,
-              launch scope, and company logos. The component already supports
-              expandable depth per role.
+              The arc is deliberate: every role adds a layer of leverage, from
+              designing and coding interfaces to leading trust-critical product
+              systems for millions of users.
             </div>
           </div>
 
@@ -126,7 +126,7 @@ export function Timeline() {
                               </div>
                               <div>
                                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-bronze dark:text-paper-warm">
-                                  Add proof here
+                                  Proof points
                                 </p>
                                 <ul className="mt-4 grid gap-3">
                                   {item.details.map((detail) => (
