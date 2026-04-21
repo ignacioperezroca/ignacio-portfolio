@@ -40,7 +40,7 @@ export function SelectedWork() {
           <SectionHeader
             eyebrow="Selected work"
             title="Case studies built around product judgment, not screenshots."
-            description="Each story is structured around context, constraints, strategy, execution, stakeholder management, and impact. Replace placeholder numbers with verified metrics as you finalize the portfolio."
+            description="Each case study is structured around context, constraints, strategy, execution, stakeholder management, and impact, with an emphasis on product judgment over surface-level visuals."
           />
 
           <div className="lg:justify-self-end">

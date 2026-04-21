@@ -333,7 +333,7 @@ export const caseStudies: CaseStudy[] = [
     topics: ["KYC", "Onboarding", "Growth"],
     stage: "Scale-up optimization",
     scope: "Consumer fintech / crypto",
-    impactMetric: "+18% completion placeholder",
+    impactMetric: "Verification state map",
     accentClass: "from-accent-green/20 via-paper-cool to-accent-blue/12",
     artifact: {
       label: "Flow artifact",
@@ -427,7 +427,7 @@ export const caseStudies: CaseStudy[] = [
     topics: ["Authentication", "Identity", "Platform"],
     stage: "Platform consolidation",
     scope: "Multi-surface product ecosystem",
-    impactMetric: "-30% recovery friction placeholder",
+    impactMetric: "Authentication decision model",
     accentClass: "from-accent-blue/20 via-paper-cool to-accent-green/12",
     artifact: {
       label: "System artifact",
@@ -517,7 +517,7 @@ export const caseStudies: CaseStudy[] = [
     topics: ["Growth", "Experimentation", "Onboarding"],
     stage: "Growth acceleration",
     scope: "Self-serve and assisted onboarding",
-    impactMetric: "+24% activation placeholder",
+    impactMetric: "Activation map",
     accentClass: "from-accent-bronze/20 via-paper-warm to-accent-blue/10",
     artifact: {
       label: "Experiment artifact",
@@ -607,7 +607,7 @@ export const caseStudies: CaseStudy[] = [
     topics: ["KYC", "Operations", "Platform"],
     stage: "Operational scale",
     scope: "Manual review and escalation tooling",
-    impactMetric: "-35% handling time placeholder",
+    impactMetric: "Review queue model",
     accentClass: "from-accent-green/16 via-paper-warm to-accent-bronze/12",
     artifact: {
       label: "Ops artifact",
@@ -690,14 +690,14 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "crypto-account-trust-recovery",
-    title: "Scaling Design: Building a modular UI library for Fintech apps",
+    title: "Case Study: Designing account recovery for trust, protection, and clarity",
     kicker: "Crypto / Trust / Account Recovery",
     summary:
-      "Turning reusable identity and onboarding patterns into a modular UI system for faster fintech delivery.",
+      "Designing recovery flows for moments when legitimate users lose access and trust is most fragile. Framed recovery as a product system that balances verification, protection, support load, and emotional clarity.",
     topics: ["Crypto", "Authentication", "Trust"],
     stage: "Trust and safety",
     scope: "Account access, recovery, and user communication",
-    impactMetric: "-28% abandonment placeholder",
+    impactMetric: "Recovery journey",
     accentClass: "from-accent-blue/14 via-paper-warm to-accent-bronze/16",
     artifact: {
       label: "Trust artifact",
