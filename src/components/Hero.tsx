@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Download, Github, Linkedin, Mail, MapPin, ShieldCheck } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, MapPin, ShieldCheck } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { FadeIn } from "@/components/FadeIn";
 import { MetricsStrip } from "@/components/MetricsStrip";
@@ -33,10 +33,6 @@ export function Hero() {
             <ButtonLink href={personalInfo.resumeUrl} variant="secondary" download>
               <Download className="h-4 w-4" aria-hidden />
               Download resume
-            </ButtonLink>
-            <ButtonLink href="#contact" variant="ghost">
-              <Mail className="h-4 w-4" aria-hidden />
-              Let&apos;s discuss scaling your next identity platform
             </ButtonLink>
           </FadeIn>
 
