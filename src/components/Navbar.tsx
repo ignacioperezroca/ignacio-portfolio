@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { Github, Linkedin, Mail, Menu, Moon, Sun, X } from "lucide-react";
 import { navItems, personalInfo } from "@/data/portfolio";
+import { cn } from "@/lib/utils";
 
 function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
@@ -50,9 +51,17 @@ function ThemeToggle() {
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const pathname = usePathname();
   const { scrollYProgress } = useScroll();
   const isHome = pathname === "/";
+
+  useEffect(() => {
+    const updateScrolled = () => setHasScrolled(window.scrollY > 12);
+    updateScrolled();
+    window.addEventListener("scroll", updateScrolled, { passive: true });
+    return () => window.removeEventListener("scroll", updateScrolled);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -69,7 +78,14 @@ export function Navbar() {
         className="fixed left-0 right-0 top-0 z-50 h-0.5 origin-left bg-accent-blue"
         style={{ scaleX: scrollYProgress }}
       />
-      <header className="sticky top-0 z-40 border-b border-ink/10 bg-paper/82 backdrop-blur-xl dark:border-paper/10 dark:bg-ink/82">
+      <header
+        className={cn(
+          "sticky top-0 z-40 border-b transition-all duration-300",
+          hasScrolled || open
+            ? "border-ink/12 bg-paper/96 shadow-line backdrop-blur-2xl dark:border-paper/12 dark:bg-ink/96"
+            : "border-transparent bg-paper/72 backdrop-blur-md dark:bg-ink/72"
+        )}
+      >
         <nav
           className="section-shell flex h-16 items-center justify-between gap-4"
           aria-label="Primary navigation"
