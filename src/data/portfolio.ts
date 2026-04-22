@@ -103,7 +103,7 @@ export const personalInfo = {
   shortPositioning:
     "I design and build the infrastructure of digital trust",
   availability:
-    "Let's discuss scaling your next identity platform"
+    "Open to conversations about onboarding, identity, authentication, growth, and platform product roles."
 };
 
 export const navItems = [

@@ -79,7 +79,7 @@ export function About() {
               href="#work"
               className="focus-ring group inline-flex items-center gap-2 rounded-md text-sm font-semibold text-ink underline decoration-ink/20 underline-offset-4 transition hover:decoration-ink dark:text-paper dark:decoration-paper/25 dark:hover:decoration-paper"
             >
-              See how this shows up in selected work
+              View selected work
               <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
           </FadeIn>

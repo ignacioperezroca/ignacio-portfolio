@@ -10,13 +10,13 @@ export function Contact() {
         <div>
           <SectionHeader
             eyebrow="Contact"
-            title="Let's discuss scaling your next identity platform"
+            title="Let’s talk"
             description={personalInfo.availability}
           />
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href={`mailto:${personalInfo.email}`} variant="secondary" external>
               <Mail className="h-4 w-4" aria-hidden />
-              Email
+              Let’s talk
             </ButtonLink>
             <ButtonLink href={personalInfo.linkedinUrl} variant="secondary" external>
               <Linkedin className="h-4 w-4" aria-hidden />
