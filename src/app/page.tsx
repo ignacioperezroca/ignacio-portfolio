@@ -1,6 +1,7 @@
 import { About } from "@/components/About";
 import { Achievements } from "@/components/Achievements";
 import { Contact } from "@/components/Contact";
+import { CurrentFocus } from "@/components/CurrentFocus";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <CurrentFocus />
         <About />
         <Timeline />
         <SelectedWork />
