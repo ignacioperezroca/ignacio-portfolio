@@ -906,183 +906,73 @@ export const socialProof = {
   testimonials: [] as Testimonial[]
 };
 
-export const thoughts = [
+export const thoughts = Object.assign(
+  [
+    {
+      label: "Published article",
+      title: "How to make an Onboarding and don’t die trying",
+      teaser:
+        "A practical guide to building a powerful digital onboarding and identity verification flow that balances authentication, KYC, user friction, and conversion.",
+      date: "Jan 8, 2021",
+      readTime: "5 min read",
+      cta: "Read on Medium",
+      url: "https://medium.com/@ignacio-perezroca"
+    },
+    {
+      label: "Published article",
+      title: "🚨 I almost got scammed during a job interview process.",
+      teaser:
+        "A sharp breakdown of how modern interview scams work, why even experienced candidates are vulnerable, and a simple framework to stay safe.",
+      date: "Apr 10, 2026",
+      readTime: "3 min read",
+      cta: "Read on Medium",
+      url: "https://medium.com/@ignacio-perezroca"
+    },
+    {
+      label: "Published article",
+      title: "Onboarding Plan for Mastering the Product Life Cycle",
+      teaser:
+        "A structured onboarding plan for product managers, covering stakeholder alignment, KPI definition, user feedback, experimentation, and impact forecasting.",
+      date: "Jul 26, 2024",
+      readTime: "5 min read",
+      cta: "Read on Medium",
+      url: "https://medium.com/@ignacio-perezroca"
+    },
+    {
+      label: "Published article",
+      title: "Mastering Your First Days as a Product Manager: A Comprehensive Onboarding Guide",
+      teaser:
+        "A practical framework to ramp up faster as a new product manager through purposeful meetings, stakeholder mapping, product context, and active learning.",
+      date: "Jul 5, 2024",
+      readTime: "3 min read",
+      cta: "Read on Medium",
+      url: "https://medium.com/@ignacio-perezroca"
+    },
+    {
+      label: "Published article",
+      title: "How to track your events and don’t die trying",
+      teaser:
+        "A concise guide to event tracking and behavioral analytics, with practical naming conventions and funnel thinking to measure product performance better.",
+      date: "Aug 16, 2021",
+      readTime: "2 min read",
+      cta: "Read on Medium",
+      url: "https://medium.com/@ignacio-perezroca"
+    }
+  ],
   {
-    title: "The Architecture of Onboarding: Balancing AML Security and User Conversion",
-    description:
-      "How regulated onboarding can protect the business while preserving momentum for legitimate users."
-  },
-  {
-    title: "The +262% Conversion Lift: Redesigning the Bitso Onboarding Funnel",
-    description:
-      "A product story about diagnosis, UX clarity, experimentation, and measurable funnel impact."
-  },
-  {
-    title: "Building Compliance into UX: How to make KYC feel invisible",
-    description:
-      "Making verification feel understandable without hiding the seriousness of identity and risk controls."
-  },
-  {
-    title: "Identity as a Defense Layer: Fighting fraud through Biometric UX",
-    description:
-      "Why biometric flows need product judgment across security, accessibility, trust, and conversion."
-  },
-  {
-    title: "Centralizing 2.5M Identities: The Roadmap for a Nationwide Auth Platform",
-    description:
-      "The strategic product questions behind a unified identity system across a major financial ecosystem."
-  },
-  {
-    title: "Implementing FaceID/Liveness: Technical trade-offs for mass adoption",
-    description:
-      "How to evaluate vendor behavior, failure states, device limits, and user comprehension at scale."
-  },
-  {
-    title: "Scaling Lemon Cash: Managing Identity infrastructure during 30x growth",
-    description:
-      "What hyper-growth teaches product teams about onboarding, risk, and platform readiness."
-  },
-  {
-    title: "The Future of Digital Identity: From Web2 Auth to Web3 Sovereignty",
-    description:
-      "A product lens on portability, ownership, recovery, and trust in the next generation of identity."
-  },
-  {
-    title: "Beyond the ID Photo: The next generation of digital identity verification",
-    description:
-      "Where onboarding moves when static document capture is no longer enough."
-  },
-  {
-    title: "Building Fintech for LATAM: Navigating volatility through Product Logic",
-    description:
-      "How regional complexity shapes product decisions across trust, adoption, and resilience."
-  },
-  {
-    title: "Project: Building a Custom Analytics Dashboard with React & Tailwind",
-    description:
-      "A technical product exercise in turning funnel questions into a focused interface for decisions."
-  },
-  {
-    title: "The Product/Legal/Dev Triangle: Aligning on Compliance Features",
-    description:
-      "How to make regulated delivery faster by clarifying constraints, ownership, and decision rules."
-  },
-  {
-    title: "Testing Trust: How small UI changes impact biometric success rates",
-    description:
-      "A practical look at how microcopy, framing, and state design influence verification outcomes."
-  },
-  {
-    title: "Retention through Trust: Why Onboarding is the first step of LTV",
-    description:
-      "Why the first identity flow sets expectations for long-term confidence and product usage."
-  },
-  {
-    title: "Transforming Legacy Banking into Digital Identity Leaders",
-    description:
-      "A roadmap view of moving from fragmented auth to modern, scalable identity infrastructure."
-  },
-  {
-    title: "Why PMs who code and design ship products 3x faster",
-    description:
-      "The Full-Stack PM advantage: faster alignment, sharper tradeoffs, and more precise execution."
-  },
-  {
-    title: "Engineering-First PRDs: How to write specs that developers actually love",
-    description:
-      "Writing requirements that clarify states, edge cases, instrumentation, and implementation intent."
-  },
-  {
-    title: "Design as a Communication Tool: Using High-Fi prototypes to align stakeholders",
-    description:
-      "Using visual fidelity to resolve product ambiguity before it becomes engineering rework."
-  },
-  {
-    title: "SQL for PMs: How to find the 'Drop-off' in your KYC funnel",
-    description:
-      "A practical framing for turning event data into product hypotheses and prioritization."
-  },
-  {
-    title: "Logic-First Design: Architecture before Aesthetics",
-    description:
-      "Why strong interface work starts with state, hierarchy, constraints, and user intent."
-  },
-  {
-    title: "Reducing Dev Waste: Validating Fintech flows with 1:1 prototypes",
-    description:
-      "How realistic prototypes help teams catch risk, complexity, and UX issues before build."
-  },
-  {
-    title: "A PM's Guide to Technical Debt: When to build for speed vs. scale",
-    description:
-      "A product-led view on when debt is strategic, when it is dangerous, and how to make the call."
-  },
-  {
-    title: "Travel Ops for PMs: How meticulous logistics improve product roadmaps",
-    description:
-      "What operational discipline teaches about sequencing, dependencies, and resilience."
-  },
-  {
-    title: "The Continuous Learner: Mastering the stack to lead the team",
-    description:
-      "Why technical fluency helps product leaders ask better questions and make better tradeoffs."
-  },
-  {
-    title: "Building the \"Golden Archive\": A knowledge system for Product Teams",
-    description:
-      "How durable documentation improves onboarding, decisions, and cross-functional memory."
-  },
-  {
-    title: "My 2030 Vision: How Passkeys will redefine the Fintech UX",
-    description:
-      "A future-facing view on passwordless authentication, trust, and financial product adoption."
-  },
-  {
-    title: "Fighting Deepfakes: The Role of Identity PMs in the AI Era",
-    description:
-      "How product teams can think about liveness, fraud, and user trust as synthetic media improves."
-  },
-  {
-    title: "Turning Regulation into a UX Competitive Advantage",
-    description:
-      "Why the best regulated products make constraints feel clear, fair, and confidence-building."
-  },
-  {
-    title: "Maintaining Product Quality during a 60K to 2M user scale-up",
-    description:
-      "The product operating principles that keep onboarding and trust systems healthy during growth."
-  },
-  {
-    title: "Mentoring the next generation of Design-Led Product Managers",
-    description:
-      "Lessons from teaching and coaching product thinkers who use design as strategic leverage."
-  },
-  {
-    title: "Identity as an Entry Point: How better KYC enables financial inclusion",
-    description:
-      "How verification design can either block access or unlock safer participation in financial services."
-  },
-  {
-    title: "Open Identity: The architecture of the next financial revolution",
-    description:
-      "A product perspective on identity portability, open banking, and trusted ecosystems."
-  },
-  {
-    title: "The 80/20 of Product: Focusing on high-impact Identity features",
-    description:
-      "How to prioritize the few trust features that unlock the most user and business value."
-  },
-  {
-    title: "Lessons from Vietnam & Japan: Global standards for Digital Onboarding",
-    description:
-      "Benchmarking onboarding expectations across markets to sharpen product judgment in LATAM."
-  },
-  {
-    title: "Building the Infrastructure of Trust: Ready for the next 2M users",
-    description:
-      "The closing product thesis: scalable identity, better UX, and trusted growth belong together."
+    sectionTitle: "Product thinking",
+    sectionSubtitle:
+      "Essays and perspectives on product strategy, onboarding, UX, analytics, and trust-critical systems.",
+    sectionIntro:
+      "A curated selection of articles written by Ignacio Perez Roca on onboarding, product thinking, behavioral analytics, digital trust, and product leadership.",
+    footerCta: {
+      title: "Explore more writing",
+      copy: "More essays, ideas, and product reflections available on Medium.",
+      buttonLabel: "View Medium profile",
+      buttonUrl: "https://medium.com/@ignacio-perezroca"
+    }
   }
-];
+);
 
 export const trustThemes = [
   {
