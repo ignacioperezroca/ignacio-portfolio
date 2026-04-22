@@ -10,14 +10,14 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { cn } from "@/lib/utils";
 
 const logoTreatments: Record<string, string> = {
-  Itti: "bg-white",
-  Bitso: "bg-[#f5f7ff]",
-  "Lemon Cash": "bg-[#f6ff58]",
-  "Personal Pay": "bg-[#f5f7ff]",
-  IUNIGO: "bg-white",
-  Ripio: "bg-white",
-  "Personal - Telecom": "bg-white",
-  "Thet Studio": "bg-white"
+  Itti: "bg-white ring-[#21bf72]/25",
+  Bitso: "bg-[#f6f7ff] ring-[#5c64ff]/25",
+  "Lemon Cash": "bg-[#f6ff58] ring-[#39ff14]/30",
+  "Personal Pay": "bg-[#f7f8ff] ring-[#6257ff]/25",
+  IUNIGO: "bg-white ring-[#eecece]/35",
+  Ripio: "bg-[#17104f] ring-[#17104f]/25",
+  "Personal - Telecom": "bg-[#5514a6] ring-[#5514a6]/25",
+  "Thet Studio": "bg-white ring-[#ee2a68]/25"
 };
 
 function CompanyLogo({
@@ -28,23 +28,25 @@ function CompanyLogo({
   className?: string;
 }) {
   return (
-    <span
-      className={cn(
-        "grid h-16 w-24 shrink-0 place-items-center overflow-hidden rounded-md border border-ink/15 p-2.5 shadow-line ring-1 ring-white/70 dark:border-paper/15 dark:ring-paper/10 md:h-16 md:w-16",
-        logoTreatments[item.company] ?? "bg-white",
-        className
-      )}
-    >
-      <Image
-        src={item.logoSrc}
-        alt={item.logoAlt}
-        width={120}
-        height={60}
-        sizes="(min-width: 768px) 64px, 96px"
-        className="h-auto max-h-10 w-auto max-w-full object-contain md:max-h-11"
-        loading="lazy"
-        unoptimized
-      />
+    <span className={cn("flex w-20 shrink-0 flex-col items-center md:w-16", className)}>
+      <span className="mb-3 h-0 w-0 border-x-[7px] border-b-[10px] border-x-transparent border-b-ink/45 dark:border-b-paper/45" />
+      <span
+        className={cn(
+          "grid h-20 w-20 place-items-center overflow-hidden rounded-md border border-ink/10 p-3 shadow-line ring-1 dark:border-paper/12 md:h-16 md:w-16 md:p-2.5",
+          logoTreatments[item.company] ?? "bg-white ring-ink/10"
+        )}
+      >
+        <Image
+          src={item.logoSrc}
+          alt={item.logoAlt}
+          width={120}
+          height={60}
+          sizes="(min-width: 768px) 64px, 80px"
+          className="h-auto max-h-12 w-auto max-w-full object-contain md:max-h-10"
+          loading="lazy"
+          unoptimized
+        />
+      </span>
     </span>
   );
 }
@@ -90,7 +92,7 @@ export function Timeline() {
                   >
                     <CompanyLogo
                       item={item}
-                      className="absolute left-0 top-5 z-10 hidden md:grid"
+                      className="absolute left-0 top-1 z-10 hidden md:flex"
                     />
 
                     <button
