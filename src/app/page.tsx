@@ -1,8 +1,8 @@
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
-import { CurrentFocus } from "@/components/CurrentFocus";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
+import { MetricsStrip } from "@/components/MetricsStrip";
 import { Navbar } from "@/components/Navbar";
 import { SelectedWork } from "@/components/SelectedWork";
 import { Skills } from "@/components/Skills";
@@ -17,10 +17,10 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <CurrentFocus />
         <About />
         <Timeline />
         <SelectedWork />
+        <MetricsStrip />
         <Skills />
         <WorkingStyle />
         {/* Hidden until verified testimonials / logos are available */}

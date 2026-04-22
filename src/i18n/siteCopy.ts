@@ -75,10 +75,6 @@ export const siteCopy = {
         detail: "Focused on improving activation and conversion where security, compliance, and confidence are part of the product itself."
       }
     ],
-    currentFocus: {
-      title: "Current focus",
-      body: "Currently focused on identity platforms, authentication systems, onboarding architecture, KYC clarity, account recovery, and product strategy for trust-critical environments."
-    },
     about: {
       kicker: "About / positioning",
       title: "Product leadership for identity, onboarding, and trust-critical systems",
@@ -288,6 +284,12 @@ export const siteCopy = {
         }
       ]
     },
+    impact: {
+      kicker: "Impact",
+      title: "Evidence across growth, trust, and platform scale.",
+      intro: "A compact view of the outcomes and operating range behind the portfolio: conversion, scale, identity infrastructure, and product judgment under real constraints.",
+      categoryLabel: "Proof point"
+    },
     expertise: {
       kicker: "Skills and expertise",
       title: "A product toolkit organized around leverage, not labels.",
@@ -420,12 +422,16 @@ export const siteCopy = {
     },
     contact: {
       kicker: "Contact",
-      title: "Let’s talk",
-      intro: "Open to conversations about onboarding, identity, authentication, growth, and platform product roles.",
-      primaryCta: "Let’s talk",
-      directConnection: "Direct connection",
-      body: "Building the Infrastructure of Trust: Ready for the next 2M users. For product roles, advisory conversations, and collaborations where Identity strategy, KYC friction, and conversion quality matter.",
-      email: "ignacio.perezroca@gmail.com"
+      title: "Let’s build the next trust-critical product system.",
+      intro: "Open to senior product roles, advisory conversations, and projects where onboarding, identity, KYC, authentication, fintech, crypto, and scalable product strategy need sharper execution.",
+      primaryCta: "Email Ignacio",
+      directConnection: "Start with the highest-signal channel",
+      body: "I’m most useful when teams need to improve conversion without weakening trust, simplify identity or authentication complexity, or turn regulated product constraints into clearer user experiences.",
+      bullets: ["Product leadership roles", "Identity / onboarding strategy", "Advisory or consulting conversations"],
+      metadata: ["Buenos Aires", "Remote-friendly", "Selected opportunities"],
+      email: "ignacio.perezroca@gmail.com",
+      secondaryLinkedin: "Connect on LinkedIn",
+      secondaryGithub: "View GitHub"
     },
     footer: {
       brandLine: "Building the Infrastructure of Trust: Ready for the next 2M users.",
@@ -524,10 +530,6 @@ export const siteCopy = {
         detail: "Enfocado en mejorar activación y conversión donde seguridad, compliance y confianza son parte del producto."
       }
     ],
-    currentFocus: {
-      title: "Foco actual",
-      body: "Hoy estoy enfocado en plataformas de identidad, sistemas de autenticación, arquitectura de onboarding, claridad en KYC, recuperación de cuenta y estrategia de producto para entornos donde la confianza es crítica."
-    },
     about: {
       kicker: "Sobre mí / posicionamiento",
       title: "Liderazgo de producto para identidad, onboarding y sistemas críticos para la confianza",
@@ -737,6 +739,12 @@ export const siteCopy = {
         }
       ]
     },
+    impact: {
+      kicker: "Impacto",
+      title: "Evidencia concreta en growth, confianza y escala de plataforma.",
+      intro: "Una síntesis de resultados y rango operativo: conversión, escala, infraestructura de identidad y criterio de producto bajo restricciones reales.",
+      categoryLabel: "Prueba"
+    },
     expertise: {
       kicker: "Skills y expertise",
       title: "Un toolkit de producto organizado por leverage, no por etiquetas.",
@@ -869,12 +877,16 @@ export const siteCopy = {
     },
     contact: {
       kicker: "Contacto",
-      title: "Hablemos",
-      intro: "Abierto a conversaciones sobre onboarding, identidad, autenticación, growth y roles de producto orientados a plataforma.",
-      primaryCta: "Hablemos",
-      directConnection: "Conexión directa",
-      body: "Building the Infrastructure of Trust: Ready for the next 2M users. Para roles de producto, conversaciones de advisory y colaboraciones donde importan estrategia de identidad, fricción de KYC y calidad de conversión.",
-      email: "ignacio.perezroca@gmail.com"
+      title: "Construyamos el próximo sistema de producto donde la confianza es crítica.",
+      intro: "Abierto a roles senior de producto, conversaciones de advisory y proyectos donde onboarding, identidad, KYC, autenticación, fintech, crypto y estrategia escalable necesitan ejecución más clara.",
+      primaryCta: "Escribirme por email",
+      directConnection: "Arranquemos por el canal más directo",
+      body: "Soy más útil cuando los equipos necesitan mejorar conversión sin debilitar confianza, simplificar complejidad de identidad o autenticación, o transformar restricciones regulatorias en experiencias más claras.",
+      bullets: ["Roles de liderazgo de producto", "Estrategia de identidad / onboarding", "Advisory o consultoría"],
+      metadata: ["Buenos Aires", "Remote-friendly", "Oportunidades seleccionadas"],
+      email: "ignacio.perezroca@gmail.com",
+      secondaryLinkedin: "Conectar en LinkedIn",
+      secondaryGithub: "Ver GitHub"
     },
     footer: {
       brandLine: "Building the Infrastructure of Trust: Ready for the next 2M users.",

@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
+import { SectionHeader } from "@/components/SectionHeader";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export function MetricsStrip() {
@@ -27,70 +28,86 @@ export function MetricsStrip() {
   }
 
   return (
-    <section id="impact" className="section-shell">
-      <FadeIn
-        delay={0.2}
-        className="border-y border-ink/10 bg-paper/65 py-4 backdrop-blur dark:border-paper/10 dark:bg-paper/5"
-      >
-      <div className="flex items-center justify-between gap-4 px-3 pb-3 sm:px-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-green dark:text-paper-warm">
-          {copy.nav.impact}
-        </p>
-        <div className="hidden items-center gap-2 sm:flex">
-          <button
-            type="button"
-            onClick={() => scrollByCard("previous")}
-            className="focus-ring motion-surface grid h-9 w-9 place-items-center rounded-md border border-ink/10 bg-white/55 text-ink-muted transition hover:border-ink/25 hover:text-ink dark:border-paper/10 dark:bg-paper/5 dark:text-paper/60 dark:hover:border-paper/25 dark:hover:text-paper"
-            aria-label={copy.ui.previousImpact}
+    <section id="impact" className="border-y border-ink/10 bg-white/48 py-20 dark:border-paper/10 dark:bg-paper/5 sm:py-28">
+      <div className="section-shell">
+        <FadeIn>
+          <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+            <SectionHeader
+              eyebrow={copy.impact.kicker}
+              title={copy.impact.title}
+              description={copy.impact.intro}
+            />
+            <div className="hidden justify-end gap-2 lg:flex">
+              <button
+                type="button"
+                onClick={() => scrollByCard("previous")}
+                className="focus-ring motion-surface grid h-10 w-10 place-items-center rounded-md border border-ink/10 bg-paper/65 text-ink-muted shadow-line transition hover:border-ink/25 hover:bg-white hover:text-ink dark:border-paper/10 dark:bg-ink/55 dark:text-paper/60 dark:hover:border-paper/25 dark:hover:bg-paper/10 dark:hover:text-paper"
+                aria-label={copy.ui.previousImpact}
+              >
+                <ChevronLeft className="h-4 w-4" aria-hidden />
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollByCard("next")}
+                className="focus-ring motion-surface grid h-10 w-10 place-items-center rounded-md border border-ink/10 bg-paper/65 text-ink-muted shadow-line transition hover:border-ink/25 hover:bg-white hover:text-ink dark:border-paper/10 dark:bg-ink/55 dark:text-paper/60 dark:hover:border-paper/25 dark:hover:bg-paper/10 dark:hover:text-paper"
+                aria-label={copy.ui.nextImpact}
+              >
+                <ChevronRight className="h-4 w-4" aria-hidden />
+              </button>
+            </div>
+          </div>
+        </FadeIn>
+
+        <div className="relative mt-12">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-12 bg-gradient-to-r from-[#fbf8f1] to-transparent dark:from-[#181612] sm:block" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-12 bg-gradient-to-l from-[#fbf8f1] to-transparent dark:from-[#181612] sm:block" />
+
+          <div
+            ref={scrollerRef}
+            tabIndex={0}
+            className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-3"
+            aria-label={copy.ui.impactCarousel}
           >
-            <ChevronLeft className="h-4 w-4" aria-hidden />
-          </button>
-          <button
-            type="button"
-            onClick={() => scrollByCard("next")}
-            className="focus-ring motion-surface grid h-9 w-9 place-items-center rounded-md border border-ink/10 bg-white/55 text-ink-muted transition hover:border-ink/25 hover:text-ink dark:border-paper/10 dark:bg-paper/5 dark:text-paper/60 dark:hover:border-paper/25 dark:hover:text-paper"
-            aria-label={copy.ui.nextImpact}
-          >
-            <ChevronRight className="h-4 w-4" aria-hidden />
-          </button>
+            {copy.heroImpactCards.map((metric, index) => (
+              <article
+                key={`${metric.value}-${metric.label}`}
+                data-impact-card
+                className="motion-surface group flex min-h-72 flex-[0_0_88%] snap-start flex-col justify-between overflow-hidden rounded-md border border-ink/10 bg-paper/78 p-6 shadow-line transition hover:border-ink/24 hover:bg-white dark:border-paper/10 dark:bg-ink/62 dark:hover:border-paper/25 dark:hover:bg-paper/8 sm:flex-[0_0_58%] md:flex-[0_0_44%] lg:flex-[0_0_31%]"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-4 border-b border-ink/10 pb-4 dark:border-paper/10">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-green dark:text-paper-warm">
+                      {copy.impact.categoryLabel}
+                    </p>
+                    <span className="font-serif text-lg text-ink/30 dark:text-paper/25">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <div className="mt-8 font-serif text-[3.25rem] leading-none text-ink dark:text-paper sm:text-6xl">
+                    {metric.value}
+                  </div>
+                  <h3 className="mt-5 text-base font-semibold text-ink dark:text-paper">
+                    {metric.label}
+                  </h3>
+                </div>
+                <p className="mt-8 border-t border-ink/10 pt-5 text-sm leading-6 text-ink-muted dark:border-paper/10 dark:text-paper/65">
+                  {metric.detail}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
 
-      <div
-        ref={scrollerRef}
-        tabIndex={0}
-        className="flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth px-3 pb-2 sm:px-4"
-        aria-label={copy.ui.impactCarousel}
-      >
-        {copy.heroImpactCards.map((metric) => (
-          <article
-            key={`${metric.value}-${metric.label}`}
-            data-impact-card
-            className="min-h-52 flex-[0_0_86%] snap-start rounded-md border border-ink/10 bg-white/62 p-5 shadow-line transition hover:-translate-y-1 hover:border-ink/20 dark:border-paper/10 dark:bg-paper/5 dark:hover:border-paper/25 sm:min-h-56 md:flex-[0_0_48%] lg:flex-[0_0_32%]"
-          >
-            <div className="font-serif text-4xl leading-none text-ink dark:text-paper">
-              {metric.value}
-            </div>
-            <div className="mt-4 text-sm font-semibold text-ink dark:text-paper">
-              {metric.label}
-            </div>
-            <p className="mt-3 text-sm leading-6 text-ink-muted dark:text-paper/62">
-              {metric.detail}
-            </p>
-          </article>
-        ))}
-      </div>
-
-      <div className="mt-2 flex justify-center gap-1.5 px-3 sm:hidden">
-        {copy.heroImpactCards.map((metric) => (
+        <div className="mt-5 flex justify-center gap-1.5 lg:hidden">
+          {copy.heroImpactCards.map((metric) => (
           <span
             key={`dot-${metric.value}-${metric.label}`}
             className="h-1.5 w-1.5 rounded-full bg-ink/20 dark:bg-paper/25"
             aria-hidden
           />
-        ))}
+          ))}
+        </div>
       </div>
-      </FadeIn>
     </section>
   );
 }

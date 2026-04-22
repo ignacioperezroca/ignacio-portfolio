@@ -103,17 +103,20 @@ a {
 }
 
 .motion-surface {
-  transform-style: preserve-3d;
   transition:
-    transform 460ms cubic-bezier(0.22, 1, 0.36, 1),
     border-color 260ms ease,
     background-color 260ms ease,
-    box-shadow 460ms cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: transform;
+    color 260ms ease,
+    opacity 260ms ease,
+    box-shadow 360ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .motion-surface:hover {
-  transform: translate3d(0, -4px, 0);
+  box-shadow: 0 14px 34px rgba(18, 17, 15, 0.08);
+}
+
+.dark .motion-surface:hover {
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
 }
 
 .spotlight-card {

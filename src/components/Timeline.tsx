@@ -9,6 +9,17 @@ import { timelineRoles, type TimelineRole } from "@/data/portfolio";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { cn } from "@/lib/utils";
 
+const logoTreatments: Record<string, string> = {
+  Itti: "bg-white",
+  Bitso: "bg-[#f5f7ff]",
+  "Lemon Cash": "bg-[#f6ff58]",
+  "Personal Pay": "bg-[#f5f7ff]",
+  IUNIGO: "bg-white",
+  Ripio: "bg-white",
+  "Personal - Telecom": "bg-white",
+  "Thet Studio": "bg-white"
+};
+
 function CompanyLogo({
   item,
   className
@@ -19,7 +30,8 @@ function CompanyLogo({
   return (
     <span
       className={cn(
-        "grid h-14 w-14 shrink-0 place-items-center overflow-hidden rounded-md border border-ink/10 bg-white p-2 shadow-line dark:border-paper/15",
+        "grid h-16 w-24 shrink-0 place-items-center overflow-hidden rounded-md border border-ink/15 p-2.5 shadow-line ring-1 ring-white/70 dark:border-paper/15 dark:ring-paper/10 md:h-16 md:w-16",
+        logoTreatments[item.company] ?? "bg-white",
         className
       )}
     >
@@ -28,8 +40,8 @@ function CompanyLogo({
         alt={item.logoAlt}
         width={120}
         height={60}
-        sizes="56px"
-        className="h-auto max-h-full w-auto max-w-full object-contain"
+        sizes="(min-width: 768px) 64px, 96px"
+        className="h-auto max-h-10 w-auto max-w-full object-contain md:max-h-11"
         loading="lazy"
         unoptimized
       />
@@ -58,7 +70,7 @@ export function Timeline() {
           </div>
 
           <div className="relative">
-            <div className="absolute bottom-0 left-[27px] top-0 hidden w-px bg-gradient-to-b from-accent-green via-ink/15 to-accent-blue dark:via-paper/20 md:block" />
+            <div className="absolute bottom-0 left-[31px] top-0 hidden w-px bg-gradient-to-b from-accent-green via-ink/15 to-accent-blue dark:via-paper/20 md:block" />
             <div className="grid gap-5">
               {timelineRoles.map((item, index) => {
                 const isOpen = openIndex === index;
@@ -74,7 +86,7 @@ export function Timeline() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-80px" }}
                     transition={{ duration: 0.55, delay: index * 0.05 }}
-                    className="relative md:pl-16"
+                    className="relative md:pl-20"
                   >
                     <CompanyLogo
                       item={item}
@@ -93,7 +105,7 @@ export function Timeline() {
                       onClick={() => setOpenIndex(isOpen ? -1 : index)}
                     >
                       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                        <div className="flex items-start gap-4">
+                        <div className="flex items-start gap-4 sm:gap-5">
                           <CompanyLogo item={item} className="md:hidden" />
                           <div>
                             <div className="flex flex-wrap items-center gap-2">

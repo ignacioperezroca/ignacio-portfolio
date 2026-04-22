@@ -4,7 +4,6 @@ import Image from "next/image";
 import { ArrowRight, Download, Github, Linkedin, Mail, MapPin, ShieldCheck } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { FadeIn } from "@/components/FadeIn";
-import { MetricsStrip } from "@/components/MetricsStrip";
 import { personalInfo, trustThemes } from "@/data/portfolio";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -119,7 +118,6 @@ export function Hero() {
           </div>
         </FadeIn>
       </div>
-      <MetricsStrip />
     </section>
   );
 }
