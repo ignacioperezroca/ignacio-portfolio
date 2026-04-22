@@ -14,8 +14,7 @@ import {
 } from "lucide-react";
 
 // Primary content model.
-// Replace placeholder metrics, dates, company names, logos, testimonials, and artifacts here.
-// The components are intentionally driven by this file so the site can be edited without touching layout code.
+// Components are intentionally driven by this file so positioning, proof points, and case-study content stay easy to maintain.
 
 export type Metric = {
   value: string;
@@ -93,7 +92,7 @@ export const personalInfo = {
   linkedinUrl: "https://www.linkedin.com/in/ignacio-perez-roca-10101010/",
   githubUrl: "https://github.com/ignacioperezroca",
   resumeUrl: "/resume/ignacio-perez-roca-product-manager-cv.pdf",
-  profileImage: "/images/profile-placeholder.svg",
+  profileImage: "/images/profile-portrait.svg",
   heroEyebrow:
     "Senior Product Manager | Identity, Onboarding, KYC, Authentication",
   heroHeadline:
@@ -397,19 +396,19 @@ export const caseStudies: CaseStudy[] = [
       ],
       metrics: [
         {
-          value: "+18%",
+          value: "State map",
           label: "KYC completion",
-          detail: "Placeholder. Replace with confirmed before/after impact."
+          detail: "Mapped every user-facing verification state to risk, vendor, and activation outcomes."
         },
         {
-          value: "-22%",
+          value: "Support",
           label: "Support contacts",
-          detail: "Placeholder for avoidable verification inquiries."
+          detail: "Designed clearer guidance for pending, retry, failed, and manual review moments."
         },
         {
-          value: "+11%",
+          value: "Activation",
           label: "Activation after approval",
-          detail: "Placeholder for downstream user value."
+          detail: "Connected verification outcomes to downstream activation and user confidence."
         }
       ],
       lessons: [
@@ -487,19 +486,19 @@ export const caseStudies: CaseStudy[] = [
       ],
       metrics: [
         {
-          value: "-30%",
+          value: "Recovery",
           label: "Recovery friction",
-          detail: "Placeholder for time-to-recover or drop-off reduction."
+          detail: "Mapped account access failures into clearer login, step-up, and recovery states."
         },
         {
-          value: "-25%",
+          value: "Support",
           label: "Auth support cases",
-          detail: "Placeholder for account access inquiries."
+          detail: "Clarified where users needed guidance, escalation, or stronger protection."
         },
         {
           value: "1 model",
           label: "Reusable auth pattern",
-          detail: "Replace with actual number of adopted surfaces or teams."
+          detail: "Defined a shared decision model for authentication, MFA, recovery, and risk step-up."
         }
       ],
       lessons: [
@@ -577,19 +576,19 @@ export const caseStudies: CaseStudy[] = [
       ],
       metrics: [
         {
-          value: "+24%",
-          label: "Activation",
-          detail: "Placeholder for first-value or qualified activation rate."
+          value: "+262%",
+          label: "Onboarding conversion",
+          detail: "Improved conversion from 8% to 29% through diagnosis, experimentation, and cleaner funnel design."
         },
         {
-          value: "-16%",
-          label: "Time-to-value",
-          detail: "Placeholder for elapsed time from signup to key action."
+          value: "8% to 29%",
+          label: "Conversion range",
+          detail: "Moved the funnel from low single-digit completion to a materially stronger onboarding baseline."
         },
         {
-          value: "12",
-          label: "Experiments shipped",
-          detail: "Placeholder. Replace with actual experiment volume."
+          value: "Experiments",
+          label: "Learning system",
+          detail: "Used structured tests to separate UX confusion, trust gaps, technical friction, and eligibility issues."
         }
       ],
       lessons: [
@@ -667,19 +666,19 @@ export const caseStudies: CaseStudy[] = [
       ],
       metrics: [
         {
-          value: "-35%",
+          value: "Queue model",
           label: "Review handling time",
-          detail: "Placeholder. Replace with actual operational impact."
+          detail: "Designed a clearer evidence hierarchy and escalation path for operational review."
         },
         {
-          value: "-20%",
+          value: "Decision quality",
           label: "Reopened cases",
-          detail: "Placeholder for decision quality or rework."
+          detail: "Reduced ambiguity by making review criteria, taxonomy, and handoffs more explicit."
         },
         {
-          value: "+1",
+          value: "Taxonomy",
           label: "Decision taxonomy",
-          detail: "Replace with actual process, queue, or policy artifact."
+          detail: "Created a decision framework that supported auditability and reviewer consistency."
         }
       ],
       lessons: [
@@ -757,19 +756,19 @@ export const caseStudies: CaseStudy[] = [
       ],
       metrics: [
         {
-          value: "-28%",
+          value: "Recovery",
           label: "Recovery abandonment",
-          detail: "Placeholder for completed recovery journey improvement."
+          detail: "Designed clearer states, timing expectations, safety rationale, and next actions."
         },
         {
-          value: "-18%",
+          value: "Repeat attempts",
           label: "Repeat attempts",
-          detail: "Placeholder for duplicate or confused recovery submissions."
+          detail: "Addressed ambiguity for legitimate users by explaining recoverable states more clearly."
         },
         {
-          value: "+",
+          value: "Trust signals",
           label: "Trust signal quality",
-          detail: "Replace with actual qualitative or quantitative trust measure."
+          detail: "Balanced user reassurance with security-sensitive information boundaries."
         }
       ],
       lessons: [
@@ -903,33 +902,8 @@ export const workingPrinciples = [
 ];
 
 export const socialProof = {
-  logoPlaceholders: [
-    "Company logo",
-    "Fintech brand",
-    "Crypto product",
-    "Identity vendor",
-    "Growth team"
-  ],
-  testimonials: [
-    {
-      quote:
-        "Add a concise quote from a founder, Head of Product, engineering leader, or design partner about your ability to connect strategy, UX, and execution.",
-      name: "Reference name",
-      title: "Title and company"
-    },
-    {
-      quote:
-        "Use this for a testimonial about identity, onboarding, KYC, growth, or cross-functional leadership under constraints.",
-      name: "Reference name",
-      title: "Title and company"
-    },
-    {
-      quote:
-        "Add one proof point about how you simplify complex product systems and create measurable business impact.",
-      name: "Reference name",
-      title: "Title and company"
-    }
-  ] satisfies Testimonial[]
+  logos: [] as string[],
+  testimonials: [] as Testimonial[]
 };
 
 export const thoughts = [

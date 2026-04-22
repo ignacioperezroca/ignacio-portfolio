@@ -11,7 +11,7 @@ export function Thoughts() {
           <SectionHeader
             eyebrow="Product thinking"
             title="Identity, onboarding, growth, and full-stack product leadership."
-            description="A growing library of essays and case-study perspectives on identity, onboarding, KYC, authentication, trust systems, and product leadership in high-growth environments."
+            description="Product perspectives on identity, onboarding, KYC, authentication, trust systems, and product leadership in high-growth environments."
           />
         </FadeIn>
 
@@ -20,7 +20,7 @@ export function Thoughts() {
             <FadeIn key={thought.title} delay={index * 0.05}>
               <article className="group h-full rounded-md border border-ink/10 bg-paper/72 p-5 shadow-line transition hover:-translate-y-1 hover:border-ink/25 dark:border-paper/10 dark:bg-ink/60 dark:hover:border-paper/25">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-green dark:text-paper-warm">
-                  Featured article
+                  Product perspective
                 </p>
                 <h3 className="mt-5 text-xl font-semibold leading-tight text-ink dark:text-paper">
                   {thought.title}
@@ -29,7 +29,7 @@ export function Thoughts() {
                   {thought.description}
                 </p>
                 <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-ink-muted transition group-hover:gap-3 group-hover:text-ink dark:text-paper/55 dark:group-hover:text-paper">
-                  Coming soon
+                  Perspective
                   <ArrowUpRight className="h-4 w-4" aria-hidden />
                 </div>
               </article>

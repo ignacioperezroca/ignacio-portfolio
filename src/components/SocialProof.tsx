@@ -4,6 +4,10 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { socialProof } from "@/data/portfolio";
 
 export function SocialProof() {
+  if (socialProof.logos.length === 0 && socialProof.testimonials.length === 0) {
+    return null;
+  }
+
   return (
     <section className="py-20 sm:py-28">
       <div className="section-shell">
@@ -11,15 +15,15 @@ export function SocialProof() {
           <FadeIn>
             <SectionHeader
               eyebrow="Social proof"
-              title="A proof layer ready for references, logos, and stakeholder quotes."
-              description="Add recognizable companies, product teams, or partner logos when you are ready. Keep only proof you can stand behind."
+              title="References and external proof from trusted product environments."
+              description="Verified references, company signals, and stakeholder quotes that reinforce trust-critical product work."
             />
           </FadeIn>
 
           <div className="grid gap-6">
             <FadeIn>
               <div className="grid grid-cols-2 gap-px overflow-hidden rounded-md border border-ink/10 bg-ink/10 dark:border-paper/10 dark:bg-paper/10 sm:grid-cols-5">
-                {socialProof.logoPlaceholders.map((logo) => (
+                {socialProof.logos.map((logo) => (
                   <div
                     key={logo}
                     className="grid min-h-24 place-items-center bg-white/70 px-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted dark:bg-ink/72 dark:text-paper/45"

@@ -77,7 +77,7 @@ export function Hero() {
             <figure className="float-slow motion-surface relative overflow-hidden rounded-md border border-ink/10 bg-ink shadow-lift dark:border-paper/10">
               <Image
                 src={personalInfo.profileImage}
-                alt={`${personalInfo.displayName} profile placeholder`}
+                alt={`${personalInfo.displayName} profile portrait`}
                 width={960}
                 height={1200}
                 priority

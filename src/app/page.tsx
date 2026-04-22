@@ -7,7 +7,7 @@ import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
 import { SelectedWork } from "@/components/SelectedWork";
 import { Skills } from "@/components/Skills";
-import { Thoughts } from "@/components/Thoughts";
+import { SocialProof } from "@/components/SocialProof";
 import { Timeline } from "@/components/Timeline";
 import { WorkingStyle } from "@/components/WorkingStyle";
 
@@ -25,7 +25,7 @@ export default function Home() {
         <Skills />
         <WorkingStyle />
         {/* Hidden until verified testimonials / logos are available */}
-        <Thoughts />
+        <SocialProof />
         <Contact />
       </main>
       <Footer />
