@@ -1,22 +1,27 @@
+"use client";
+
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { SectionHeader } from "@/components/SectionHeader";
 import { personalInfo } from "@/data/portfolio";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export function Contact() {
+  const { copy } = useLanguage();
+
   return (
     <section className="py-20 sm:py-28" id="contact">
       <div className="section-shell grid gap-10 lg:grid-cols-[0.84fr_1.16fr] lg:items-start">
         <div>
           <SectionHeader
-            eyebrow="Contact"
-            title="Let’s talk"
-            description={personalInfo.availability}
+            eyebrow={copy.contact.kicker}
+            title={copy.contact.title}
+            description={copy.contact.intro}
           />
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href={`mailto:${personalInfo.email}`} variant="secondary" external>
               <Mail className="h-4 w-4" aria-hidden />
-              Let’s talk
+              {copy.contact.primaryCta}
             </ButtonLink>
             <ButtonLink href={personalInfo.linkedinUrl} variant="secondary" external>
               <Linkedin className="h-4 w-4" aria-hidden />
@@ -31,17 +36,15 @@ export function Contact() {
 
         <aside className="spotlight-card motion-surface overflow-hidden rounded-md border border-ink/10 bg-white/70 p-6 shadow-line dark:border-paper/10 dark:bg-paper/5">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-green dark:text-paper-warm">
-            Direct connection
+            {copy.contact.directConnection}
           </p>
           <p className="mt-5 text-2xl font-semibold leading-tight text-ink dark:text-paper">
-            Building the Infrastructure of Trust: Ready for the next 2M users.
-            For product roles, advisory conversations, and collaborations where
-            Identity strategy, KYC friction, and conversion quality matter.
+            {copy.contact.body}
           </p>
           <div className="mt-8 grid gap-3">
             {[
               {
-                label: personalInfo.email,
+                label: copy.contact.email,
                 href: `mailto:${personalInfo.email}`,
                 icon: Mail
               },

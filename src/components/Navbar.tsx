@@ -6,9 +6,12 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { Github, Linkedin, Mail, Menu, Moon, Sun, X } from "lucide-react";
 import { navItems, personalInfo } from "@/data/portfolio";
+import { useLanguage } from "@/i18n/LanguageContext";
+import type { Language } from "@/i18n/siteCopy";
 import { cn } from "@/lib/utils";
 
 function ThemeToggle() {
+  const { copy } = useLanguage();
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
@@ -31,8 +34,8 @@ function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       className="focus-ring motion-surface inline-flex h-10 w-10 items-center justify-center rounded-md border border-ink/10 bg-paper/70 text-ink shadow-line backdrop-blur transition hover:border-ink/25 dark:border-paper/15 dark:bg-ink/70 dark:text-paper dark:hover:border-paper/35"
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={isDark ? copy.ui.switchToLight : copy.ui.switchToDark}
+      title={isDark ? copy.ui.switchToLight : copy.ui.switchToDark}
     >
       <AnimatePresence mode="wait" initial={false}>
         <motion.span
@@ -49,7 +52,42 @@ function ThemeToggle() {
   );
 }
 
+function LanguageToggle() {
+  const { language, setLanguage, copy } = useLanguage();
+  const languages: Language[] = ["en", "es"];
+
+  return (
+    <div
+      className="motion-surface inline-flex h-10 items-center rounded-md border border-ink/10 bg-paper/70 p-1 shadow-line backdrop-blur dark:border-paper/15 dark:bg-ink/70"
+      aria-label={copy.ui.languageSwitch}
+      role="group"
+    >
+      {languages.map((item) => {
+        const isActive = language === item;
+
+        return (
+          <button
+            key={item}
+            type="button"
+            onClick={() => setLanguage(item)}
+            className={cn(
+              "focus-ring rounded-[6px] px-2.5 py-1.5 text-xs font-bold transition",
+              isActive
+                ? "bg-ink text-paper dark:bg-paper dark:text-ink"
+                : "text-ink-muted hover:text-ink dark:text-paper/60 dark:hover:text-paper"
+            )}
+            aria-pressed={isActive}
+          >
+            {item === "en" ? copy.ui.languageEnglish : copy.ui.languageSpanish}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 export function Navbar() {
+  const { copy } = useLanguage();
   const [open, setOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const pathname = usePathname();
@@ -78,6 +116,19 @@ export function Navbar() {
     return isHome ? href : `/${href}`;
   };
 
+  const navLabelFor = (href: string, fallback: string) => {
+    const labels: Record<string, string> = {
+      "#about": copy.nav.about,
+      "#timeline": copy.nav.timeline,
+      "#work": copy.nav.work,
+      "#impact": copy.nav.impact,
+      "#expertise": copy.nav.expertise,
+      "#contact": copy.nav.contact
+    };
+
+    return labels[href] ?? fallback;
+  };
+
   return (
     <>
       <motion.div
@@ -94,12 +145,12 @@ export function Navbar() {
       >
         <nav
           className="section-shell flex h-16 items-center justify-between gap-4"
-          aria-label="Primary navigation"
+          aria-label={copy.ui.primaryNavigation}
         >
           <Link
             href="/"
             className="focus-ring group inline-flex items-center gap-3 rounded-md"
-            aria-label="Go to homepage"
+            aria-label={copy.ui.goHome}
           >
             <span className="motion-surface grid h-9 w-9 place-items-center rounded-md border border-ink/12 bg-ink text-xs font-bold text-paper transition group-hover:bg-accent-green dark:border-paper/15 dark:bg-paper dark:text-ink">
               IP
@@ -116,7 +167,7 @@ export function Navbar() {
                 href={hrefFor(item.href)}
                 className="focus-ring group relative rounded-md px-3 py-2 text-sm font-medium text-ink-muted transition hover:bg-ink/5 hover:text-ink dark:text-paper/65 dark:hover:bg-paper/10 dark:hover:text-paper"
               >
-                {item.label}
+                {navLabelFor(item.href, item.label)}
                 <span className="absolute inset-x-3 bottom-1 h-px origin-left scale-x-0 bg-accent-green transition-transform duration-300 group-hover:scale-x-100 dark:bg-paper-warm" />
               </Link>
             ))}
@@ -153,11 +204,12 @@ export function Navbar() {
                 <Mail className="h-4 w-4" />
               </a>
             </div>
+            <LanguageToggle />
             <ThemeToggle />
             <button
               type="button"
               className="focus-ring motion-surface inline-flex h-10 w-10 items-center justify-center rounded-md border border-ink/10 bg-paper/70 text-ink shadow-line backdrop-blur transition hover:border-ink/25 dark:border-paper/15 dark:bg-ink/70 dark:text-paper dark:hover:border-paper/35 lg:hidden"
-              aria-label={open ? "Close navigation" : "Open navigation"}
+              aria-label={open ? copy.ui.closeNavigation : copy.ui.openNavigation}
               aria-expanded={open}
               onClick={() => setOpen((value) => !value)}
             >
@@ -189,7 +241,7 @@ export function Navbar() {
                     className="focus-ring motion-surface block rounded-md border border-ink/10 px-4 py-3 text-sm font-semibold text-ink transition hover:bg-ink/5 dark:border-paper/10 dark:text-paper dark:hover:bg-paper/10"
                     onClick={() => setOpen(false)}
                   >
-                    {item.label}
+                    {navLabelFor(item.href, item.label)}
                   </Link>
                 </motion.div>
               ))}
@@ -198,7 +250,7 @@ export function Navbar() {
               {[
                 { label: "LinkedIn", href: personalInfo.linkedinUrl, Icon: Linkedin },
                 { label: "GitHub", href: personalInfo.githubUrl, Icon: Github },
-                { label: "Email", href: `mailto:${personalInfo.email}`, Icon: Mail }
+                { label: copy.ui.email, href: `mailto:${personalInfo.email}`, Icon: Mail }
               ].map(({ label, href, Icon }, index) => (
                 <motion.a
                   key={label}

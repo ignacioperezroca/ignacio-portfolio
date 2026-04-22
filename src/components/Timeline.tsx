@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, TrendingUp } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { timelineRoles, type TimelineRole } from "@/data/portfolio";
+import { useLanguage } from "@/i18n/LanguageContext";
 import { cn } from "@/lib/utils";
 
 function CompanyLogo({
@@ -37,6 +38,7 @@ function CompanyLogo({
 }
 
 export function Timeline() {
+  const { copy } = useLanguage();
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
@@ -45,15 +47,13 @@ export function Timeline() {
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
           <div className="lg:sticky lg:top-28 lg:self-start">
             <SectionHeader
-              eyebrow="Career timeline"
-              title="From design and frontend to product leadership in identity, crypto, and fintech."
-              description="A LinkedIn-aligned progression showing increasing scope: hands-on interface craft, crypto infrastructure, fintech onboarding, growth at scale, and unified identity platforms."
+              eyebrow={copy.timeline.kicker}
+              title={copy.timeline.title}
+              description={copy.timeline.intro1}
             />
             <div className="mt-8 hidden rounded-md border border-ink/10 bg-paper/70 p-5 text-sm leading-6 text-ink-muted shadow-line dark:border-paper/10 dark:bg-ink/60 dark:text-paper/65 lg:block">
               <TrendingUp className="mb-4 h-5 w-5 text-accent-green dark:text-paper-warm" />
-              The arc is deliberate: every role adds a layer of leverage, from
-              designing and coding interfaces to leading trust-critical product
-              systems for millions of users.
+              {copy.timeline.intro2}
             </div>
           </div>
 
@@ -62,6 +62,10 @@ export function Timeline() {
             <div className="grid gap-5">
               {timelineRoles.map((item, index) => {
                 const isOpen = openIndex === index;
+                const localized = copy.timeline.items[index];
+                const impacts = "impact" in localized ? localized.impact : item.impacts;
+                const details = "scope" in localized ? localized.scope : item.details;
+                const detailTitle = "scopeTitle" in localized ? localized.scopeTitle : item.detailTitle;
 
                 return (
                   <motion.article
@@ -94,17 +98,17 @@ export function Timeline() {
                           <div>
                             <div className="flex flex-wrap items-center gap-2">
                               <span className="rounded-md bg-accent-green/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-accent-green dark:bg-paper/10 dark:text-paper-warm">
-                                {item.specialty}
+                                {localized.badge}
                               </span>
                               <span className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted dark:text-paper/45">
-                                {item.dates}
+                                {localized.period}
                               </span>
                             </div>
                             <h3 className="mt-4 text-2xl font-semibold text-ink dark:text-paper">
-                              {item.role}
+                              {localized.role}
                             </h3>
                             <p className="mt-1 text-sm font-semibold text-ink-muted dark:text-paper/60">
-                              {item.company}
+                              {localized.company}
                             </p>
                           </div>
                         </div>
@@ -116,10 +120,10 @@ export function Timeline() {
                         />
                       </div>
                       <p className="mt-5 max-w-2xl text-base leading-7 text-ink-muted dark:text-paper/68">
-                        {item.mission}
+                        {localized.summary}
                       </p>
                       <div className="mt-4 flex flex-wrap gap-2">
-                        {item.scope.split(", ").map((scope) => (
+                        {localized.tags.map((scope) => (
                           <span
                             key={scope}
                             className="rounded-md border border-ink/10 px-2.5 py-1 text-xs font-semibold text-ink-muted dark:border-paper/10 dark:text-paper/55"
@@ -143,10 +147,10 @@ export function Timeline() {
                             <div className="grid gap-6 md:grid-cols-[1fr_0.8fr]">
                               <div>
                                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-green dark:text-paper-warm">
-                                  Key impact
+                                  {"impactTitle" in localized ? localized.impactTitle : copy.timeline.keyImpact}
                                 </p>
                                 <ul className="mt-4 grid gap-3">
-                                  {item.impacts.map((impact) => (
+                                  {impacts.map((impact) => (
                                     <li
                                       key={impact}
                                       className="flex gap-3 text-sm leading-6 text-ink-muted dark:text-paper/68"
@@ -159,10 +163,10 @@ export function Timeline() {
                               </div>
                               <div>
                                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-bronze dark:text-paper-warm">
-                                  {item.detailTitle ?? "Proof points"}
+                                  {detailTitle ?? copy.timeline.proofPoints}
                                 </p>
                                 <ul className="mt-4 grid gap-3">
-                                  {item.details.map((detail) => (
+                                  {details.map((detail) => (
                                     <li
                                       key={detail}
                                       className="text-sm leading-6 text-ink-muted dark:text-paper/62"

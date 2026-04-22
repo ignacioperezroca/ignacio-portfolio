@@ -7,19 +7,28 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, SlidersHorizontal } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { caseStudies } from "@/data/portfolio";
+import { useLanguage } from "@/i18n/LanguageContext";
 import { cn } from "@/lib/utils";
 
 export function SelectedWork() {
+  const { copy } = useLanguage();
   const filters = useMemo(
     () => ["All", ...Array.from(new Set(caseStudies.flatMap((study) => study.topics)))],
     []
   );
   const [activeFilter, setActiveFilter] = useState("All");
+  const localizedStudies = caseStudies.map((study, index) => ({
+    ...study,
+    localized: copy.work.cards[index] ?? copy.work.cards[0]
+  }));
 
   const filteredStudies =
     activeFilter === "All"
-      ? caseStudies
-      : caseStudies.filter((study) => study.topics.includes(activeFilter));
+      ? localizedStudies
+      : localizedStudies.filter((study) => study.topics.includes(activeFilter));
+
+  const filterLabelFor = (filter: string) =>
+    copy.work.filters[filter as keyof typeof copy.work.filters] ?? filter;
 
   function handlePointerMove(event: PointerEvent<HTMLElement>) {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -38,15 +47,15 @@ export function SelectedWork() {
       <div className="section-shell">
         <div className="grid gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
           <SectionHeader
-            eyebrow="Selected work"
-            title="Case studies built around product judgment, not screenshots."
-            description="Each case study is structured around context, constraints, strategy, execution, stakeholder management, and impact, with an emphasis on product judgment over surface-level visuals."
+            eyebrow={copy.work.kicker}
+            title={copy.work.title}
+            description={copy.work.intro}
           />
 
           <div className="lg:justify-self-end">
             <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted dark:text-paper/55">
               <SlidersHorizontal className="h-4 w-4" />
-              Filter by theme
+              {copy.work.filterLabel}
             </div>
             <div className="flex flex-wrap gap-2">
               {filters.map((filter) => (
@@ -68,7 +77,7 @@ export function SelectedWork() {
                       transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
                     />
                   ) : null}
-                  <span className="relative">{filter}</span>
+                  <span className="relative">{filterLabelFor(filter)}</span>
                 </button>
               ))}
             </div>
@@ -93,20 +102,20 @@ export function SelectedWork() {
                   <div className={cn("min-h-48 bg-gradient-to-br p-6 transition duration-500 group-hover:scale-[1.015]", study.accentClass)}>
                   <div className="flex items-start justify-between gap-4">
                     <p className="rounded-md bg-white/70 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink shadow-line dark:bg-ink/70 dark:text-paper">
-                      {study.artifact.label}
+                      {study.localized.artifactLabel}
                     </p>
                     <p className="text-right text-sm font-semibold text-ink/70 dark:text-paper/70">
-                      {study.impactMetric}
+                      {study.localized.artifactTitle}
                     </p>
                   </div>
                   <div className="mt-14 grid grid-cols-[1fr_auto_1fr] items-center gap-4 text-ink dark:text-ink">
                     <div className="h-px origin-left scale-x-75 bg-ink/20 transition duration-500 group-hover:scale-x-100" />
                     <div className="rounded-md bg-ink px-4 py-3 text-center text-paper shadow-line transition duration-500 group-hover:-translate-y-1">
                       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/55">
-                        {study.artifact.primary}
+                        {study.localized.artifactTitle}
                       </p>
                       <p className="mt-1 text-sm font-semibold">
-                        {study.artifact.secondary}
+                        {study.localized.artifactMeta}
                       </p>
                     </div>
                     <div className="h-px origin-right scale-x-75 bg-ink/20 transition duration-500 group-hover:scale-x-100" />
@@ -115,7 +124,7 @@ export function SelectedWork() {
 
                 <div className="p-6">
                   <div className="flex flex-wrap gap-2">
-                    {study.topics.map((topic) => (
+                    {study.localized.tags.map((topic) => (
                       <span
                         key={topic}
                         className="rounded-md border border-ink/10 px-2.5 py-1 text-xs font-semibold text-ink-muted dark:border-paper/10 dark:text-paper/55"
@@ -126,17 +135,17 @@ export function SelectedWork() {
                   </div>
 
                   <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-accent-green dark:text-paper-warm">
-                    {study.kicker}
+                    {study.localized.meta}
                   </p>
                   <h3 className="mt-3 text-2xl font-semibold leading-tight text-ink dark:text-paper">
-                    {study.title}
+                    {study.localized.title}
                   </h3>
                   <p className="mt-4 text-sm leading-7 text-ink-muted dark:text-paper/65">
-                    {study.summary}
+                    {study.localized.body}
                   </p>
 
                   <ul className="mt-5 grid gap-3">
-                    {study.previewBullets.map((bullet) => (
+                    {study.localized.bullets.map((bullet) => (
                       <li
                         key={bullet}
                         className="flex gap-3 text-sm leading-6 text-ink-muted dark:text-paper/62"
@@ -148,7 +157,7 @@ export function SelectedWork() {
                   </ul>
 
                   <div className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-ink transition group-hover:gap-3 dark:text-paper">
-                    Read case study
+                    {study.localized.cta}
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </div>

@@ -1,22 +1,26 @@
+"use client";
+
 import { ArrowUpRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeader } from "@/components/SectionHeader";
-import { thoughts } from "@/data/portfolio";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export function Thoughts() {
+  const { copy } = useLanguage();
+
   return (
     <section className="border-y border-ink/10 bg-white/48 py-20 dark:border-paper/10 dark:bg-paper/5 sm:py-28">
       <div className="section-shell">
         <FadeIn>
           <SectionHeader
-            eyebrow={thoughts.sectionTitle}
-            title={thoughts.sectionSubtitle}
-            description={thoughts.sectionIntro}
+            eyebrow={copy.thinking.kicker}
+            title={copy.thinking.title}
+            description={copy.thinking.intro}
           />
         </FadeIn>
 
         <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {thoughts.map((thought, index) => (
+          {copy.thinking.articles.map((thought, index) => (
             <FadeIn key={thought.title} delay={index * 0.05}>
               <article className="group h-full rounded-md border border-ink/10 bg-paper/72 p-5 shadow-line transition hover:-translate-y-1 hover:border-ink/25 dark:border-paper/10 dark:bg-ink/60 dark:hover:border-paper/25">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-green dark:text-paper-warm">

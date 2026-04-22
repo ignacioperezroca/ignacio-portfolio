@@ -2,10 +2,11 @@
 
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { heroMetrics } from "@/data/portfolio";
 import { FadeIn } from "@/components/FadeIn";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export function MetricsStrip() {
+  const { copy } = useLanguage();
   const scrollerRef = useRef<HTMLDivElement>(null);
 
   function scrollByCard(direction: "previous" | "next") {
@@ -33,14 +34,14 @@ export function MetricsStrip() {
       >
       <div className="flex items-center justify-between gap-4 px-3 pb-3 sm:px-4">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-green dark:text-paper-warm">
-          Impact
+          {copy.nav.impact}
         </p>
         <div className="hidden items-center gap-2 sm:flex">
           <button
             type="button"
             onClick={() => scrollByCard("previous")}
             className="focus-ring motion-surface grid h-9 w-9 place-items-center rounded-md border border-ink/10 bg-white/55 text-ink-muted transition hover:border-ink/25 hover:text-ink dark:border-paper/10 dark:bg-paper/5 dark:text-paper/60 dark:hover:border-paper/25 dark:hover:text-paper"
-            aria-label="Previous impact cards"
+            aria-label={copy.ui.previousImpact}
           >
             <ChevronLeft className="h-4 w-4" aria-hidden />
           </button>
@@ -48,7 +49,7 @@ export function MetricsStrip() {
             type="button"
             onClick={() => scrollByCard("next")}
             className="focus-ring motion-surface grid h-9 w-9 place-items-center rounded-md border border-ink/10 bg-white/55 text-ink-muted transition hover:border-ink/25 hover:text-ink dark:border-paper/10 dark:bg-paper/5 dark:text-paper/60 dark:hover:border-paper/25 dark:hover:text-paper"
-            aria-label="Next impact cards"
+            aria-label={copy.ui.nextImpact}
           >
             <ChevronRight className="h-4 w-4" aria-hidden />
           </button>
@@ -59,9 +60,9 @@ export function MetricsStrip() {
         ref={scrollerRef}
         tabIndex={0}
         className="flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth px-3 pb-2 sm:px-4"
-        aria-label="Impact carousel"
+        aria-label={copy.ui.impactCarousel}
       >
-        {heroMetrics.map((metric) => (
+        {copy.heroImpactCards.map((metric) => (
           <article
             key={`${metric.value}-${metric.label}`}
             data-impact-card
@@ -81,7 +82,7 @@ export function MetricsStrip() {
       </div>
 
       <div className="mt-2 flex justify-center gap-1.5 px-3 sm:hidden">
-        {heroMetrics.map((metric) => (
+        {copy.heroImpactCards.map((metric) => (
           <span
             key={`dot-${metric.value}-${metric.label}`}
             className="h-1.5 w-1.5 rounded-full bg-ink/20 dark:bg-paper/25"
