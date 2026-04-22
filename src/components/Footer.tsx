@@ -3,6 +3,8 @@ import { Github, Linkedin, Mail } from "lucide-react";
 import { navItems, personalInfo } from "@/data/portfolio";
 
 export function Footer() {
+  const hrefFor = (href: string) => (href.startsWith("/") ? href : `/${href}`);
+
   return (
     <footer className="border-t border-ink/10 bg-ink py-10 text-paper dark:border-paper/10">
       <div className="section-shell">
@@ -28,7 +30,7 @@ export function Footer() {
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
-                    href={`/${item.href}`}
+                    href={hrefFor(item.href)}
                     className="focus-ring rounded-md text-sm text-paper/65 transition hover:text-paper"
                   >
                     {item.label}

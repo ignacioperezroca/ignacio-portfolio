@@ -70,7 +70,13 @@ export function Navbar() {
     };
   }, [open]);
 
-  const hrefFor = (href: string) => (isHome ? href : `/${href}`);
+  const hrefFor = (href: string) => {
+    if (href.startsWith("/")) {
+      return href;
+    }
+
+    return isHome ? href : `/${href}`;
+  };
 
   return (
     <>

@@ -112,6 +112,7 @@ export const navItems = [
   { label: "Work", href: "#work" },
   { label: "Impact", href: "#impact" },
   { label: "Expertise", href: "#expertise" },
+  { label: "Why companies hire me", href: "/why-companies-hire-me" },
   { label: "Contact", href: "#contact" }
 ];
 
