@@ -1,5 +1,4 @@
 import { About } from "@/components/About";
-import { Achievements } from "@/components/Achievements";
 import { Contact } from "@/components/Contact";
 import { CurrentFocus } from "@/components/CurrentFocus";
 import { Footer } from "@/components/Footer";
@@ -22,7 +21,6 @@ export default function Home() {
         <About />
         <Timeline />
         <SelectedWork />
-        <Achievements />
         <Skills />
         <WorkingStyle />
         {/* Hidden until verified testimonials / logos are available */}

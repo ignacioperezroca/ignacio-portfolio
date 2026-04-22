@@ -116,27 +116,52 @@ export const navItems = [
 
 export const heroMetrics: Metric[] = [
   {
-    value: "16+ yrs",
-    label: "Building digital products",
-    detail: "Across product, UX, and software development."
+    value: "+262%",
+    label: "onboarding conversion",
+    detail:
+      "Improved onboarding conversion from 8% to 29% through experimentation, sharper diagnosis, and cleaner funnel design."
   },
   {
-    value: "12M+ users",
-    label: "Fintech, crypto & identity",
+    value: "60K to 2M",
+    label: "users",
     detail:
-      "Built and scaled onboarding journeys across high-growth platforms."
+      "Supported onboarding and trust infrastructure during one of LatAm crypto’s fastest growth phases."
+  },
+  {
+    value: "2.5M+",
+    label: "user ecosystem",
+    detail:
+      "Leading product strategy for identity, authentication, and trust infrastructure across a large financial ecosystem."
+  },
+  {
+    value: "16+ years",
+    label: "product, UX & software",
+    detail:
+      "Across product, UX, and software development, with unusual leverage between strategy, design, and technical execution."
   },
   {
     value: "7 countries",
     label: "LatAm expansion",
     detail:
-      "Launched onboarding products across Argentina, Brazil, Mexico, Peru, Colombia, Uruguay, and Ecuador."
+      "Experience across onboarding and product delivery in Argentina, Brazil, Mexico, Peru, Colombia, Uruguay, and Ecuador."
   },
   {
-    value: "+262% conversion",
-    label: "Bitso onboarding uplift",
+    value: "Trust-critical",
+    label: "product focus",
     detail:
-      "Improved onboarding conversion from 8% to 29% through experimentation and product optimization."
+      "Specialized in onboarding, KYC, authentication, identity, platform migration, and activation under regulatory and operational constraints."
+  },
+  {
+    value: "Product + UX",
+    label: "technical fluency",
+    detail:
+      "Bridging strategy, user experience, analytics, and implementation across high-complexity digital products."
+  },
+  {
+    value: "Growth",
+    label: "without ignoring trust",
+    detail:
+      "Focused on improving activation and conversion where security, compliance, and confidence are part of the product itself."
   }
 ];
 
@@ -776,45 +801,6 @@ export const caseStudies: CaseStudy[] = [
         "The product should make users feel protected without revealing the system's full defensive logic."
       ]
     }
-  }
-];
-
-export const achievements: Metric[] = [
-  {
-    value: "+262%",
-    label: "onboarding conversion",
-    detail:
-      "Improved onboarding conversion from 8% to 29% through experimentation, sharper diagnosis, and cleaner funnel design."
-  },
-  {
-    value: "60K to 2M",
-    label: "users",
-    detail:
-      "Supported onboarding and trust infrastructure during one of LatAm crypto’s fastest growth phases."
-  },
-  {
-    value: "2.5M+",
-    label: "user ecosystem",
-    detail:
-      "Leading product strategy for identity, authentication, and trust infrastructure across a large financial ecosystem."
-  },
-  {
-    value: "16+",
-    label: "years",
-    detail:
-      "Across product, UX, and software development, with unusual leverage between strategy, design, and technical execution."
-  },
-  {
-    value: "7",
-    label: "countries",
-    detail:
-      "Experience across onboarding and product delivery in Argentina, Brazil, Mexico, Peru, Colombia, Uruguay, and Ecuador."
-  },
-  {
-    value: "Trust-critical",
-    label: "product focus",
-    detail:
-      "Specialized in onboarding, KYC, authentication, identity, platform migration, and activation under regulatory and operational constraints."
   }
 ];
 
