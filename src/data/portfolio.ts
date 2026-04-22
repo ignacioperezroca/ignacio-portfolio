@@ -111,7 +111,6 @@ export const navItems = [
   { label: "Work", href: "#work" },
   { label: "Impact", href: "#impact" },
   { label: "Expertise", href: "#expertise" },
-  { label: "Why companies hire me", href: "/why-companies-hire-me" },
   { label: "Contact", href: "#contact" }
 ];
 
@@ -145,7 +144,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Itti",
     logoText: "ITTI",
-    logoSrc: "/logos/unid.svg",
+    logoSrc: "https://www.itti.digital/wp-content/uploads/2022/08/itti_logo.svg",
     logoAlt: "Itti logo",
     detailTitle: "Current scope",
     role: "Product Lead for UNID",
@@ -170,7 +169,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Bitso",
     logoText: "BIT",
-    logoSrc: "/logos/bitso.svg",
+    logoSrc: "https://bitso.com/__next/_next/static/media/bitso.b09b228b.svg",
     logoAlt: "Bitso logo",
     role: "Product Manager - Onboarding | CSPO",
     dates: "Oct 2022 - 2024",
@@ -192,7 +191,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Lemon Cash",
     logoText: "LEM",
-    logoSrc: "/logos/lemon-cash.svg",
+    logoSrc: "https://framerusercontent.com/assets/Rd3Vepv2BCGVA2ynwKixOHHA0.png",
     logoAlt: "Lemon Cash logo",
     role: "Product Manager - Acquisition | CSPO",
     dates: "Oct 2021 - Oct 2022",
@@ -214,7 +213,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Personal Pay",
     logoText: "PAY",
-    logoSrc: "/logos/personal-pay.svg",
+    logoSrc: "https://www.personal.com.ar/content/dam/teco-cms-ecosystem/componentes-cross/vidrieras/iso-pay.svg",
     logoAlt: "Personal Pay logo",
     role: "Product Manager",
     dates: "Jul 2020 - Oct 2021",
@@ -258,7 +257,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Ripio",
     logoText: "RIP",
-    logoSrc: "/logos/ripio.svg",
+    logoSrc: "https://cdn.prod.website-files.com/5f17344acf2c6d3c3a1d6238/68223e2a6a651095b0183f04_Logo%20Nav.svg",
     logoAlt: "Ripio logo",
     role: "Product Owner - Credit Crypto Product",
     dates: "Sep 2017 - Jul 2019",
@@ -280,7 +279,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Personal - Telecom",
     logoText: "TEL",
-    logoSrc: "/logos/personal-telecom.svg",
+    logoSrc: "https://www.personal.com.ar/content/dam/teco-cms-ecosystem/componentes-cross/header/logo-personal-brand-new.svg",
     logoAlt: "Personal Telecom logo",
     role: "Designer & Frontend Developer",
     dates: "Mar 2015 - Sep 2017",

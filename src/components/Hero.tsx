@@ -34,10 +34,6 @@ export function Hero() {
               <Download className="h-4 w-4" aria-hidden />
               Download resume
             </ButtonLink>
-            <ButtonLink href="/why-companies-hire-me" variant="secondary">
-              Why companies hire me
-              <ArrowRight className="h-4 w-4" aria-hidden />
-            </ButtonLink>
             <ButtonLink href="#contact" variant="ghost">
               <Mail className="h-4 w-4" aria-hidden />
               Let’s talk
