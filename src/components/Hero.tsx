@@ -35,7 +35,7 @@ export function Hero() {
           </FadeIn>
 
           <FadeIn delay={0.1} className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
-            <ButtonLink href="#work">
+            <ButtonLink href="/work">
               {copy.hero.primaryCta}
               <ArrowRight className="h-4 w-4" aria-hidden />
             </ButtonLink>
@@ -43,7 +43,7 @@ export function Hero() {
               <Download className="h-4 w-4" aria-hidden />
               {copy.hero.secondaryCta}
             </ButtonLink>
-            <ButtonLink href="#contact" variant="ghost">
+            <ButtonLink href="/contact" variant="ghost">
               <Mail className="h-4 w-4" aria-hidden />
               {copy.hero.contactCta}
             </ButtonLink>

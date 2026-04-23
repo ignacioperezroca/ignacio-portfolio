@@ -106,12 +106,13 @@ export const personalInfo = {
 };
 
 export const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Timeline", href: "#timeline" },
-  { label: "Work", href: "#work" },
-  { label: "Impact", href: "#impact" },
-  { label: "Expertise", href: "#expertise" },
-  { label: "Contact", href: "#contact" }
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Experience", href: "/experience" },
+  { label: "Work", href: "/work" },
+  { label: "Expertise", href: "/expertise" },
+  { label: "Writing", href: "/writing" },
+  { label: "Contact", href: "/contact" }
 ];
 
 export const heroMetrics: Metric[] = [

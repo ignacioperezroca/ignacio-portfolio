@@ -3,11 +3,13 @@ export type Language = "en" | "es";
 export const siteCopy = {
   en: {
     nav: {
+      home: "Home",
       about: "About",
-      timeline: "Timeline",
+      experience: "Experience",
       work: "Work",
       impact: "Impact",
       expertise: "Expertise",
+      writing: "Writing",
       contact: "Contact",
       letsTalk: "Let’s talk",
       downloadResume: "Download resume"
@@ -453,16 +455,23 @@ export const siteCopy = {
       email: "Email",
       previousImpact: "Previous impact cards",
       nextImpact: "Next impact cards",
-      impactCarousel: "Impact carousel"
+      impactCarousel: "Impact carousel",
+      viewFullAbout: "Read the full story",
+      viewFullExperience: "See full experience",
+      viewAllWork: "View all selected work",
+      viewAllExpertise: "Explore expertise",
+      viewAllWriting: "View writing hub"
     }
   },
   es: {
     nav: {
+      home: "Inicio",
       about: "Sobre mí",
-      timeline: "Trayectoria",
+      experience: "Experiencia",
       work: "Casos",
       impact: "Impacto",
       expertise: "Expertise",
+      writing: "Escritura",
       contact: "Contacto",
       letsTalk: "Hablemos",
       downloadResume: "Descargar CV"
@@ -908,7 +917,12 @@ export const siteCopy = {
       email: "Email",
       previousImpact: "Tarjetas de impacto anteriores",
       nextImpact: "Tarjetas de impacto siguientes",
-      impactCarousel: "Carrusel de impacto"
+      impactCarousel: "Carrusel de impacto",
+      viewFullAbout: "Leer la historia completa",
+      viewFullExperience: "Ver experiencia completa",
+      viewAllWork: "Ver todos los casos",
+      viewAllExpertise: "Explorar expertise",
+      viewAllWriting: "Ver hub de escritura"
     }
   }
 } as const;

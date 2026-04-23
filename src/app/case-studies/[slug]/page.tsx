@@ -72,7 +72,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         <section className="border-b border-ink/10 bg-white/48 py-14 dark:border-paper/10 dark:bg-paper/5 sm:py-20">
           <div className="section-shell">
             <Link
-              href="/#work"
+              href="/work"
               className="focus-ring inline-flex items-center gap-2 rounded-md text-sm font-semibold text-ink-muted transition hover:text-ink dark:text-paper/60 dark:hover:text-paper"
             >
               <ArrowLeft className="h-4 w-4" aria-hidden />

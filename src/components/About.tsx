@@ -5,8 +5,9 @@ import { FadeIn } from "@/components/FadeIn";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-export function About() {
+export function About({ preview = false }: { preview?: boolean }) {
   const { copy } = useLanguage();
+  const cards = preview ? copy.about.cards.slice(0, 2) : copy.about.cards;
 
   return (
     <section className="py-20 sm:py-28" id="about">
@@ -34,14 +35,16 @@ export function About() {
             </p>
           </FadeIn>
 
-          <FadeIn delay={0.18}>
-            <p className="text-base leading-8 text-ink-muted dark:text-paper/70">
-              {copy.about.p3}
-            </p>
-          </FadeIn>
+          {!preview ? (
+            <FadeIn delay={0.18}>
+              <p className="text-base leading-8 text-ink-muted dark:text-paper/70">
+                {copy.about.p3}
+              </p>
+            </FadeIn>
+          ) : null}
 
-          <div className="grid gap-4 md:grid-cols-3">
-            {copy.about.cards.map((point, index) => (
+          <div className="grid gap-4 md:grid-cols-2">
+            {cards.map((point, index) => (
               <FadeIn key={point.title} delay={0.15 + index * 0.05}>
                 <article className="h-full rounded-md border border-ink/10 bg-white/62 p-5 shadow-line transition hover:-translate-y-1 hover:border-ink/20 dark:border-paper/10 dark:bg-paper/5 dark:hover:border-paper/25">
                   <CheckCircle2 className="mb-5 h-5 w-5 text-accent-green dark:text-paper-warm" />
@@ -58,10 +61,10 @@ export function About() {
 
           <FadeIn delay={0.32}>
             <a
-              href="#work"
+              href={preview ? "/about" : "/work"}
               className="focus-ring group inline-flex items-center gap-2 rounded-md text-sm font-semibold text-ink underline decoration-ink/20 underline-offset-4 transition hover:decoration-ink dark:text-paper dark:decoration-paper/25 dark:hover:decoration-paper"
             >
-              {copy.about.cta}
+              {preview ? copy.ui.viewFullAbout : copy.about.cta}
               <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
           </FadeIn>
