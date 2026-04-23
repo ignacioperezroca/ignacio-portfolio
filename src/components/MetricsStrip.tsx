@@ -1,14 +1,19 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-export function MetricsStrip() {
+export function MetricsStrip({ previewLimit }: { previewLimit?: number }) {
   const { copy } = useLanguage();
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const [expanded, setExpanded] = useState(false);
+  const isPreview = typeof previewLimit === "number" && !expanded;
+  const metrics = isPreview
+    ? copy.heroImpactCards.slice(0, previewLimit)
+    : copy.heroImpactCards;
 
   function scrollByCard(direction: "previous" | "next") {
     const scroller = scrollerRef.current;
@@ -68,7 +73,7 @@ export function MetricsStrip() {
             className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-3"
             aria-label={copy.ui.impactCarousel}
           >
-            {copy.heroImpactCards.map((metric, index) => (
+            {metrics.map((metric, index) => (
               <article
                 key={`${metric.value}-${metric.label}`}
                 data-impact-card
@@ -99,7 +104,7 @@ export function MetricsStrip() {
         </div>
 
         <div className="mt-5 flex justify-center gap-1.5 lg:hidden">
-          {copy.heroImpactCards.map((metric) => (
+          {metrics.map((metric) => (
           <span
             key={`dot-${metric.value}-${metric.label}`}
             className="h-1.5 w-1.5 rounded-full bg-ink/20 dark:bg-paper/25"
@@ -107,6 +112,18 @@ export function MetricsStrip() {
           />
           ))}
         </div>
+        {isPreview ? (
+          <div className="mt-8">
+            <button
+              type="button"
+              onClick={() => setExpanded(true)}
+              className="focus-ring motion-surface inline-flex items-center gap-2 rounded-md border border-ink/10 bg-paper/72 px-4 py-3 text-sm font-semibold text-ink shadow-line transition hover:border-ink/25 hover:bg-white dark:border-paper/10 dark:bg-ink/60 dark:text-paper dark:hover:border-paper/25"
+            >
+              {copy.ui.viewAll}
+              <ChevronRight className="h-4 w-4" aria-hidden />
+            </button>
+          </div>
+        ) : null}
       </div>
     </section>
   );

@@ -10,13 +10,15 @@ import { caseStudies } from "@/data/portfolio";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { cn } from "@/lib/utils";
 
-export function SelectedWork() {
+export function SelectedWork({ previewLimit }: { previewLimit?: number }) {
   const { copy } = useLanguage();
   const filters = useMemo(
     () => ["All", ...Array.from(new Set(caseStudies.flatMap((study) => study.topics)))],
     []
   );
   const [activeFilter, setActiveFilter] = useState("All");
+  const [expanded, setExpanded] = useState(false);
+  const isPreview = typeof previewLimit === "number" && !expanded;
   const localizedStudies = caseStudies.map((study, index) => ({
     ...study,
     localized: copy.work.cards[index] ?? copy.work.cards[0]
@@ -26,6 +28,7 @@ export function SelectedWork() {
     activeFilter === "All"
       ? localizedStudies
       : localizedStudies.filter((study) => study.topics.includes(activeFilter));
+  const visibleStudies = isPreview ? filteredStudies.slice(0, previewLimit) : filteredStudies;
 
   const filterLabelFor = (filter: string) =>
     copy.work.filters[filter as keyof typeof copy.work.filters] ?? filter;
@@ -52,6 +55,7 @@ export function SelectedWork() {
             description={copy.work.intro}
           />
 
+          {!isPreview ? (
           <div className="lg:justify-self-end">
             <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted dark:text-paper/55">
               <SlidersHorizontal className="h-4 w-4" />
@@ -82,11 +86,23 @@ export function SelectedWork() {
               ))}
             </div>
           </div>
+          ) : (
+            <div className="lg:justify-self-end">
+              <button
+                type="button"
+                onClick={() => setExpanded(true)}
+                className="focus-ring motion-surface inline-flex items-center gap-2 rounded-md border border-ink/10 bg-white/62 px-4 py-3 text-sm font-semibold text-ink shadow-line transition hover:border-ink/25 hover:bg-white dark:border-paper/10 dark:bg-paper/5 dark:text-paper dark:hover:border-paper/25"
+              >
+                {copy.ui.viewAll}
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </button>
+            </div>
+          )}
         </div>
 
         <motion.div layout className="mt-12 grid gap-5 lg:grid-cols-2">
           <AnimatePresence mode="popLayout">
-            {filteredStudies.map((study, index) => (
+            {visibleStudies.map((study, index) => (
               <motion.article
                 key={study.slug}
                 layout

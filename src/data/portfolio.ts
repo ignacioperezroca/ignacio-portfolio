@@ -901,7 +901,7 @@ export const thoughts = Object.assign(
       date: "Jan 8, 2021",
       readTime: "5 min read",
       cta: "Read on Medium",
-      url: "https://medium.com/@ignacio-perezroca"
+      url: "https://ignacio-perezroca.medium.com"
     },
     {
       label: "Published article",
@@ -911,7 +911,7 @@ export const thoughts = Object.assign(
       date: "Apr 10, 2026",
       readTime: "3 min read",
       cta: "Read on Medium",
-      url: "https://medium.com/@ignacio-perezroca"
+      url: "https://ignacio-perezroca.medium.com"
     },
     {
       label: "Published article",
@@ -921,7 +921,7 @@ export const thoughts = Object.assign(
       date: "Jul 26, 2024",
       readTime: "5 min read",
       cta: "Read on Medium",
-      url: "https://medium.com/@ignacio-perezroca"
+      url: "https://ignacio-perezroca.medium.com"
     },
     {
       label: "Published article",
@@ -931,7 +931,7 @@ export const thoughts = Object.assign(
       date: "Jul 5, 2024",
       readTime: "3 min read",
       cta: "Read on Medium",
-      url: "https://medium.com/@ignacio-perezroca"
+      url: "https://ignacio-perezroca.medium.com"
     },
     {
       label: "Published article",
@@ -941,7 +941,7 @@ export const thoughts = Object.assign(
       date: "Aug 16, 2021",
       readTime: "2 min read",
       cta: "Read on Medium",
-      url: "https://medium.com/@ignacio-perezroca"
+      url: "https://ignacio-perezroca.medium.com"
     }
   ],
   {
@@ -954,7 +954,7 @@ export const thoughts = Object.assign(
       title: "Explore more writing",
       copy: "More essays, ideas, and product reflections available on Medium.",
       buttonLabel: "View Medium profile",
-      buttonUrl: "https://medium.com/@ignacio-perezroca"
+      buttonUrl: "https://ignacio-perezroca.medium.com"
     }
   }
 );

@@ -76,24 +76,25 @@ export const siteCopy = {
       }
     ],
     about: {
-      kicker: "About / positioning",
-      title: "Product leadership for identity, onboarding, and trust-critical systems",
-      intro: "I work at the intersection of product strategy, UX, technical systems, and regulated user journeys.",
-      p1: "My edge is not just shipping features. It is helping teams make better product decisions when growth, trust, compliance, risk, and technical constraints all matter at the same time.",
-      p2: "I’m most useful in environments where the funnel is leaking but the reason is unclear, where identity or security requirements create friction, or where a platform decision needs to improve the user experience instead of just adding complexity underneath it.",
-      p3: "My background across design, frontend, analytics, onboarding, KYC, authentication, and platform work lets me connect the layers that often stay fragmented across teams: user trust, business outcomes, product clarity, technical feasibility, and operational reality.",
+      kicker: "About",
+      title: "Product Manager specialized in identity, onboarding, and trust-critical growth",
+      intro: "I’m a Product Manager with 16+ years of experience building human-first, scalable onboarding journeys across fintech, crypto, and digital platforms.",
+      p1: "I specialize in digital identity, KYC, authentication, and product-led growth, with a strong focus on turning trust-critical flows into clear, high-conversion experiences. Over the years, I’ve led international teams across Argentina, Brazil, Mexico, Paraguay, and Colombia, helping scale products used by millions of users across LatAm.",
+      p2: "Some of the outcomes I’m most proud of include scaling Lemon from 60k to 2M users in 6 months, launching Lemon in Brazil, improving Bitso’s onboarding conversion by +262%, and currently leading UNID at ITTI, the identity and onboarding infrastructure unifying ~3M users across a large financial ecosystem.",
+      p3: "What makes my profile different is the combination of product strategy, UX thinking, and technical depth. My background in design and frontend development helps me connect business goals, user needs, and implementation realities, turning metrics into product experiences that improve acquisition, activation, retention, and long-term trust.",
+      p4: "I use data to surface real problems and opportunities, but I care just as much about clarity, usability, and the emotional side of product experience. My mission is to build trust, empower teams, and deliver products people genuinely love.",
       cards: [
         {
-          title: "Product judgment with technical fluency",
-          body: "I can frame the bet, pressure-test the UX, and reason through technical consequences before the team commits."
+          title: "Identity, onboarding, and KYC",
+          body: "Deep experience designing and scaling trust-critical user journeys where compliance, security, and conversion have to work together."
         },
         {
-          title: "Growth where trust is part of the metric",
-          body: "I improve activation and conversion in environments where user quality, compliance, and confidence cannot be treated as secondary concerns."
+          title: "Growth with technical credibility",
+          body: "A profile shaped by product, design, and frontend development, able to bridge strategy, UX, analytics, and implementation."
         },
         {
-          title: "Identity systems made legible",
-          body: "KYC, authentication, recovery, and access are complex systems. I make them clearer for users and more operable for teams."
+          title: "Proven scale across LatAm",
+          body: "Experience leading teams and shipping products across multiple markets, industries, and growth stages, from early build to mass adoption."
         }
       ],
       cta: "View selected work"
@@ -370,7 +371,7 @@ export const siteCopy = {
         title: "Explore more writing",
         copy: "More essays, ideas, and product reflections available on Medium.",
         buttonLabel: "View Medium profile",
-        buttonUrl: "https://medium.com/@ignacio-perezroca"
+        buttonUrl: "https://ignacio-perezroca.medium.com"
       },
       articles: [
         {
@@ -380,7 +381,7 @@ export const siteCopy = {
           date: "Jan 8, 2021",
           readTime: "5 min read",
           cta: "Read on Medium",
-          url: "https://medium.com/@ignacio-perezroca"
+          url: "https://ignacio-perezroca.medium.com"
         },
         {
           label: "Published article",
@@ -389,7 +390,7 @@ export const siteCopy = {
           date: "Apr 10, 2026",
           readTime: "3 min read",
           cta: "Read on Medium",
-          url: "https://medium.com/@ignacio-perezroca"
+          url: "https://ignacio-perezroca.medium.com"
         },
         {
           label: "Published article",
@@ -398,7 +399,7 @@ export const siteCopy = {
           date: "Jul 26, 2024",
           readTime: "5 min read",
           cta: "Read on Medium",
-          url: "https://medium.com/@ignacio-perezroca"
+          url: "https://ignacio-perezroca.medium.com"
         },
         {
           label: "Published article",
@@ -407,7 +408,7 @@ export const siteCopy = {
           date: "Jul 5, 2024",
           readTime: "3 min read",
           cta: "Read on Medium",
-          url: "https://medium.com/@ignacio-perezroca"
+          url: "https://ignacio-perezroca.medium.com"
         },
         {
           label: "Published article",
@@ -416,7 +417,7 @@ export const siteCopy = {
           date: "Aug 16, 2021",
           readTime: "2 min read",
           cta: "Read on Medium",
-          url: "https://medium.com/@ignacio-perezroca"
+          url: "https://ignacio-perezroca.medium.com"
         }
       ]
     },
@@ -453,7 +454,12 @@ export const siteCopy = {
       email: "Email",
       previousImpact: "Previous impact cards",
       nextImpact: "Next impact cards",
-      impactCarousel: "Impact carousel"
+      impactCarousel: "Impact carousel",
+      viewAll: "View all",
+      readFullStory: "Read the full story",
+      seeFullExperience: "See full experience",
+      exploreExpertise: "Explore expertise",
+      viewWritingHub: "View writing hub"
     }
   },
   es: {
@@ -825,7 +831,7 @@ export const siteCopy = {
         title: "Explorar más escritura",
         copy: "Más ensayos, ideas y reflexiones de producto disponibles en Medium.",
         buttonLabel: "Ver perfil de Medium",
-        buttonUrl: "https://medium.com/@ignacio-perezroca"
+        buttonUrl: "https://ignacio-perezroca.medium.com"
       },
       articles: [
         {
@@ -835,7 +841,7 @@ export const siteCopy = {
           date: "8 ene 2021",
           readTime: "5 min de lectura",
           cta: "Leer en Medium",
-          url: "https://medium.com/@ignacio-perezroca"
+          url: "https://ignacio-perezroca.medium.com"
         },
         {
           label: "Artículo publicado",
@@ -844,7 +850,7 @@ export const siteCopy = {
           date: "10 abr 2026",
           readTime: "3 min de lectura",
           cta: "Leer en Medium",
-          url: "https://medium.com/@ignacio-perezroca"
+          url: "https://ignacio-perezroca.medium.com"
         },
         {
           label: "Artículo publicado",
@@ -853,7 +859,7 @@ export const siteCopy = {
           date: "26 jul 2024",
           readTime: "5 min de lectura",
           cta: "Leer en Medium",
-          url: "https://medium.com/@ignacio-perezroca"
+          url: "https://ignacio-perezroca.medium.com"
         },
         {
           label: "Artículo publicado",
@@ -862,7 +868,7 @@ export const siteCopy = {
           date: "5 jul 2024",
           readTime: "3 min de lectura",
           cta: "Leer en Medium",
-          url: "https://medium.com/@ignacio-perezroca"
+          url: "https://ignacio-perezroca.medium.com"
         },
         {
           label: "Artículo publicado",
@@ -871,7 +877,7 @@ export const siteCopy = {
           date: "16 ago 2021",
           readTime: "2 min de lectura",
           cta: "Leer en Medium",
-          url: "https://medium.com/@ignacio-perezroca"
+          url: "https://ignacio-perezroca.medium.com"
         }
       ]
     },
@@ -908,7 +914,12 @@ export const siteCopy = {
       email: "Email",
       previousImpact: "Tarjetas de impacto anteriores",
       nextImpact: "Tarjetas de impacto siguientes",
-      impactCarousel: "Carrusel de impacto"
+      impactCarousel: "Carrusel de impacto",
+      viewAll: "Ver todo",
+      readFullStory: "Leer la historia completa",
+      seeFullExperience: "Ver experiencia completa",
+      exploreExpertise: "Explorar expertise",
+      viewWritingHub: "Ver hub de escritura"
     }
   }
 } as const;

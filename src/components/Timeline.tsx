@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, TrendingUp } from "lucide-react";
+import { ArrowRight, ChevronDown, TrendingUp } from "lucide-react";
 import { SectionHeader } from "@/components/SectionHeader";
 import { timelineRoles, type TimelineRole } from "@/data/portfolio";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -51,9 +51,12 @@ function CompanyLogo({
   );
 }
 
-export function Timeline() {
+export function Timeline({ previewLimit }: { previewLimit?: number }) {
   const { copy } = useLanguage();
   const [openIndex, setOpenIndex] = useState(0);
+  const [expanded, setExpanded] = useState(false);
+  const isPreview = typeof previewLimit === "number" && !expanded;
+  const visibleRoles = isPreview ? timelineRoles.slice(0, previewLimit) : timelineRoles;
 
   return (
     <section className="border-y border-ink/10 bg-white/48 py-20 dark:border-paper/10 dark:bg-paper/5 sm:py-28" id="timeline">
@@ -74,7 +77,7 @@ export function Timeline() {
           <div className="relative">
             <div className="absolute bottom-0 left-[31px] top-0 hidden w-px bg-gradient-to-b from-accent-green via-ink/15 to-accent-blue dark:via-paper/20 md:block" />
             <div className="grid gap-5">
-              {timelineRoles.map((item, index) => {
+              {visibleRoles.map((item, index) => {
                 const isOpen = openIndex === index;
                 const localized = copy.timeline.items[index];
                 const impacts = "impact" in localized ? localized.impact : item.impacts;
@@ -199,6 +202,18 @@ export function Timeline() {
                 );
               })}
             </div>
+            {isPreview ? (
+              <div className="mt-8 md:pl-20">
+                <button
+                  type="button"
+                  onClick={() => setExpanded(true)}
+                  className="focus-ring motion-surface inline-flex items-center gap-2 rounded-md border border-ink/10 bg-paper/72 px-4 py-3 text-sm font-semibold text-ink shadow-line transition hover:border-ink/25 hover:bg-white dark:border-paper/10 dark:bg-ink/60 dark:text-paper dark:hover:border-paper/25"
+                >
+                  {copy.ui.seeFullExperience}
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </button>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

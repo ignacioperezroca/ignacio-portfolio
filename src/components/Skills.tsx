@@ -1,12 +1,19 @@
 "use client";
 
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 import { skillCategories } from "@/data/portfolio";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-export function Skills() {
+export function Skills({ previewLimit }: { previewLimit?: number }) {
   const { copy } = useLanguage();
+  const [expanded, setExpanded] = useState(false);
+  const isPreview = typeof previewLimit === "number" && !expanded;
+  const visibleCategories = isPreview
+    ? skillCategories.slice(0, previewLimit)
+    : skillCategories;
 
   return (
     <section className="py-20 sm:py-28" id="expertise">
@@ -20,7 +27,7 @@ export function Skills() {
         </FadeIn>
 
         <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {skillCategories.map((category, index) => {
+          {visibleCategories.map((category, index) => {
             const localized = copy.expertise.groups[index] ?? copy.expertise.groups[0];
 
             return (
@@ -48,6 +55,18 @@ export function Skills() {
           );
           })}
         </div>
+        {isPreview ? (
+          <div className="mt-10">
+            <button
+              type="button"
+              onClick={() => setExpanded(true)}
+              className="focus-ring motion-surface inline-flex items-center gap-2 rounded-md border border-ink/10 bg-white/62 px-4 py-3 text-sm font-semibold text-ink shadow-line transition hover:border-ink/25 hover:bg-white dark:border-paper/10 dark:bg-paper/5 dark:text-paper dark:hover:border-paper/25"
+            >
+              {copy.ui.exploreExpertise}
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </button>
+          </div>
+        ) : null}
       </div>
     </section>
   );

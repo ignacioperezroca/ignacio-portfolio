@@ -1,11 +1,18 @@
 "use client";
 
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-export function WorkingStyle() {
+export function WorkingStyle({ previewLimit }: { previewLimit?: number }) {
   const { copy } = useLanguage();
+  const [expanded, setExpanded] = useState(false);
+  const isPreview = typeof previewLimit === "number" && !expanded;
+  const principles = isPreview
+    ? copy.operate.principles.slice(0, previewLimit)
+    : copy.operate.principles;
 
   return (
     <section className="border-y border-ink/10 bg-white/48 py-20 dark:border-paper/10 dark:bg-paper/5 sm:py-28">
@@ -43,7 +50,7 @@ export function WorkingStyle() {
           </FadeIn>
 
           <div className="grid gap-4 md:grid-cols-2">
-            {copy.operate.principles.map((principle, index) => (
+            {principles.map((principle, index) => (
               <FadeIn key={principle.title} delay={0.05 + index * 0.05}>
                 <article className="h-full rounded-md border border-ink/10 bg-white/68 p-5 shadow-line dark:border-paper/10 dark:bg-paper/5">
                   <h3 className="text-lg font-semibold text-ink dark:text-paper">
@@ -56,6 +63,18 @@ export function WorkingStyle() {
               </FadeIn>
             ))}
           </div>
+          {isPreview ? (
+            <FadeIn delay={0.18}>
+              <button
+                type="button"
+                onClick={() => setExpanded(true)}
+                className="focus-ring motion-surface inline-flex items-center gap-2 rounded-md border border-ink/10 bg-white/62 px-4 py-3 text-sm font-semibold text-ink shadow-line transition hover:border-ink/25 hover:bg-white dark:border-paper/10 dark:bg-paper/5 dark:text-paper dark:hover:border-paper/25"
+              >
+                {copy.ui.viewAll}
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </button>
+            </FadeIn>
+          ) : null}
         </div>
       </div>
     </section>

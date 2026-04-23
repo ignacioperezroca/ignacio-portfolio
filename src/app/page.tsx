@@ -9,7 +9,6 @@ import { Skills } from "@/components/Skills";
 import { SocialProof } from "@/components/SocialProof";
 import { Thoughts } from "@/components/Thoughts";
 import { Timeline } from "@/components/Timeline";
-import { WorkingStyle } from "@/components/WorkingStyle";
 
 export default function Home() {
   return (
@@ -17,15 +16,14 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Timeline />
-        <SelectedWork />
         <MetricsStrip />
-        <Skills />
-        <WorkingStyle />
+        <About preview />
+        <SelectedWork previewLimit={3} />
+        <Timeline previewLimit={3} />
+        <Skills previewLimit={4} />
         {/* Hidden until verified testimonials / logos are available */}
         <SocialProof />
-        <Thoughts />
+        <Thoughts previewLimit={3} />
         <Contact />
       </main>
       <Footer />
