@@ -172,7 +172,7 @@ export const timelineRoles: TimelineRole[] = [
     logoSrc: "https://www.itti.digital/wp-content/uploads/2022/08/itti_logo.svg",
     logoAlt: "Itti logo",
     detailTitle: "Current scope",
-    role: "Product Lead for UNID",
+    role: "Senior Product Manager",
     dates: "2024 - Present",
     mission:
       "Centralizing authentication and identity for Paraguay's largest financial ecosystem.",
@@ -194,9 +194,9 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Bitso",
     logoText: "BIT",
-    logoSrc: "https://bitso.com/__next/_next/static/media/bitso.b09b228b.svg",
+    logoSrc: "/logos/bitso.svg",
     logoAlt: "Bitso logo",
-    role: "Product Manager - Onboarding | CSPO",
+    role: "Product Manager - Onboarding",
     dates: "Oct 2022 - 2024",
     mission:
       "Redesign crypto onboarding and acquisition flows across a large exchange user base.",
@@ -218,7 +218,7 @@ export const timelineRoles: TimelineRole[] = [
     logoText: "LEM",
     logoSrc: "https://framerusercontent.com/assets/Rd3Vepv2BCGVA2ynwKixOHHA0.png",
     logoAlt: "Lemon Cash logo",
-    role: "Product Manager - Acquisition | CSPO",
+    role: "Product Manager - Acquisition",
     dates: "Oct 2021 - Oct 2022",
     mission:
       "Scale onboarding infrastructure during one of LATAM crypto's fastest growth moments.",
@@ -901,7 +901,7 @@ export const thoughts = Object.assign(
       date: "Jan 8, 2021",
       readTime: "5 min read",
       cta: "Read on Medium",
-      url: "https://ignacio-perezroca.medium.com"
+      directUrl: "https://ignacio-perezroca.medium.com/how-to-make-an-onboarding-and-dont-die-trying-9a02b725b92b"
     },
     {
       label: "Published article",
@@ -911,7 +911,7 @@ export const thoughts = Object.assign(
       date: "Apr 10, 2026",
       readTime: "3 min read",
       cta: "Read on Medium",
-      url: "https://ignacio-perezroca.medium.com"
+      directUrl: "https://ignacio-perezroca.medium.com/i-almost-got-scammed-during-a-job-interview-process-52352d3b80ac"
     },
     {
       label: "Published article",
@@ -921,7 +921,7 @@ export const thoughts = Object.assign(
       date: "Jul 26, 2024",
       readTime: "5 min read",
       cta: "Read on Medium",
-      url: "https://ignacio-perezroca.medium.com"
+      directUrl: "https://ignacio-perezroca.medium.com/mastering-the-product-life-cycle-7b2ca5265868"
     },
     {
       label: "Published article",
@@ -931,7 +931,7 @@ export const thoughts = Object.assign(
       date: "Jul 5, 2024",
       readTime: "3 min read",
       cta: "Read on Medium",
-      url: "https://ignacio-perezroca.medium.com"
+      directUrl: "https://ignacio-perezroca.medium.com/employees-onboarding-hidden-secrets-of-step-0-b81ce000ab95"
     },
     {
       label: "Published article",
@@ -941,7 +941,7 @@ export const thoughts = Object.assign(
       date: "Aug 16, 2021",
       readTime: "2 min read",
       cta: "Read on Medium",
-      url: "https://ignacio-perezroca.medium.com"
+      directUrl: "https://ignacio-perezroca.medium.com/how-to-track-your-events-and-dont-die-trying-3a0809efd075"
     }
   ],
   {

@@ -110,7 +110,7 @@ export const siteCopy = {
         {
           period: "2024 - Present",
           badge: "Identity platform",
-          role: "Product Lead for UNID",
+          role: "Senior Product Manager",
           company: "Itti",
           summary: "Centralizing authentication and identity for Paraguay's largest financial ecosystem.",
           tags: ["Unified identity", "authentication", "KYC", "platform strategy"],
@@ -132,7 +132,7 @@ export const siteCopy = {
         {
           period: "Oct 2022 - 2024",
           badge: "Conversion at scale",
-          role: "Product Manager - Onboarding | CSPO",
+          role: "Product Manager - Onboarding",
           company: "Bitso",
           summary: "Redesign crypto onboarding and acquisition flows across a large exchange user base.",
           tags: ["Onboarding", "acquisition", "activation", "experimentation"]
@@ -140,7 +140,7 @@ export const siteCopy = {
         {
           period: "Oct 2021 - Oct 2022",
           badge: "Hyper-growth crypto",
-          role: "Product Manager - Acquisition | CSPO",
+          role: "Product Manager - Acquisition",
           company: "Lemon Cash",
           summary: "Scale onboarding infrastructure during one of LATAM crypto's fastest growth moments.",
           tags: ["Crypto", "onboarding", "regional launches", "KYC", "activation"]
@@ -381,7 +381,7 @@ export const siteCopy = {
           date: "Jan 8, 2021",
           readTime: "5 min read",
           cta: "Read on Medium",
-          url: "https://ignacio-perezroca.medium.com"
+          directUrl: "https://ignacio-perezroca.medium.com/how-to-make-an-onboarding-and-dont-die-trying-9a02b725b92b"
         },
         {
           label: "Published article",
@@ -390,7 +390,7 @@ export const siteCopy = {
           date: "Apr 10, 2026",
           readTime: "3 min read",
           cta: "Read on Medium",
-          url: "https://ignacio-perezroca.medium.com"
+          directUrl: "https://ignacio-perezroca.medium.com/i-almost-got-scammed-during-a-job-interview-process-52352d3b80ac"
         },
         {
           label: "Published article",
@@ -399,7 +399,7 @@ export const siteCopy = {
           date: "Jul 26, 2024",
           readTime: "5 min read",
           cta: "Read on Medium",
-          url: "https://ignacio-perezroca.medium.com"
+          directUrl: "https://ignacio-perezroca.medium.com/mastering-the-product-life-cycle-7b2ca5265868"
         },
         {
           label: "Published article",
@@ -408,7 +408,7 @@ export const siteCopy = {
           date: "Jul 5, 2024",
           readTime: "3 min read",
           cta: "Read on Medium",
-          url: "https://ignacio-perezroca.medium.com"
+          directUrl: "https://ignacio-perezroca.medium.com/employees-onboarding-hidden-secrets-of-step-0-b81ce000ab95"
         },
         {
           label: "Published article",
@@ -417,7 +417,7 @@ export const siteCopy = {
           date: "Aug 16, 2021",
           readTime: "2 min read",
           cta: "Read on Medium",
-          url: "https://ignacio-perezroca.medium.com"
+          directUrl: "https://ignacio-perezroca.medium.com/how-to-track-your-events-and-dont-die-trying-3a0809efd075"
         }
       ]
     },
@@ -570,7 +570,7 @@ export const siteCopy = {
         {
           period: "2024 - Actualidad",
           badge: "Plataforma de identidad",
-          role: "Product Lead de UNID",
+          role: "Senior Product Manager",
           company: "Itti",
           summary: "Centralizando autenticación e identidad para el ecosistema financiero más grande de Paraguay.",
           tags: ["Identidad unificada", "autenticación", "KYC", "estrategia de plataforma"],
@@ -592,7 +592,7 @@ export const siteCopy = {
         {
           period: "Oct 2022 - 2024",
           badge: "Conversión a escala",
-          role: "Product Manager - Onboarding | CSPO",
+          role: "Product Manager - Onboarding",
           company: "Bitso",
           summary: "Rediseñé onboarding crypto y flujos de adquisición sobre una base de usuarios masiva de exchange.",
           tags: ["Onboarding", "adquisición", "activación", "experimentación"]
@@ -600,7 +600,7 @@ export const siteCopy = {
         {
           period: "Oct 2021 - Oct 2022",
           badge: "Hyper-growth crypto",
-          role: "Product Manager - Acquisition | CSPO",
+          role: "Product Manager - Acquisition",
           company: "Lemon Cash",
           summary: "Escalé infraestructura de onboarding durante uno de los momentos de mayor crecimiento crypto en LATAM.",
           tags: ["Crypto", "onboarding", "lanzamientos regionales", "KYC", "activación"]
@@ -841,7 +841,7 @@ export const siteCopy = {
           date: "8 ene 2021",
           readTime: "5 min de lectura",
           cta: "Leer en Medium",
-          url: "https://ignacio-perezroca.medium.com"
+          directUrl: "https://ignacio-perezroca.medium.com/how-to-make-an-onboarding-and-dont-die-trying-9a02b725b92b"
         },
         {
           label: "Artículo publicado",
@@ -850,7 +850,7 @@ export const siteCopy = {
           date: "10 abr 2026",
           readTime: "3 min de lectura",
           cta: "Leer en Medium",
-          url: "https://ignacio-perezroca.medium.com"
+          directUrl: "https://ignacio-perezroca.medium.com/i-almost-got-scammed-during-a-job-interview-process-52352d3b80ac"
         },
         {
           label: "Artículo publicado",
@@ -859,7 +859,7 @@ export const siteCopy = {
           date: "26 jul 2024",
           readTime: "5 min de lectura",
           cta: "Leer en Medium",
-          url: "https://ignacio-perezroca.medium.com"
+          directUrl: "https://ignacio-perezroca.medium.com/mastering-the-product-life-cycle-7b2ca5265868"
         },
         {
           label: "Artículo publicado",
@@ -868,7 +868,7 @@ export const siteCopy = {
           date: "5 jul 2024",
           readTime: "3 min de lectura",
           cta: "Leer en Medium",
-          url: "https://ignacio-perezroca.medium.com"
+          directUrl: "https://ignacio-perezroca.medium.com/employees-onboarding-hidden-secrets-of-step-0-b81ce000ab95"
         },
         {
           label: "Artículo publicado",
@@ -877,7 +877,7 @@ export const siteCopy = {
           date: "16 ago 2021",
           readTime: "2 min de lectura",
           cta: "Leer en Medium",
-          url: "https://ignacio-perezroca.medium.com"
+          directUrl: "https://ignacio-perezroca.medium.com/how-to-track-your-events-and-dont-die-trying-3a0809efd075"
         }
       ]
     },

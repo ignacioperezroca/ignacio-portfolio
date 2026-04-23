@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="160" height="80" viewBox="0 0 160 80" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-labelledby="title">
   <title id="title">IUNIGO</title>
-  <rect width="160" height="80" rx="18" fill="#eefbff"/>
-  <path d="M25 51V29h8v22h-8zm14-22h8v13c0 5 2 8 7 8s7-3 7-8V29h8v14c0 10-6 16-15 16s-15-6-15-16V29z" fill="#008fb3"/>
-  <text x="78" y="50" fill="#102733" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="850" letter-spacing=".5">IUNIGO</text>
+  <rect width="160" height="160" rx="20" fill="#ffffff"/>
+  <rect x="52" y="39" width="24" height="8" rx="1.5" fill="#ffd8d8"/>
+  <path d="M42 63v39c0 14.9 12.1 27 27 27h22c14.9 0 27-12.1 27-27V63h-15v39c0 6.6-5.4 12-12 12H69c-6.6 0-12-5.4-12-12V63H42Z" fill="#312764"/>
+  <rect x="74" y="63" width="13" height="66" rx="6.5" fill="#312764"/>
 </svg>

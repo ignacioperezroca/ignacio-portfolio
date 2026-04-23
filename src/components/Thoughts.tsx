@@ -6,6 +6,18 @@ import { FadeIn } from "@/components/FadeIn";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useLanguage } from "@/i18n/LanguageContext";
 
+function getArticleUrl(article: { title: string; directUrl?: string }) {
+  if (!article.directUrl) {
+    if (process.env.NODE_ENV === "development") {
+      console.warn(`Missing directUrl for article: ${article.title}`);
+    }
+
+    return "#";
+  }
+
+  return article.directUrl;
+}
+
 export function Thoughts({ previewLimit }: { previewLimit?: number }) {
   const { copy } = useLanguage();
   const [expanded, setExpanded] = useState(false);
@@ -28,7 +40,12 @@ export function Thoughts({ previewLimit }: { previewLimit?: number }) {
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {articles.map((thought, index) => (
             <FadeIn key={thought.title} delay={index * 0.05}>
-              <article className="group h-full rounded-md border border-ink/10 bg-paper/72 p-5 shadow-line transition hover:-translate-y-1 hover:border-ink/25 dark:border-paper/10 dark:bg-ink/60 dark:hover:border-paper/25">
+              <a
+                href={getArticleUrl(thought)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block h-full rounded-md border border-ink/10 bg-paper/72 p-5 shadow-line transition hover:-translate-y-1 hover:border-ink/25 dark:border-paper/10 dark:bg-ink/60 dark:hover:border-paper/25"
+              >
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-green dark:text-paper-warm">
                   {thought.label}
                 </p>
@@ -42,7 +59,7 @@ export function Thoughts({ previewLimit }: { previewLimit?: number }) {
                   {thought.cta}
                   <ArrowUpRight className="h-4 w-4" aria-hidden />
                 </div>
-              </article>
+              </a>
             </FadeIn>
           ))}
         </div>

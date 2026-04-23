@@ -11,13 +11,19 @@ import { cn } from "@/lib/utils";
 
 const logoTreatments: Record<string, string> = {
   Itti: "bg-white ring-[#21bf72]/25",
-  Bitso: "bg-[#f6f7ff] ring-[#5c64ff]/25",
+  Bitso: "bg-[#5f65f6] p-0 ring-[#5c64ff]/25",
   "Lemon Cash": "bg-[#f6ff58] ring-[#39ff14]/30",
   "Personal Pay": "bg-[#f7f8ff] ring-[#6257ff]/25",
-  IUNIGO: "bg-white ring-[#eecece]/35",
+  IUNIGO: "bg-white p-1.5 ring-[#eecece]/35",
   Ripio: "bg-[#17104f] ring-[#17104f]/25",
   "Personal - Telecom": "bg-[#5514a6] ring-[#5514a6]/25",
-  "Thet Studio": "bg-white ring-[#ee2a68]/25"
+  "Thet Studio": "bg-white p-0 ring-[#ee2a68]/25"
+};
+
+const logoImageTreatments: Record<string, string> = {
+  Bitso: "max-h-full md:max-h-full",
+  IUNIGO: "max-h-16 md:max-h-12",
+  "Thet Studio": "max-h-full md:max-h-full"
 };
 
 function CompanyLogo({
@@ -42,7 +48,10 @@ function CompanyLogo({
           width={120}
           height={60}
           sizes="(min-width: 768px) 64px, 80px"
-          className="h-auto max-h-12 w-auto max-w-full object-contain md:max-h-10"
+          className={cn(
+            "h-auto max-h-12 w-auto max-w-full object-contain md:max-h-10",
+            logoImageTreatments[item.company]
+          )}
           loading="lazy"
           unoptimized
         />
