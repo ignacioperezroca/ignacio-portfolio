@@ -7,15 +7,15 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 export function Footer() {
   const { copy } = useLanguage();
+  const hrefFor = (href: string) => (href.startsWith("/") ? href : `/${href}`);
   const navLabelFor = (href: string, fallback: string) => {
     const labels: Record<string, string> = {
-      "/": copy.nav.home,
-      "/about": copy.nav.about,
-      "/experience": copy.nav.experience,
-      "/work": copy.nav.work,
-      "/expertise": copy.nav.expertise,
-      "/writing": copy.nav.writing,
-      "/contact": copy.nav.contact
+      "#about": copy.nav.about,
+      "#timeline": copy.nav.timeline,
+      "#work": copy.nav.work,
+      "#impact": copy.nav.impact,
+      "#expertise": copy.nav.expertise,
+      "#contact": copy.nav.contact
     };
 
     return labels[href] ?? fallback;
@@ -46,7 +46,7 @@ export function Footer() {
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
-                    href={item.href}
+                    href={hrefFor(item.href)}
                     className="focus-ring rounded-md text-sm text-paper/65 transition hover:text-paper"
                   >
                     {navLabelFor(item.href, item.label)}

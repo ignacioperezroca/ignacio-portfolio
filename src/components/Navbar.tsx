@@ -92,6 +92,7 @@ export function Navbar() {
   const [hasScrolled, setHasScrolled] = useState(false);
   const pathname = usePathname();
   const { scrollYProgress } = useScroll();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const updateScrolled = () => setHasScrolled(window.scrollY > 12);
@@ -107,15 +108,22 @@ export function Navbar() {
     };
   }, [open]);
 
+  const hrefFor = (href: string) => {
+    if (href.startsWith("/")) {
+      return href;
+    }
+
+    return isHome ? href : `/${href}`;
+  };
+
   const navLabelFor = (href: string, fallback: string) => {
     const labels: Record<string, string> = {
-      "/": copy.nav.home,
-      "/about": copy.nav.about,
-      "/experience": copy.nav.experience,
-      "/work": copy.nav.work,
-      "/expertise": copy.nav.expertise,
-      "/writing": copy.nav.writing,
-      "/contact": copy.nav.contact
+      "#about": copy.nav.about,
+      "#timeline": copy.nav.timeline,
+      "#work": copy.nav.work,
+      "#impact": copy.nav.impact,
+      "#expertise": copy.nav.expertise,
+      "#contact": copy.nav.contact
     };
 
     return labels[href] ?? fallback;
@@ -156,9 +164,8 @@ export function Navbar() {
             {navItems.map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                href={hrefFor(item.href)}
                 className="focus-ring group relative rounded-md px-3 py-2 text-sm font-medium text-ink-muted transition hover:bg-ink/5 hover:text-ink dark:text-paper/65 dark:hover:bg-paper/10 dark:hover:text-paper"
-                aria-current={pathname === item.href ? "page" : undefined}
               >
                 {navLabelFor(item.href, item.label)}
                 <span className="absolute inset-x-3 bottom-1 h-px origin-left scale-x-0 bg-accent-green transition-transform duration-300 group-hover:scale-x-100 dark:bg-paper-warm" />
@@ -230,9 +237,8 @@ export function Navbar() {
                   transition={{ duration: 0.24, delay: 0.04 + index * 0.025 }}
                 >
                   <Link
-                    href={item.href}
+                    href={hrefFor(item.href)}
                     className="focus-ring motion-surface block rounded-md border border-ink/10 px-4 py-3 text-sm font-semibold text-ink transition hover:bg-ink/5 dark:border-paper/10 dark:text-paper dark:hover:bg-paper/10"
-                    aria-current={pathname === item.href ? "page" : undefined}
                     onClick={() => setOpen(false)}
                   >
                     {navLabelFor(item.href, item.label)}

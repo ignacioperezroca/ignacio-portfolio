@@ -10,13 +10,7 @@ import { caseStudies } from "@/data/portfolio";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { cn } from "@/lib/utils";
 
-export function SelectedWork({
-  limit,
-  showFilters = true
-}: {
-  limit?: number;
-  showFilters?: boolean;
-}) {
+export function SelectedWork() {
   const { copy } = useLanguage();
   const filters = useMemo(
     () => ["All", ...Array.from(new Set(caseStudies.flatMap((study) => study.topics)))],
@@ -32,7 +26,6 @@ export function SelectedWork({
     activeFilter === "All"
       ? localizedStudies
       : localizedStudies.filter((study) => study.topics.includes(activeFilter));
-  const visibleStudies = typeof limit === "number" ? filteredStudies.slice(0, limit) : filteredStudies;
 
   const filterLabelFor = (filter: string) =>
     copy.work.filters[filter as keyof typeof copy.work.filters] ?? filter;
@@ -59,7 +52,6 @@ export function SelectedWork({
             description={copy.work.intro}
           />
 
-          {showFilters ? (
           <div className="lg:justify-self-end">
             <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted dark:text-paper/55">
               <SlidersHorizontal className="h-4 w-4" />
@@ -90,22 +82,11 @@ export function SelectedWork({
               ))}
             </div>
           </div>
-          ) : (
-            <div className="lg:justify-self-end">
-              <Link
-                href="/work"
-                className="focus-ring motion-surface inline-flex items-center gap-2 rounded-md border border-ink/10 bg-white/62 px-4 py-3 text-sm font-semibold text-ink shadow-line transition hover:border-ink/25 hover:bg-white dark:border-paper/10 dark:bg-paper/5 dark:text-paper dark:hover:border-paper/25"
-              >
-                {copy.ui.viewAllWork}
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
-            </div>
-          )}
         </div>
 
         <motion.div layout className="mt-12 grid gap-5 lg:grid-cols-2">
           <AnimatePresence mode="popLayout">
-            {visibleStudies.map((study, index) => (
+            {filteredStudies.map((study, index) => (
               <motion.article
                 key={study.slug}
                 layout
