@@ -36,6 +36,7 @@ export function SelectedWork({ previewLimit }: { previewLimit?: number }) {
     copy.work.filters[filter as keyof typeof copy.work.filters] ?? filter;
   const itemVariants = staggerItem;
   const listVariants = staggerContainer;
+  const proofMetrics = copy.work.proofMetrics ?? [];
 
   return (
     <section className="scroll-mt-24 py-20 sm:scroll-mt-28 sm:py-28" id="work">
@@ -98,101 +99,149 @@ export function SelectedWork({ previewLimit }: { previewLimit?: number }) {
           )}
         </div>
 
+        {proofMetrics.length ? (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={listVariants}
+            className="mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-5"
+          >
+            {proofMetrics.map((metric) => (
+              <motion.div
+                key={`${metric.value}-${metric.label}`}
+                variants={itemVariants}
+                className="motion-surface rounded-md border border-ink/10 bg-white/72 p-4 shadow-line backdrop-blur-sm transition-premium dark:border-paper/10 dark:bg-paper/6"
+              >
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-muted dark:text-paper/55">
+                  {metric.label}
+                </p>
+                <p className="mt-3 text-2xl font-semibold leading-none text-ink dark:text-paper sm:text-[1.65rem]">
+                  {metric.value}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        ) : null}
+
         <motion.div
           layout
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.12 }}
           variants={listVariants}
-          className="mt-12 grid gap-5 lg:grid-cols-2"
+          className="mt-12 grid gap-5 lg:grid-cols-6"
         >
           <AnimatePresence mode="popLayout">
-            {visibleStudies.map((study) => (
-              <motion.article
-                key={study.slug}
-                layout
-                variants={itemVariants}
-                exit={{ opacity: 0, y: 10, scale: 0.985, filter: "blur(8px)" }}
-                viewport={{ once: true, margin: "-80px" }}
-                className="spotlight-card motion-surface transition-premium group overflow-hidden rounded-md border border-ink/10 bg-white/72 shadow-line hover:border-ink/24 hover:shadow-lift dark:border-paper/10 dark:bg-paper/5 dark:hover:border-paper/25"
-              >
-                <Link href={`/case-studies/${study.slug}`} className="focus-ring block h-full">
-                  <div className={cn("bg-gradient-to-br p-6", study.accentClass)}>
-                    <div className="flex items-start justify-between gap-4">
-                      <p className="rounded-md bg-white/75 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink shadow-line dark:bg-ink/75 dark:text-paper">
-                        {copy.work.caseStudyLabel}
-                      </p>
-                      <p className="text-right text-sm font-semibold text-ink/70 dark:text-paper/70">
-                        {study.localized.artifactLabel}
-                      </p>
-                    </div>
-                    <div className="mt-10 rounded-md border border-ink/10 bg-paper/88 p-4 shadow-line dark:border-paper/10 dark:bg-ink/88">
-                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-green dark:text-paper-warm">
-                        {study.localized.artifactTitle}
-                      </p>
-                      <p className="mt-2 text-sm font-medium leading-6 text-ink-muted dark:text-paper/68">
-                        {study.localized.artifactMeta}
-                      </p>
-                    </div>
-                  </div>
+            {visibleStudies.map((study, index) => {
+              const featured = index < 3;
 
-                  <div className="p-6">
-                    <div className="flex flex-wrap gap-2">
-                      {study.localized.tags.map((topic) => (
-                        <span
-                          key={topic}
-                          className="rounded-md border border-ink/10 px-2.5 py-1 text-xs font-semibold text-ink-muted dark:border-paper/10 dark:text-paper/55"
-                        >
-                          {topic}
-                        </span>
-                      ))}
+              return (
+                <motion.article
+                  key={study.slug}
+                  layout
+                  variants={itemVariants}
+                  exit={{ opacity: 0, y: 10, scale: 0.985, filter: "blur(8px)" }}
+                  viewport={{ once: true, margin: "-80px" }}
+                  className={cn(
+                    "spotlight-card motion-surface transition-premium group overflow-hidden rounded-md border border-ink/10 bg-white/72 shadow-line hover:border-ink/24 hover:shadow-lift dark:border-paper/10 dark:bg-paper/5 dark:hover:border-paper/25",
+                    featured ? "lg:col-span-2" : "lg:col-span-3"
+                  )}
+                >
+                  <Link href={`/case-studies/${study.slug}`} className="focus-ring block h-full">
+                    <div
+                      className={cn(
+                        "border-b border-ink/10 bg-gradient-to-br p-6 dark:border-paper/10",
+                        study.accentClass
+                      )}
+                    >
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="space-y-3">
+                          <p className="rounded-md bg-white/78 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink shadow-line dark:bg-ink/75 dark:text-paper">
+                            {copy.work.caseStudyLabel}
+                          </p>
+                          <div>
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-muted dark:text-paper/55">
+                              {copy.work.companyLabel}
+                            </p>
+                            <p className="mt-2 text-lg font-semibold leading-tight text-ink dark:text-paper">
+                              {study.localized.company}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="max-w-[12rem] text-right">
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-muted dark:text-paper/55">
+                            {copy.work.metricLabel}
+                          </p>
+                          <p className="mt-2 text-lg font-semibold leading-tight text-ink dark:text-paper">
+                            {study.localized.metric}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 space-y-2">
+                        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-muted dark:text-paper/55">
+                          {copy.work.productAreaLabel}
+                        </p>
+                        <p className="text-sm leading-6 text-ink-muted dark:text-paper/68">
+                          {study.localized.productArea}
+                        </p>
+                      </div>
                     </div>
 
-                    <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-accent-green dark:text-paper-warm">
-                      {study.localized.meta}
-                    </p>
-                    <h3 className="mt-3 text-2xl font-semibold leading-tight text-ink dark:text-paper">
-                      {study.localized.title}
-                    </h3>
-                    <p className="mt-4 text-sm leading-7 text-ink-muted dark:text-paper/65">
-                      {study.summary}
-                    </p>
+                    <div className="p-6">
+                      <p className="text-xl font-semibold leading-tight text-ink dark:text-paper">
+                        {study.localized.strategicSummary}
+                      </p>
 
-                    <div className="mt-6 grid gap-4 border-t border-ink/10 pt-5 dark:border-paper/10">
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted dark:text-paper/55">
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        {study.localized.tags.map((topic) => (
+                          <span
+                            key={topic}
+                            className="rounded-md border border-ink/10 px-2.5 py-1 text-xs font-semibold text-ink-muted dark:border-paper/10 dark:text-paper/55"
+                          >
+                            {topic}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="mt-6 rounded-md border border-ink/10 bg-paper/82 p-4 shadow-line dark:border-paper/10 dark:bg-ink/28">
+                        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-muted dark:text-paper/55">
                           {copy.work.problemLabel}
                         </p>
                         <p className="mt-2 text-sm leading-6 text-ink-muted dark:text-paper/68">
-                          {study.story.problem[0]}
+                          {study.localized.problem}
                         </p>
                       </div>
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted dark:text-paper/55">
-                          {copy.work.approachLabel}
-                        </p>
-                        <p className="mt-2 text-sm leading-6 text-ink-muted dark:text-paper/68">
-                          {study.story.strategy[0]}
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted dark:text-paper/55">
-                          {copy.work.impactLabel}
-                        </p>
-                        <p className="mt-2 text-sm leading-6 text-ink-muted dark:text-paper/68">
-                          {study.story.metrics[0]?.detail ?? study.previewBullets[0]}
-                        </p>
-                      </div>
-                    </div>
 
-                    <div className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-ink transition-premium dark:text-paper">
-                      {copy.work.readCaseStudy}
-                      <ArrowRight className="h-4 w-4 transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0.5" />
+                      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                        <div className="rounded-md border border-ink/10 bg-paper/72 p-4 shadow-line dark:border-paper/10 dark:bg-ink/20">
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-muted dark:text-paper/55">
+                            {copy.work.roleLabel}
+                          </p>
+                          <p className="mt-2 text-sm leading-6 text-ink-muted dark:text-paper/68">
+                            {study.localized.role}
+                          </p>
+                        </div>
+                        <div className="rounded-md border border-ink/10 bg-paper/72 p-4 shadow-line dark:border-paper/10 dark:bg-ink/20">
+                          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-muted dark:text-paper/55">
+                            {copy.work.showsLabel}
+                          </p>
+                          <p className="mt-2 text-sm leading-6 text-ink-muted dark:text-paper/68">
+                            {study.localized.shows}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-ink transition-premium dark:text-paper">
+                        {copy.work.readCaseStudy}
+                        <ArrowRight className="h-4 w-4 transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0.5" />
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              </motion.article>
-            ))}
+                  </Link>
+                </motion.article>
+              );
+            })}
           </AnimatePresence>
         </motion.div>
       </div>

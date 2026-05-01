@@ -7,7 +7,6 @@ import { FadeIn } from "@/components/FadeIn";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { caseStudies } from "@/data/portfolio";
-import { cn } from "@/lib/utils";
 import {
   robotsMetadata,
   siteName,
@@ -125,24 +124,57 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                   <p className="mt-6 max-w-2xl text-lg leading-8 text-ink-muted dark:text-paper/70">
                     {study.summary}
                   </p>
+                  <div className="mt-8 flex flex-wrap gap-2">
+                    {study.topics.map((topic) => (
+                      <span
+                        key={topic}
+                        className="rounded-md border border-ink/10 bg-white/68 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted shadow-line dark:border-paper/10 dark:bg-paper/5 dark:text-paper/60"
+                      >
+                        {topic}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                <div className={cn("rounded-md bg-gradient-to-br p-6", study.accentClass)}>
-                  <div className="flex items-center justify-between gap-4">
-                    <span className="rounded-md bg-white/70 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink shadow-line">
+                <div className="rounded-md border border-ink/10 bg-white/74 p-6 shadow-line dark:border-paper/10 dark:bg-paper/5">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <span className="rounded-md bg-ink px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-paper shadow-line dark:bg-paper dark:text-ink">
                       {study.stage}
                     </span>
-                    <span className="text-sm font-semibold text-ink/70">
-                      {study.impactMetric}
+                    <span className="text-sm font-semibold text-ink-muted dark:text-paper/60">
+                      {study.scope}
                     </span>
                   </div>
-                  <div className="mt-24 border-t border-ink/15 pt-6">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink/50">
-                      Scope
+
+                  <div className="mt-8 border-t border-ink/10 pt-6 dark:border-paper/10">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-green dark:text-paper-warm">
+                      Impact
                     </p>
-                    <p className="mt-2 text-2xl font-semibold text-ink">
-                      {study.scope}
+                    <p className="mt-4 font-serif text-[clamp(2.5rem,5vw,4.8rem)] leading-none tracking-[-0.05em] text-ink dark:text-paper">
+                      {study.impactMetric}
                     </p>
+                    <p className="mt-5 max-w-xl text-base leading-7 text-ink-muted dark:text-paper/68">
+                      {study.artifact.primary}
+                    </p>
+                    <p className="mt-2 max-w-xl text-sm leading-6 text-ink-muted dark:text-paper/60">
+                      {study.artifact.secondary}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                    {study.story.metrics.slice(0, 3).map((metric) => (
+                      <div
+                        key={metric.label}
+                        className="rounded-md border border-ink/10 bg-paper/80 p-4 shadow-line dark:border-paper/10 dark:bg-ink/24"
+                      >
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-muted dark:text-paper/50">
+                          {metric.label}
+                        </p>
+                        <p className="mt-3 text-lg font-semibold leading-tight text-ink dark:text-paper">
+                          {metric.value}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -218,7 +250,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               <FadeIn delay={0.22}>
                 <section className="rounded-md border border-ink/10 bg-ink p-6 text-paper shadow-line dark:border-paper/10 sm:p-8">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper-warm">
-                    Metrics / impact
+                    Measured impact
                   </p>
                   <div className="mt-6 grid gap-px overflow-hidden rounded-md border border-paper/10 bg-paper/10 md:grid-cols-3">
                     {study.story.metrics.map((metric, index) => (
@@ -243,11 +275,14 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               <FadeIn delay={0.28}>
                 <section className="rounded-md border border-ink/10 bg-white/70 p-6 shadow-line dark:border-paper/10 dark:bg-paper/5 sm:p-8">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-bronze dark:text-paper-warm">
-                    What this demonstrates
+                    What this shows
                   </p>
                   <div className="mt-5 grid gap-3 md:grid-cols-3">
                     {study.previewBullets.map((bullet) => (
-                      <div key={bullet} className="flex gap-3 text-sm leading-6 text-ink-muted dark:text-paper/65">
+                      <div
+                        key={bullet}
+                        className="flex gap-3 rounded-md border border-ink/10 bg-paper/72 p-4 text-sm leading-6 text-ink-muted shadow-line dark:border-paper/10 dark:bg-ink/24 dark:text-paper/65"
+                      >
                         <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent-green dark:text-paper-warm" />
                         {bullet}
                       </div>

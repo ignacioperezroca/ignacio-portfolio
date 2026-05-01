@@ -40,10 +40,10 @@ export const siteCopy = {
         value: "+262%",
         label: "onboarding conversion",
         detail: "Improved onboarding conversion from 8% to 29% through experimentation, sharper diagnosis, and cleaner funnel design.",
-        category: "Onboarding"
+        category: "Conversion"
       },
       {
-        value: "60K to 2M",
+        value: "60K → 2M",
         label: "users",
         detail: "Supported onboarding and trust infrastructure during one of LatAm crypto’s fastest growth phases.",
         category: "Scale"
@@ -199,14 +199,24 @@ export const siteCopy = {
     },
     work: {
       kicker: "02 / Work",
-      title: "Case studies built around product judgment, not screenshots.",
-      intro: "Case studies focused on the problem, the strategy, the execution, and the impact behind each product decision.",
+      title: "Selected work across trust, growth, and identity.",
+      intro: "Case studies showing how I diagnose friction, simplify regulated journeys, align teams, and turn product strategy into measurable outcomes across onboarding, KYC, authentication, identity, and growth.",
       filterLabel: "Filter by theme",
       caseStudyLabel: "Case Study",
-      problemLabel: "Problem",
-      approachLabel: "Approach",
-      impactLabel: "Impact",
+      companyLabel: "Company / product",
+      productAreaLabel: "Product area",
+      metricLabel: "Metric / outcome",
+      problemLabel: "Challenge",
+      roleLabel: "Role / contribution",
+      showsLabel: "What this case shows",
       readCaseStudy: "Read case study",
+      proofMetrics: [
+        { value: "16+ yrs", label: "product, UX & software" },
+        { value: "8M+ users", label: "onboarded across fintech, crypto & Web3" },
+        { value: "+262%", label: "onboarding conversion" },
+        { value: "60K → 2M", label: "users in 6 months" },
+        { value: "~3M users", label: "unified through UNID" }
+      ],
       filters: {
         All: "All",
         KYC: "KYC",
@@ -222,87 +232,91 @@ export const siteCopy = {
       },
       cards: [
         {
-          artifactLabel: "Flow artifact",
-          artifactTitle: "Verification state map",
-          artifactMeta: "Drop-off, retry, escalation, approved",
-          tags: ["KYC", "Onboarding", "Growth"],
-          meta: "KYC / Onboarding / Conversion",
           title: "Case Study: Migrating 2.5M users to a Unified Authentication Hub",
-          body: "Centralizing authentication and identity into a scalable trust layer for a multi-brand financial ecosystem.",
-          bullets: [
-            "Reframed KYC as a trust journey instead of a compliance interruption.",
-            "Separated user confusion from risk-driven rejection states.",
-            "Created a measurement plan for completion, retries, support contacts, and approved users."
-          ],
+          company: "Itti / UNID",
+          productArea: "Unified identity · Authentication · Onboarding infrastructure",
+          strategicSummary:
+            "Leading the product strategy for UNID, a shared identity layer designed to centralize login, onboarding, and trust across the Grupo Vázquez ecosystem.",
+          metric: "~3M users · 30 companies",
+          problem:
+            "Identity and login were fragmented across brands, creating inconsistent journeys and migration risk.",
+          role:
+            "Defined the product direction, migration sequencing, stakeholder alignment, and platform primitives across product, design, engineering, operations, legal, and leadership.",
+          shows:
+            "Platform thinking, migration strategy, identity infrastructure, and stakeholder alignment at ecosystem scale.",
+          tags: ["Identity", "Authentication", "Platform"],
           cta: "Read case study"
         },
         {
-          artifactLabel: "System artifact",
-          artifactTitle: "Authentication decision model",
-          artifactMeta: "Login, MFA, recovery, risk step-up",
-          tags: ["Authentication", "Identity", "Platform"],
-          meta: "Authentication / Security / Platform",
-          title: "Case Study: Scaling a Crypto-Wallet to 2M users in hyper-growth",
-          body: "Managing identity infrastructure and onboarding quality while Lemon Cash scaled from 60K to 2M users.",
-          bullets: [
-            "Connected user trust, risk signals, and product access decisions into a reusable model.",
-            "Reduced one-off authentication patterns across product surfaces.",
-            "Improved recovery clarity without weakening account protection."
-          ],
-          cta: "Read case study"
-        },
-        {
-          artifactLabel: "Experiment artifact",
-          artifactTitle: "Activation map",
-          artifactMeta: "Intent, setup, verification, first value",
-          tags: ["Growth", "Experimentation", "Onboarding"],
-          meta: "Growth / Experimentation / Activation",
           title: "Case Study: A data-driven approach to a +262% conversion increase",
-          body: "Redesigning the Bitso onboarding funnel with sharper diagnosis, cleaner UX, and conversion-focused execution.",
-          bullets: [
-            "Defined activation as a sequence of trust, comprehension, and first-value milestones.",
-            "Prioritized experiments by impact, confidence, and operational risk.",
-            "Built a tighter loop between analytics, research, design, and delivery."
-          ],
+          company: "Bitso",
+          productArea: "Onboarding · KYC · Activation · Growth",
+          strategicSummary:
+            "Improved onboarding conversion by reframing onboarding as an activation system, not just a registration flow.",
+          metric: "+262% onboarding conversion · 8M+ users",
+          problem:
+            "Users had strong intent, but too many were dropping before reaching activation.",
+          role:
+            "Led diagnosis, funnel analysis, roadmap definition, experimentation, and cross-functional alignment across Product, Design, Engineering, Data, Risk, Compliance, and Support.",
+          shows:
+            "Conversion strategy, experimentation, regulated onboarding, and product-led growth.",
+          tags: ["Growth", "KYC", "Onboarding"],
           cta: "Read case study"
         },
         {
-          artifactLabel: "Ops artifact",
-          artifactTitle: "Review queue model",
-          artifactMeta: "Evidence, decision, escalation, audit",
-          tags: ["KYC", "Operations", "Platform"],
-          meta: "Backoffice / Operations / Risk",
+          title: "Case Study: Scaling a Crypto-Wallet to 2M users in hyper-growth",
+          company: "Lemon Cash",
+          productArea: "Crypto onboarding · Growth systems · Regional launch",
+          strategicSummary:
+            "Scaled onboarding and growth systems during one of LatAm crypto’s fastest expansion phases, supporting acquisition, activation, KYC, and Brazil launch execution.",
+          metric: "60K → 2M users · +3200% growth · Brazil launch",
+          problem:
+            "Growth had to move quickly without breaking onboarding quality or trust.",
+          role:
+            "Built launch sequencing, onboarding infrastructure, and team alignment while the product expanded across the region.",
+          shows:
+            "Growth systems, regional expansion, trust-critical onboarding, and execution at speed.",
+          tags: ["Crypto", "Growth", "Onboarding"],
+          cta: "Read case study"
+        },
+        {
           title: "Deconstructing the \"Perfect\" KYC flow: A PM/Designer perspective",
-          body: "Breaking down the product logic behind KYC flows that balance AML security, clarity, and user conversion.",
-          bullets: [
-            "Converted messy review workflows into clearer decision states.",
-            "Reduced repeated support and operations work through better signals.",
-            "Protected compliance quality while improving throughput."
-          ],
+          company: "Operations / KYC",
+          productArea: "Backoffice · Review queues · Auditability",
+          strategicSummary:
+            "Turning messy review workflows into a clearer decision system for compliance, support, and product teams.",
+          metric: "Decision model · auditability",
+          problem:
+            "Reviewers were switching across systems and interpreting inconsistent signals.",
+          role:
+            "Led discovery, requirements, workflow design, and rollout with operations and risk.",
+          shows:
+            "Product judgment under constraints, clearer internal systems, and the value of UX structure in regulated journeys.",
+          tags: ["KYC", "Operations", "Platform"],
           cta: "Read case study"
         },
         {
-          artifactLabel: "Trust artifact",
-          artifactTitle: "Recovery journey",
-          artifactMeta: "Signal, verify, protect, restore",
-          tags: ["Crypto", "Authentication", "Trust"],
-          meta: "Crypto / Trust / Account Recovery",
           title: "Case Study: Designing account recovery for trust, protection, and clarity",
-          body: "Designing recovery flows for moments when legitimate users lose access and trust is most fragile.",
-          bullets: [
-            "Framed recovery as a product system that balances verification, protection, support load, and emotional clarity.",
-            "Designed for the emotional reality of account access loss, not only the technical path.",
-            "Made protection states more legible to legitimate users.",
-            "Reduced ambiguity across security, support, and product teams."
-          ],
+          company: "Recovery systems",
+          productArea: "Recovery · Authentication · Safety",
+          strategicSummary:
+            "Turned a high-stress account-recovery moment into a calmer, more legible journey for legitimate users.",
+          metric: "Recovery journey · trust signals",
+          problem:
+            "Legitimate users needed speed and reassurance while the system stayed fraud-aware.",
+          role:
+            "Defined recovery states, messaging, and escalation paths with security and support.",
+          shows:
+            "Trust-critical UX, security tradeoffs, and emotional clarity under pressure.",
+          tags: ["Crypto", "Authentication", "Trust"],
           cta: "Read case study"
         }
       ]
     },
     impact: {
       kicker: "01 / Impact",
-      title: "Evidence across growth, trust, and platform scale.",
-      intro: "A compact view of the outcomes and operating range behind the portfolio: conversion, scale, identity infrastructure, and product judgment under real constraints.",
+      title: "Measured impact across growth, trust, and scale.",
+      intro: "Selected evidence from product work where conversion, identity, security, UX, and platform execution had to move together.",
       categoryLabel: "Proof"
     },
     expertise: {
@@ -508,10 +522,10 @@ export const siteCopy = {
         value: "+262%",
         label: "conversión de onboarding",
         detail: "Mejoré la conversión de onboarding de 8% a 29% mediante experimentación, mejor diagnóstico y un funnel más claro.",
-        category: "Onboarding"
+        category: "Conversión"
       },
       {
-        value: "60K a 2M",
+        value: "60K → 2M",
         label: "usuarios",
         detail: "Sostuve onboarding e infraestructura de confianza durante una de las etapas de mayor crecimiento crypto en LatAm.",
         category: "Escala"
@@ -667,14 +681,24 @@ export const siteCopy = {
     },
     work: {
       kicker: "02 / Casos",
-      title: "Case studies armados alrededor de criterio de producto, no de screenshots.",
-      intro: "Casos enfocados en el problema, la estrategia, la ejecución y el impacto detrás de cada decisión de producto.",
+      title: "Trabajos seleccionados sobre confianza, growth e identidad.",
+      intro: "Casos que muestran cómo diagnostico fricción, simplifico journeys regulados, alineo equipos y convierto estrategia de producto en resultados medibles en onboarding, KYC, autenticación, identidad y growth.",
       filterLabel: "Filtrar por tema",
-      caseStudyLabel: "Case Study",
-      problemLabel: "Problem",
-      approachLabel: "Approach",
-      impactLabel: "Impact",
+      caseStudyLabel: "Caso de producto",
+      companyLabel: "Empresa / producto",
+      productAreaLabel: "Área de producto",
+      metricLabel: "Métrica / resultado",
+      problemLabel: "Desafío",
+      roleLabel: "Rol / contribución",
+      showsLabel: "Qué demuestra este caso",
       readCaseStudy: "Leer caso",
+      proofMetrics: [
+        { value: "16+ años", label: "producto, UX y software" },
+        { value: "8M+ usuarios", label: "onboardeados en fintech, crypto y Web3" },
+        { value: "+262%", label: "conversión de onboarding" },
+        { value: "60K → 2M", label: "usuarios en 6 meses" },
+        { value: "~3M usuarios", label: "unificados en UNID" }
+      ],
       filters: {
         All: "Todos",
         KYC: "KYC",
@@ -690,87 +714,91 @@ export const siteCopy = {
       },
       cards: [
         {
-          artifactLabel: "Artefacto de flujo",
-          artifactTitle: "Mapa de estados de verificación",
-          artifactMeta: "Caída, reintento, escalamiento, aprobado",
-          tags: ["KYC", "Onboarding", "Growth"],
-          meta: "KYC / Onboarding / Conversión",
-          title: "Caso: Migración de 2.5M usuarios a un hub unificado de autenticación",
-          body: "Centralizar autenticación e identidad en una capa escalable de confianza para un ecosistema financiero multi-marca.",
-          bullets: [
-            "Reencuadré KYC como un journey de confianza y no como una interrupción de compliance.",
-            "Separé la confusión del usuario de los estados de rechazo impulsados por riesgo.",
-            "Creé un plan de medición para completitud, reintentos, contactos a soporte y usuarios aprobados."
-          ],
+          title: "Caso de producto: Migración de 2.5M usuarios a un hub unificado de autenticación",
+          company: "Itti / UNID",
+          productArea: "Identidad unificada · Autenticación · Infraestructura de onboarding",
+          strategicSummary:
+            "Liderando la estrategia de producto de UNID, una capa compartida de identidad diseñada para centralizar login, onboarding y confianza en todo el ecosistema Grupo Vázquez.",
+          metric: "~3M usuarios · 30 compañías",
+          problem:
+            "La identidad y el login estaban fragmentados entre marcas, lo que generaba journeys inconsistentes y riesgo en la migración.",
+          role:
+            "Definí la dirección de producto, la secuencia de migración y la alineación de stakeholders entre producto, diseño, ingeniería, operaciones, legales y liderazgo.",
+          shows:
+            "Pensamiento de plataforma, estrategia de migración, infraestructura de identidad y alineación de stakeholders a escala de ecosistema.",
+          tags: ["Identidad", "Autenticación", "Plataforma"],
           cta: "Leer caso"
         },
         {
-          artifactLabel: "Artefacto de sistema",
-          artifactTitle: "Modelo de decisión de autenticación",
-          artifactMeta: "Login, MFA, recuperación, escalamiento por riesgo",
-          tags: ["Autenticación", "Identidad", "Plataforma"],
-          meta: "Autenticación / Seguridad / Plataforma",
-          title: "Caso: Escalar una crypto wallet a 2M usuarios en hyper-growth",
-          body: "Gestionar infraestructura de identidad y calidad de onboarding mientras Lemon Cash escalaba de 60K a 2M usuarios.",
-          bullets: [
-            "Conecté confianza del usuario, señales de riesgo y decisiones de acceso en un modelo reutilizable.",
-            "Reduje patrones aislados de autenticación entre distintas superficies del producto.",
-            "Mejoré la claridad de recuperación sin debilitar la protección de cuentas."
-          ],
+          title: "Caso de producto: Un enfoque data-driven para lograr +262% de conversión",
+          company: "Bitso",
+          productArea: "Onboarding · KYC · Activación · Growth",
+          strategicSummary:
+            "Mejoré la conversión de onboarding reencuadrando el flujo como un sistema de activación, no solo como una pantalla de registro.",
+          metric: "+262% conversión de onboarding · 8M+ usuarios",
+          problem:
+            "Había intención fuerte, pero demasiadas personas se caían antes de llegar a activarse.",
+          role:
+            "Lideré el diagnóstico, el análisis del funnel, la definición del roadmap, la experimentación y la alineación cross-functional con Product, Design, Engineering, Data, Risk, Compliance y Support.",
+          shows:
+            "Estrategia de conversión, experimentación, onboarding regulado y growth con foco de producto.",
+          tags: ["Growth", "KYC", "Onboarding"],
           cta: "Leer caso"
         },
         {
-          artifactLabel: "Artefacto de experimento",
-          artifactTitle: "Mapa de activación",
-          artifactMeta: "Intención, setup, verificación, primer valor",
-          tags: ["Growth", "Experimentación", "Onboarding"],
-          meta: "Growth / Experimentación / Activación",
-          title: "Caso: Un enfoque data-driven para lograr +262% de conversión",
-          body: "Rediseñar el funnel de onboarding de Bitso con mejor diagnóstico, UX más clara y ejecución enfocada en conversión.",
-          bullets: [
-            "Definí activación como una secuencia de hitos de confianza, comprensión y primer valor.",
-            "Priorizé experimentos por impacto, confianza y riesgo operativo.",
-            "Construí un loop más ajustado entre analytics, research, diseño y delivery."
-          ],
+          title: "Caso de producto: Escalar una crypto wallet a 2M usuarios en hyper-growth",
+          company: "Lemon Cash",
+          productArea: "Onboarding crypto · Sistemas de growth · Lanzamiento regional",
+          strategicSummary:
+            "Escalé sistemas de onboarding y growth durante una de las fases más rápidas de expansión de LatAm crypto, apoyando adquisición, activación, KYC y la ejecución del lanzamiento en Brasil.",
+          metric: "60K → 2M usuarios · +3200% growth · lanzamiento en Brasil",
+          problem:
+            "Había que moverse rápido sin romper la calidad del onboarding ni la confianza.",
+          role:
+            "Construí la secuencia de lanzamiento, la infraestructura de onboarding y la alineación del equipo mientras el producto crecía en la región.",
+          shows:
+            "Sistemas de growth, expansión regional, onboarding crítico para la confianza y ejecución a velocidad.",
+          tags: ["Crypto", "Growth", "Onboarding"],
           cta: "Leer caso"
         },
         {
-          artifactLabel: "Artefacto operativo",
-          artifactTitle: "Modelo de cola de revisión",
-          artifactMeta: "Evidencia, decisión, escalamiento, auditoría",
+          title: "Desarmando el flujo de KYC \"perfecto\": perspectiva PM/Designer",
+          company: "Operaciones / KYC",
+          productArea: "Backoffice · Colas de revisión · Auditabilidad",
+          strategicSummary:
+            "Convirtiendo workflows de revisión caóticos en un sistema de decisión más claro para compliance, soporte y equipos de producto.",
+          metric: "Modelo de decisión · auditabilidad",
+          problem:
+            "Quienes revisaban casos saltaban entre sistemas e interpretaban señales inconsistentes.",
+          role:
+            "Lideré discovery, definición de requisitos, diseño del workflow y rollout junto con operaciones y riesgo.",
+          shows:
+            "Criterio de producto bajo restricciones, sistemas internos más claros y el valor de la estructura UX en journeys regulados.",
           tags: ["KYC", "Operaciones", "Plataforma"],
-          meta: "Backoffice / Operaciones / Riesgo",
-          title: "Desarmando el flujo de KYC \"perfecto\": mirada de PM/Designer",
-          body: "Descomponer la lógica de producto detrás de flujos KYC que equilibran seguridad AML, claridad y conversión.",
-          bullets: [
-            "Convertí workflows de revisión desordenados en estados de decisión más claros.",
-            "Reduje trabajo repetido de soporte y operaciones mediante mejores señales.",
-            "Protegí la calidad de compliance mejorando el throughput."
-          ],
           cta: "Leer caso"
         },
         {
-          artifactLabel: "Artefacto de confianza",
-          artifactTitle: "Journey de recuperación",
-          artifactMeta: "Señal, verificar, proteger, restaurar",
+          title: "Caso de producto: Diseñar recuperación de cuenta con confianza, protección y claridad",
+          company: "Sistemas de recuperación",
+          productArea: "Recuperación · Autenticación · Seguridad",
+          strategicSummary:
+            "Convertí un momento de recuperación de cuenta de alta fricción en un journey más calmo y legible para usuarios legítimos.",
+          metric: "Journey de recuperación · señales de confianza",
+          problem:
+            "Los usuarios legítimos necesitaban rapidez y tranquilidad mientras el sistema seguía siendo antifraude.",
+          role:
+            "Definí los estados de recuperación, el messaging y los paths de escalamiento junto con seguridad y soporte.",
+          shows:
+            "UX crítica para la confianza, trade-offs de seguridad y claridad emocional bajo presión.",
           tags: ["Crypto", "Autenticación", "Confianza"],
-          meta: "Crypto / Confianza / Recuperación de cuenta",
-          title: "Caso: Diseñar recuperación de cuenta con confianza, protección y claridad",
-          body: "Diseñar flujos de recuperación para momentos donde usuarios legítimos pierden acceso y la confianza es más frágil.",
-          bullets: [
-            "Enmarqué la recuperación como un sistema de producto que balancea verificación, protección, carga de soporte y claridad emocional.",
-            "Diseñé para la realidad emocional de perder acceso, no solo para el camino técnico.",
-            "Volví más legibles los estados de protección para usuarios legítimos.",
-            "Reduje ambigüedad entre seguridad, soporte y producto."
-          ],
           cta: "Leer caso"
         }
       ]
     },
     impact: {
       kicker: "01 / Impacto",
-      title: "Evidencia concreta en growth, confianza y escala de plataforma.",
-      intro: "Una síntesis de resultados y rango operativo: conversión, escala, infraestructura de identidad y criterio de producto bajo restricciones reales.",
+      title: "Impacto medido en growth, confianza y escala.",
+      intro: "Evidencia seleccionada de trabajo de producto donde conversión, identidad, seguridad, UX y ejecución de plataforma tuvieron que avanzar juntos.",
       categoryLabel: "Prueba"
     },
     expertise: {

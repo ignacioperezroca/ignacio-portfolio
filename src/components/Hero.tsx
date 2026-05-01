@@ -55,7 +55,7 @@ export function Hero() {
           </motion.p>
           <motion.h1
             variants={itemVariants}
-            className="mt-5 font-serif text-[3.75rem] leading-[0.88] text-ink dark:text-paper sm:text-[5.4rem] lg:text-[7rem] xl:text-[8rem]"
+            className="mt-5 font-serif text-[3.35rem] leading-[0.9] text-ink dark:text-paper sm:text-[4.95rem] lg:text-[5.85rem] xl:text-[6.6rem]"
           >
             <span className="block">{firstName}</span>
             <span className="block">{lastName}</span>

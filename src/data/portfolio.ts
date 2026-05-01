@@ -351,29 +351,29 @@ export const caseStudies: CaseStudy[] = [
     title: "Case Study: Migrating 2.5M users to a Unified Authentication Hub",
     kicker: "KYC / Onboarding / Conversion",
     summary:
-      "Centralizing authentication and identity into a reusable trust layer.",
+      "Centralizing authentication and identity into a reusable trust layer for a 30-company financial ecosystem.",
     topics: ["KYC", "Onboarding", "Growth"],
-    stage: "Scale-up optimization",
-    scope: "Consumer fintech / crypto",
-    impactMetric: "Verification state map",
+    stage: "Identity platform rollout",
+    scope: "Unified login, verification, and onboarding",
+    impactMetric: "1M onboarded / 2.5M migrated",
     accentClass: "from-accent-green/20 via-paper-cool to-accent-blue/12",
     artifact: {
       label: "Flow artifact",
-      primary: "Verification state map",
-      secondary: "Drop-off, retry, escalation, approved"
+      primary: "Unified identity state model",
+      secondary: "Registration, login, auth, and rollout control"
     },
     previewBullets: [
-      "Reframed KYC as a trust journey instead of a compliance interruption.",
-      "Separated user confusion from risk-driven rejection states.",
-      "Created a measurement plan for completion, retries, support contacts, and approved users."
+      "Launched UNID across Grupo Vázquez as a single interoperable identity layer.",
+      "Centralized login and authentication with Keycloak, cutting access time by 40%.",
+      "Built Amplitude instrumentation and incident controls for rollout and migration."
     ],
     story: {
       context: [
-        "Onboarding was a direct growth lever, but it lived inside a regulated environment where every reduction in friction had to respect risk, vendor behavior, and compliance rules.",
-        "The product needed to help legitimate users move through identity verification with more confidence and fewer dead ends."
+        "The product team was building a single secure onboarding path for all services in the Grupo Vázquez ecosystem.",
+        "Identity had to become a platform capability, not a brand-by-brand patchwork."
       ],
       problem: [
-        "Users were dropping at points where the product did not clearly explain what was needed, why it mattered, or what would happen next.",
+        "Users were moving through fragmented login and verification experiences depending on the service they entered from.",
         "Internally, funnel metrics, vendor states, and operational review queues were not aligned into one shared model."
       ],
       userPain: [
@@ -391,8 +391,9 @@ export const caseStudies: CaseStudy[] = [
         "Engineering had to work inside existing onboarding architecture while improving observability."
       ],
       myRole: [
-        "Owned the product problem framing, funnel diagnosis, solution strategy, and cross-functional alignment.",
-        "Partnered with design, engineering, data, compliance, risk, support, and operations to define the right level of friction for each state."
+        "Owned the product framing, migration sequencing, funnel diagnosis, and cross-functional alignment.",
+        "Partnered with design, engineering, data, compliance, risk, support, operations, Globant, and Ingenia to ship in weekly releases.",
+        "Coordinated 9-person technical squads and incident response during security events and migration spikes."
       ],
       strategy: [
         "Map every user-facing state against the underlying risk/vendor state and business objective.",
@@ -406,7 +407,8 @@ export const caseStudies: CaseStudy[] = [
       solution: [
         "Redesigned the onboarding state model, copy hierarchy, retry guidance, and success criteria.",
         "Added clearer next steps for pending, retry, failed, and manual review states.",
-        "Defined analytics events that connected user action, vendor response, operational state, and activation outcome."
+        "Defined an Amplitude event architecture by vertical so auth, login, edit, and delete events could drive funnels, cohorts, and alerts.",
+        "Instrumented dashboards in Amplitude and New Relic to track conversions, critical errors, and system-level drop-offs."
       ],
       execution: [
         "Sequenced the work into high-confidence UX fixes, instrumentation improvements, and deeper platform changes.",
@@ -418,19 +420,24 @@ export const caseStudies: CaseStudy[] = [
       ],
       metrics: [
         {
-          value: "State map",
-          label: "KYC completion",
-          detail: "Mapped every user-facing verification state to risk, vendor, and activation outcomes."
+          value: "1M",
+          label: "Users onboarded",
+          detail: "Reached one million onboardings in less than 12 months."
         },
         {
-          value: "Support",
-          label: "Support contacts",
-          detail: "Designed clearer guidance for pending, retry, failed, and manual review moments."
+          value: "40%",
+          label: "Faster access",
+          detail: "Centralized the login strategy with Keycloak and cut access time."
         },
         {
-          value: "Activation",
-          label: "Activation after approval",
-          detail: "Connected verification outcomes to downstream activation and user confidence."
+          value: "2.5M+",
+          label: "Users migrated",
+          detail: "Progressively moved users to the new login and verification infrastructure."
+        },
+        {
+          value: "9-person",
+          label: "Technical squads",
+          detail: "Coordinated weekly delivery with Globant and Ingenia across performance, security, and scalability."
         }
       ],
       lessons: [
@@ -445,82 +452,89 @@ export const caseStudies: CaseStudy[] = [
     title: "Case Study: Scaling a Crypto-Wallet to 2M users in hyper-growth",
     kicker: "Authentication / Security / Platform",
     summary:
-      "Managing identity infrastructure and onboarding quality during hyper-growth.",
+      "Improving onboarding conversion across an 8M+ user exchange by turning activation into a trust and clarity system.",
     topics: ["Authentication", "Identity", "Platform"],
-    stage: "Platform consolidation",
-    scope: "Multi-surface product ecosystem",
-    impactMetric: "Authentication decision model",
+    stage: "Conversion at scale",
+    scope: "Onboarding, KYC, authentication, and home products",
+    impactMetric: "+262% conversion lift",
     accentClass: "from-accent-blue/20 via-paper-cool to-accent-green/12",
     artifact: {
       label: "System artifact",
-      primary: "Auth decision model",
-      secondary: "Login, MFA, recovery, risk step-up"
+      primary: "Activation map",
+      secondary: "Intent, setup, verification, and first value"
     },
     previewBullets: [
-      "Connected user trust, risk signals, and product access decisions into a reusable model.",
-      "Reduced one-off authentication patterns across product surfaces.",
-      "Improved recovery clarity without weakening account protection."
+      "Improved onboarding conversion from 8% to 29% by reframing onboarding as an activation system.",
+      "Worked across an 8M+ user product and a team of 16 people spanning customer-facing and technical products.",
+      "Reduced product costs by $350K in 2023 while scaling growth and trust infrastructure."
     ],
     story: {
       context: [
-        "Authentication had become a product experience problem, not only a security layer.",
-        "Different teams were solving access, recovery, and step-up flows with inconsistent patterns."
+        "Bitso was growing quickly, and onboarding had to support both acquisition efficiency and product trust.",
+        "The team needed to understand whether drop-off came from UX confusion, trust gaps, or product friction."
       ],
       problem: [
-        "Users experienced fragmented login and recovery flows depending on where they entered the product.",
-        "Security decisions were hard to explain, hard to measure, and expensive to evolve."
+        "The funnel showed where users dropped, but not why they lost momentum.",
+        "Teams were debating tactics without a shared definition of activation quality."
       ],
       userPain: [
-        "Users did not understand why additional verification was needed.",
-        "Recovery flows created anxiety because the product did not communicate progress or safety."
+        "Users encountered too many unclear choices before experiencing core product value.",
+        "The flow optimized for screen completion rather than confidence in the next action."
       ],
       businessPain: [
-        "Inconsistent auth patterns increased engineering maintenance and support escalations.",
-        "Security improvements were slower because each surface required bespoke coordination."
+        "Acquisition spend and top-of-funnel growth were under-monetized because activation leaked.",
+        "Experiments were difficult to compare without a consistent learning model."
       ],
       constraints: [
-        "The solution had to respect existing account systems, session behavior, device constraints, and risk policies.",
-        "Teams needed a migration path that did not interrupt active users."
+        "The work had to ship in small increments without destabilizing regulated or trust-sensitive steps.",
+        "Some events and attribution paths needed cleanup before deeper optimization."
       ],
       myRole: [
-        "Led product strategy for the unified experience model and worked with engineering to scope platform primitives.",
-        "Aligned security, support, data, design, and product teams around a common set of user states and outcomes."
+        "Owned the activation strategy, experiment roadmap, and cross-functional operating cadence.",
+        "Led onboarding, authentication, KYC, and home products while managing a 16-person team.",
+        "Worked with the C-suite to shape the growth strategy, vision, mission, roadmap, and OKRs."
       ],
       strategy: [
-        "Define authentication as a set of reusable product decisions: identify, verify, step up, recover, and re-establish trust.",
-        "Create one mental model for users and one operating model for internal teams."
+        "Define activation milestones that represented real user progress, not vanity events.",
+        "Use a portfolio of experiments: copy and hierarchy, flow simplification, progressive disclosure, trust signals, and personalized next steps."
       ],
       research: [
-        "Analyzed support escalations, login failures, recovery attempts, and account lockout patterns.",
-        "Reviewed where users abandoned flows because they could not distinguish protection from failure."
+        "Combined funnel analytics, behavioral data, and product health metrics with support feedback and targeted user analysis.",
+        "Defined and analyzed conversion, critical errors, and drop-off patterns across onboarding and home surfaces."
       ],
       solution: [
-        "Created a unified state model and reusable UX patterns for login, MFA, recovery, and risk step-up.",
-        "Defined product requirements for visibility into why a step-up happened and how users could resolve it."
+        "Created a clearer first-session journey, stronger trust language, and fewer ambiguous decisions.",
+        "Built a new home screen as a scalable information hub for discoverability and promotions.",
+        "Used the product work to support customer-facing growth as well as technical and risk products."
       ],
       execution: [
-        "Sequenced delivery by highest-risk inconsistency first, then migrated lower-risk surfaces.",
-        "Used a shared component and analytics contract so future product teams could adopt the platform pattern."
+        "Ran the onboarding roadmap from inception to release and kept the team aligned on measurable outcomes.",
+        "Reduced product costs by $350K in 2023 while the product ecosystem expanded."
       ],
       stakeholderManagement: [
-        "Translated security requirements into product language and product tradeoffs into security language.",
-        "Made the migration credible by separating foundational platform work from visible UX improvements."
+        "Aligned product, design, engineering, data, risk, compliance, and support around a shared activation model.",
+        "Kept leadership conversations focused on compounding learning, not isolated wins."
       ],
       metrics: [
         {
-          value: "Recovery",
-          label: "Recovery friction",
-          detail: "Mapped account access failures into clearer login, step-up, and recovery states."
+          value: "+262%",
+          label: "Onboarding conversion",
+          detail: "Improved conversion from 8% to 29% through diagnosis, experimentation, and cleaner funnel design."
         },
         {
-          value: "Support",
-          label: "Auth support cases",
-          detail: "Clarified where users needed guidance, escalation, or stronger protection."
+          value: "4M → 7M",
+          label: "User growth",
+          detail: "Supported product expansion across a growing 8M+ user exchange."
         },
         {
-          value: "1 model",
-          label: "Reusable auth pattern",
-          detail: "Defined a shared decision model for authentication, MFA, recovery, and risk step-up."
+          value: "16-person",
+          label: "Team",
+          detail: "Led a mix of customer-facing and technical products with cross-functional delivery."
+        },
+        {
+          value: "$350K",
+          label: "Cost reduction",
+          detail: "Reduced product costs while improving growth and product health."
         }
       ],
       lessons: [
@@ -535,82 +549,90 @@ export const caseStudies: CaseStudy[] = [
     title: "Case Study: A data-driven approach to a +262% conversion increase",
     kicker: "Growth / Experimentation / Activation",
     summary:
-      "Redesigning the Bitso onboarding funnel with sharper diagnosis and cleaner execution.",
+      "Scaling onboarding and growth systems during one of LatAm crypto’s fastest expansion phases, while launching Brazil and seven-country onboarding.",
     topics: ["Growth", "Experimentation", "Onboarding"],
-    stage: "Growth acceleration",
-    scope: "Self-serve and assisted onboarding",
-    impactMetric: "Activation map",
+    stage: "Hyper-growth expansion",
+    scope: "Crypto onboarding, regional launches, KYC, activation",
+    impactMetric: "60K → 2M",
     accentClass: "from-accent-bronze/20 via-paper-warm to-accent-blue/10",
     artifact: {
       label: "Experiment artifact",
-      primary: "Activation map",
-      secondary: "Intent, setup, verification, first value"
+      primary: "Country launch plan",
+      secondary: "KYC matrix, onboarding metrics, and sequencing"
     },
     previewBullets: [
-      "Defined activation as a sequence of trust, comprehension, and first-value milestones.",
-      "Prioritized experiments by impact, confidence, and operational risk.",
-      "Built a tighter loop between analytics, research, design, and delivery."
+      "Scaled Lemon from 60K to 2M users, a +3200% growth period.",
+      "Launched onboarding for Argentina, Brazil, Mexico, Peru, Colombia, Uruguay, and Ecuador in 6 months.",
+      "Optimized KYC with AB testing, driving a $4M revenue increase and a 6,000% conversion-time improvement."
     ],
     story: {
       context: [
-        "The team needed growth improvements that came from better product adoption, not shallow acquisition tactics.",
-        "Activation depended on users understanding the product, trusting the flow, and completing several high-intent steps."
+        "Lemon was moving through one of LatAm crypto’s fastest growth moments, and onboarding had to keep up.",
+        "The team needed a growth system that scaled product adoption without breaking trust or operational quality."
       ],
       problem: [
-        "The funnel showed where users dropped, but not why they lost momentum.",
-        "Teams were debating tactics without a shared definition of activation quality."
+        "Growth had to move quickly without weakening onboarding conversion or KYC reliability.",
+        "The team also needed a way to launch multiple countries without turning each rollout into a bespoke project."
       ],
       userPain: [
-        "Users encountered too many unclear choices before experiencing core product value.",
-        "The flow optimized for completion of screens rather than confidence in the next action."
+        "Users needed a faster path to value while still understanding the product and the trust requirements.",
+        "Country-by-country complexity could easily have made the experience feel fragmented."
       ],
       businessPain: [
-        "Acquisition spend and top-of-funnel growth were under-monetized because activation leaked.",
-        "Experiments were difficult to compare without a consistent learning model."
+        "The business needed scalable growth, not just spikes in acquisition.",
+        "KYC and onboarding quality directly influenced revenue, conversion, and the pace of expansion."
       ],
       constraints: [
-        "The work had to ship in small increments without destabilizing regulated or trust-sensitive steps.",
-        "Some events and attribution paths needed cleanup before deeper optimization."
+        "The work had to ship in small increments while multiple markets were launching.",
+        "The product had to keep risk, compliance, and operating teams aligned as the funnel changed."
       ],
       myRole: [
-        "Owned the activation strategy, experiment roadmap, prioritization model, and cross-functional operating cadence.",
-        "Worked with data and design to turn ambiguous drop-off into testable product hypotheses."
+        "Owned the growth strategy, roadmap, and cross-functional operating cadence.",
+        "Led onboarding, authentication, KYC, and home products while managing a 20-person team.",
+        "Partnered with the CPO to establish Lemon’s first product hiring process."
       ],
       strategy: [
-        "Define activation milestones that represented real user progress, not vanity events.",
-        "Use a portfolio of experiments: copy and hierarchy, flow simplification, progressive disclosure, trust signals, and personalized next steps."
+        "Define the growth system around onboarding, activation, KYC, and market launch sequencing.",
+        "Use experimentation to improve conversion, reduce friction, and protect trust at scale."
       ],
       research: [
-        "Combined funnel analytics, heatmaps/session review where available, support feedback, and targeted interviews.",
-        "Tagged drop-off causes by motivation, comprehension, trust, eligibility, technical failure, and timing."
+        "Combined funnel analysis, product metrics, and user behavior with launch feedback and operating constraints.",
+        "Tracked where users dropped in order to isolate whether the issue was comprehension, trust, eligibility, or technical friction."
       ],
       solution: [
-        "Introduced a clearer first-session journey, stronger trust language, and fewer ambiguous decisions.",
-        "Built an experiment backlog with expected impact, confidence, effort, risk, and learning value."
+        "Introduced a clearer onboarding structure, stronger KYC automation, and more deliberate market sequencing.",
+        "Built the launch and experimentation backlog around measurable conversion, revenue, and operational targets.",
+        "Created a scalable plan for Brazil and the other LatAm markets instead of one-off local flows."
       ],
       execution: [
         "Ran sequential and parallel experiments depending on traffic, dependency risk, and measurement confidence.",
-        "Created post-experiment readouts that captured decisions, not just results."
+        "Scaled the product team fivefold in six months to support the pace of the rollout.",
+        "Managed hiring for PM and PO roles to build a stronger product bench."
       ],
       stakeholderManagement: [
-        "Aligned growth, product, design, engineering, analytics, and risk teams on which tradeoffs were acceptable.",
-        "Kept leadership conversations focused on compounding learning, not isolated wins."
+        "Aligned growth, product, design, engineering, analytics, risk, and leadership on which tradeoffs were acceptable.",
+        "Kept the conversation focused on compounding learning, launch readiness, and measurable growth."
       ],
       metrics: [
         {
-          value: "+262%",
-          label: "Onboarding conversion",
-          detail: "Improved conversion from 8% to 29% through diagnosis, experimentation, and cleaner funnel design."
+          value: "60K → 2M",
+          label: "Users",
+          detail: "Scaled Lemon from 60K to 2M users in 6 months."
         },
         {
-          value: "8% to 29%",
-          label: "Conversion range",
-          detail: "Moved the funnel from low single-digit completion to a materially stronger onboarding baseline."
+          value: "+3200%",
+          label: "Growth",
+          detail: "Drove one of LatAm crypto’s fastest expansion curves."
         },
         {
-          value: "Experiments",
-          label: "Learning system",
-          detail: "Used structured tests to separate UX confusion, trust gaps, technical friction, and eligibility issues."
+          value: "$4M",
+          label: "Revenue lift",
+          detail: "Optimized KYC automation through AB testing."
+        },
+        {
+          value: "7 countries",
+          label: "Launch scope",
+          detail: "Launched onboarding across Argentina, Brazil, Mexico, Peru, Colombia, Uruguay, and Ecuador."
         }
       ],
       lessons: [
