@@ -1,17 +1,18 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
+import { MotionConfig } from "framer-motion";
 import { personalInfo } from "@/data/portfolio";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ignacio-portfolio.vercel.app"),
+  metadataBase: new URL("https://ignacio-product.vercel.app"),
   title: {
-    default: `${personalInfo.displayName} - Senior Product Manager`,
-    template: `%s - ${personalInfo.displayName}`
+    default: `${personalInfo.displayName} | Senior Product Manager`,
+    template: `%s | ${personalInfo.displayName}`
   },
   description:
-    "Premium product portfolio for a Senior Product Manager specialized in fintech, crypto, onboarding, KYC, authentication, digital identity, and product-led growth.",
+    "Senior Product Manager specialized in fintech, crypto, digital identity, KYC, onboarding, authentication and product-led growth across LatAm.",
   keywords: [
     "Senior Product Manager",
     "Fintech Product Manager",
@@ -25,19 +26,33 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: personalInfo.displayName }],
   creator: personalInfo.displayName,
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/apple-touch-icon.svg"
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
-    url: "https://ignacio-portfolio.vercel.app",
-    title: `${personalInfo.displayName} - Senior Product Manager`,
+    url: "https://ignacio-product.vercel.app",
+    title: `${personalInfo.displayName} | Senior Product Manager`,
     description:
-      "Trust-critical product strategy across fintech, crypto, onboarding, KYC, authentication, identity, and growth.",
-    siteName: `${personalInfo.displayName} Portfolio`
+      "Senior Product Manager specialized in fintech, crypto, digital identity, KYC, onboarding, authentication and product-led growth across LatAm.",
+    siteName: personalInfo.displayName,
+    images: [
+      {
+        url: "/social-preview-v3.png",
+        width: 1200,
+        height: 630,
+        alt: `${personalInfo.displayName} | Senior Product Manager`
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
-    title: `${personalInfo.displayName} - Senior Product Manager`,
+    title: `${personalInfo.displayName} | Senior Product Manager`,
     description:
-      "Trust-critical product strategy across fintech, crypto, onboarding, KYC, authentication, identity, and growth."
+      "Senior Product Manager specialized in fintech, crypto, digital identity, KYC, onboarding, authentication and product-led growth across LatAm.",
+    images: ["/social-preview-v3.png"]
   },
   alternates: {
     canonical: "/"
@@ -61,7 +76,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <LanguageProvider>{children}</LanguageProvider>
+        <MotionConfig reducedMotion="user">
+          <LanguageProvider>{children}</LanguageProvider>
+        </MotionConfig>
         <Analytics />
       </body>
     </html>

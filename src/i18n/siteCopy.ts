@@ -3,11 +3,12 @@ export type Language = "en" | "es";
 export const siteCopy = {
   en: {
     nav: {
-      about: "About",
-      timeline: "Timeline",
-      work: "Work",
       impact: "Impact",
+      work: "Work",
+      timeline: "Timeline",
       expertise: "Expertise",
+      writing: "Writing",
+      about: "About",
       contact: "Contact",
       letsTalk: "Let’s talk",
       downloadResume: "Download resume"
@@ -15,8 +16,9 @@ export const siteCopy = {
     hero: {
       eyebrow: "Senior Product Manager | Identity, Onboarding, KYC, Authentication",
       name: "Ignacio Perez Roca",
-      headline: "I build trust-critical product systems that scale growth without breaking security, compliance, or UX.",
-      subheadline: "Senior Product Manager with 16+ years across fintech, crypto, and digital identity. I’ve helped scale onboarding and trust infrastructure for millions of users across LatAm, bridging product strategy, UX clarity, technical constraints, and measurable business impact.",
+      headline: "Senior Product Manager building trust-critical fintech journeys.",
+      subheadline: "I help teams simplify onboarding, KYC, authentication, and activation flows by combining product strategy, UX clarity, content design, technical judgment, and data-driven execution.",
+      supportingLine: "16+ years across fintech, crypto, digital identity, UX, and frontend-aware product leadership.",
       primaryCta: "View selected work",
       secondaryCta: "Download resume",
       contactCta: "Let’s talk",
@@ -37,52 +39,60 @@ export const siteCopy = {
       {
         value: "+262%",
         label: "onboarding conversion",
-        detail: "Improved onboarding conversion from 8% to 29% through experimentation, sharper diagnosis, and cleaner funnel design."
+        detail: "Improved onboarding conversion from 8% to 29% through experimentation, sharper diagnosis, and cleaner funnel design.",
+        category: "Onboarding"
       },
       {
         value: "60K to 2M",
         label: "users",
-        detail: "Supported onboarding and trust infrastructure during one of LatAm crypto’s fastest growth phases."
+        detail: "Supported onboarding and trust infrastructure during one of LatAm crypto’s fastest growth phases.",
+        category: "Scale"
       },
       {
         value: "2.5M+",
         label: "user ecosystem",
-        detail: "Leading product strategy for identity, authentication, and trust infrastructure across a large financial ecosystem."
+        detail: "Leading product strategy for identity, authentication, and trust infrastructure across a large financial ecosystem.",
+        category: "Platform"
       },
       {
         value: "16+ years",
         label: "product, UX & software",
-        detail: "Across product, UX, and software development, with unusual leverage between strategy, design, and technical execution."
+        detail: "Across product, UX, and software development, with unusual leverage between strategy, design, and technical execution.",
+        category: "Experience"
       },
       {
         value: "7 countries",
         label: "LatAm expansion",
-        detail: "Experience across onboarding and product delivery in Argentina, Brazil, Mexico, Peru, Colombia, Uruguay, and Ecuador."
+        detail: "Experience across onboarding and product delivery in Argentina, Brazil, Mexico, Peru, Colombia, Uruguay, and Ecuador.",
+        category: "Markets"
       },
       {
         value: "Trust-critical",
         label: "product focus",
-        detail: "Specialized in onboarding, KYC, authentication, identity, platform migration, and activation under regulatory and operational constraints."
+        detail: "Specialized in onboarding, KYC, authentication, identity, platform migration, and activation under regulatory and operational constraints.",
+        category: "Focus"
       },
       {
         value: "Product + UX",
         label: "technical fluency",
-        detail: "Bridging strategy, user experience, analytics, and implementation across high-complexity digital products."
+        detail: "Bridging strategy, user experience, analytics, and implementation across high-complexity digital products.",
+        category: "Fluency"
       },
       {
         value: "Growth",
         label: "without ignoring trust",
-        detail: "Focused on improving activation and conversion where security, compliance, and confidence are part of the product itself."
+        detail: "Focused on improving activation and conversion where security, compliance, and confidence are part of the product itself.",
+        category: "Thesis"
       }
     ],
     about: {
       kicker: "About",
-      title: "Product Manager specialized in identity, onboarding, and trust-critical growth",
-      intro: "I’m a Product Manager with 16+ years of experience building human-first, scalable onboarding journeys across fintech, crypto, and digital platforms.",
-      p1: "I specialize in digital identity, KYC, authentication, and product-led growth, with a strong focus on turning trust-critical flows into clear, high-conversion experiences. Over the years, I’ve led international teams across Argentina, Brazil, Mexico, Paraguay, and Colombia, helping scale products used by millions of users across LatAm.",
-      p2: "Some of the outcomes I’m most proud of include scaling Lemon from 60k to 2M users in 6 months, launching Lemon in Brazil, improving Bitso’s onboarding conversion by +262%, and currently leading UNID at ITTI, the identity and onboarding infrastructure unifying ~3M users across a large financial ecosystem.",
-      p3: "What makes my profile different is the combination of product strategy, UX thinking, and technical depth. My background in design and frontend development helps me connect business goals, user needs, and implementation realities, turning metrics into product experiences that improve acquisition, activation, retention, and long-term trust.",
-      p4: "I use data to surface real problems and opportunities, but I care just as much about clarity, usability, and the emotional side of product experience. My mission is to build trust, empower teams, and deliver products people genuinely love.",
+      title: "A product leader shaped by strategy, design, and technical execution.",
+      intro: "I’m a Senior Product Manager with 16+ years of experience across fintech, crypto, digital identity, UX, and frontend-aware product leadership.",
+      p1: "I specialize in simplifying onboarding, KYC, authentication, and activation journeys so teams can scale without weakening security, clarity, or user confidence.",
+      p2: "My work sits at the intersection of growth, trust, compliance, and user experience, with a bias toward product systems that are easy to understand and hard to break.",
+      p3: "The combination of product strategy, UX thinking, content design, and frontend fluency helps me connect business goals, user needs, and implementation realities.",
+      p4: "I care about clarity, usability, and the emotional side of product experience, because trust is built in the details.",
       cards: [
         {
           title: "Identity, onboarding, and KYC",
@@ -100,10 +110,10 @@ export const siteCopy = {
       cta: "View selected work"
     },
     timeline: {
-      kicker: "Career timeline",
+      kicker: "03 / Timeline",
       title: "From design and frontend to product leadership in identity, crypto, and fintech.",
-      intro1: "A LinkedIn-aligned progression showing increasing scope: hands-on interface craft, crypto infrastructure, fintech onboarding, growth at scale, and unified identity platforms.",
-      intro2: "The arc is deliberate: every role adds a layer of leverage, from designing and coding interfaces to leading trust-critical product systems for millions of users.",
+      intro1: "A progression that moves from design craft to crypto growth, onboarding, and identity platforms.",
+      intro2: "Each role adds a layer of leverage: interface quality, growth systems, and trust-critical product ownership.",
       keyImpact: "Key impact",
       proofPoints: "Proof points",
       items: [
@@ -188,10 +198,14 @@ export const siteCopy = {
       ]
     },
     work: {
-      kicker: "Selected work",
+      kicker: "02 / Work",
       title: "Case studies built around product judgment, not screenshots.",
-      intro: "Each case study is structured around context, constraints, strategy, execution, stakeholder management, and impact, with an emphasis on product judgment over surface-level visuals.",
+      intro: "Case studies focused on the problem, the strategy, the execution, and the impact behind each product decision.",
       filterLabel: "Filter by theme",
+      caseStudyLabel: "Case Study",
+      problemLabel: "Problem",
+      approachLabel: "Approach",
+      impactLabel: "Impact",
       readCaseStudy: "Read case study",
       filters: {
         All: "All",
@@ -286,15 +300,15 @@ export const siteCopy = {
       ]
     },
     impact: {
-      kicker: "Impact",
+      kicker: "01 / Impact",
       title: "Evidence across growth, trust, and platform scale.",
       intro: "A compact view of the outcomes and operating range behind the portfolio: conversion, scale, identity infrastructure, and product judgment under real constraints.",
-      categoryLabel: "Proof point"
+      categoryLabel: "Proof"
     },
     expertise: {
-      kicker: "Skills and expertise",
-      title: "A product toolkit organized around leverage, not labels.",
-      intro: "This is not a tag cloud. It is the operating system behind how I frame problems, lead teams, and ship products in high-trust environments.",
+      kicker: "05 / Expertise",
+      title: "The product operating system behind trust-critical growth.",
+      intro: "A compact toolkit for turning ambiguous problems into measurable product direction across identity, onboarding, and experimentation.",
       groups: [
         {
           title: "Product Strategy",
@@ -302,39 +316,29 @@ export const siteCopy = {
           tags: ["Opportunity sizing", "Narrative strategy", "Roadmapping", "Executive alignment"]
         },
         {
-          title: "Growth & Activation",
-          body: "Improving conversion and time-to-value through better onboarding, instrumentation, and experimentation systems.",
-          tags: ["Funnel diagnosis", "Experiment design", "Activation metrics", "PLG loops"]
+          title: "Onboarding & Activation",
+          body: "Improving conversion and time-to-value through clearer journeys, better instrumentation, and experimentation.",
+          tags: ["Funnel diagnosis", "Activation metrics", "PLG loops", "Experimentation"]
         },
         {
-          title: "Identity / KYC / Auth",
+          title: "Identity / KYC / Authentication",
           body: "Building trust-critical flows where verification, security, compliance, and user confidence have to work together.",
           tags: ["KYC states", "MFA", "Risk step-up", "Account recovery"]
         },
         {
-          title: "Research & Experimentation",
+          title: "Product Design & UX Architecture",
+          body: "Designing flows, states, information architecture, and decision paths that reduce confusion in regulated journeys.",
+          tags: ["User flows", "IA", "UX systems", "State design"]
+        },
+        {
+          title: "Content Design for Trust",
+          body: "Using clearer copy, microcopy, and messaging systems to help users understand risk, verification, and next steps.",
+          tags: ["Microcopy", "Trust language", "Onboarding copy", "Recovery flows"]
+        },
+        {
+          title: "Analytics & Experimentation",
           body: "Combining behavioral data with qualitative insight to understand why users move, hesitate, or abandon.",
-          tags: ["User interviews", "Support mining", "A/B tests", "Decision readouts"]
-        },
-        {
-          title: "UX / Design Collaboration",
-          body: "Using a design background to sharpen problem definition, information hierarchy, interaction quality, and product clarity.",
-          tags: ["Journey mapping", "Prototyping", "Design critique", "Copy hierarchy"]
-        },
-        {
-          title: "Data & Analytics",
-          body: "Defining useful metrics, event taxonomies, and readouts that help teams make decisions rather than collect dashboards.",
-          tags: ["Event design", "Cohort analysis", "Metric trees", "Instrumentation QA"]
-        },
-        {
-          title: "Technical / Platform Collaboration",
-          body: "Working fluently with engineering on architecture tradeoffs, migration paths, reusable primitives, and delivery risk.",
-          tags: ["API thinking", "State models", "Migration sequencing", "Technical discovery"]
-        },
-        {
-          title: "Leadership & Stakeholders",
-          body: "Creating shared judgment across product, engineering, design, compliance, risk, data, support, and leadership.",
-          tags: ["Operating cadence", "Tradeoff framing", "Decision docs", "Stakeholder maps"]
+          tags: ["A/B tests", "Event tracking", "Amplitude", "Support mining"]
         }
       ]
     },
@@ -364,9 +368,9 @@ export const siteCopy = {
       ]
     },
     thinking: {
-      kicker: "Product thinking",
-      title: "Essays and perspectives on product strategy, onboarding, UX, analytics, and trust-critical systems.",
-      intro: "A curated selection of articles written by Ignacio Perez Roca on onboarding, product thinking, behavioral analytics, digital trust, and product leadership.",
+      kicker: "06 / Writing",
+      title: "Product thinking, onboarding, and trust systems.",
+      intro: "A curated selection of writing on onboarding, product strategy, behavioral analytics, digital trust, and product leadership.",
       footerCta: {
         title: "Explore more writing",
         copy: "More essays, ideas, and product reflections available on Medium.",
@@ -380,6 +384,7 @@ export const siteCopy = {
           teaser: "A practical guide to building a powerful digital onboarding and identity verification flow that balances authentication, KYC, user friction, and conversion.",
           date: "Jan 8, 2021",
           readTime: "5 min read",
+          tags: ["Onboarding", "KYC", "Identity"],
           cta: "Read on Medium",
           directUrl: "https://ignacio-perezroca.medium.com/how-to-make-an-onboarding-and-dont-die-trying-9a02b725b92b"
         },
@@ -389,6 +394,7 @@ export const siteCopy = {
           teaser: "A sharp breakdown of how modern interview scams work, why even experienced candidates are vulnerable, and a simple framework to stay safe.",
           date: "Apr 10, 2026",
           readTime: "3 min read",
+          tags: ["Job Safety", "Trust", "Career"],
           cta: "Read on Medium",
           directUrl: "https://ignacio-perezroca.medium.com/i-almost-got-scammed-during-a-job-interview-process-52352d3b80ac"
         },
@@ -398,6 +404,7 @@ export const siteCopy = {
           teaser: "A structured onboarding plan for product managers, covering stakeholder alignment, KPI definition, user feedback, experimentation, and impact forecasting.",
           date: "Jul 26, 2024",
           readTime: "5 min read",
+          tags: ["Product Strategy", "Product Leadership", "Onboarding"],
           cta: "Read on Medium",
           directUrl: "https://ignacio-perezroca.medium.com/mastering-the-product-life-cycle-7b2ca5265868"
         },
@@ -407,6 +414,7 @@ export const siteCopy = {
           teaser: "A practical framework to ramp up faster as a new product manager through purposeful meetings, stakeholder mapping, product context, and active learning.",
           date: "Jul 5, 2024",
           readTime: "3 min read",
+          tags: ["Product Leadership", "Onboarding", "Career"],
           cta: "Read on Medium",
           directUrl: "https://ignacio-perezroca.medium.com/employees-onboarding-hidden-secrets-of-step-0-b81ce000ab95"
         },
@@ -416,19 +424,18 @@ export const siteCopy = {
           teaser: "A concise guide to event tracking and behavioral analytics, with practical naming conventions and funnel thinking to measure product performance better.",
           date: "Aug 16, 2021",
           readTime: "2 min read",
+          tags: ["Analytics", "Experimentation", "UX"],
           cta: "Read on Medium",
           directUrl: "https://ignacio-perezroca.medium.com/how-to-track-your-events-and-dont-die-trying-3a0809efd075"
         }
       ]
     },
     contact: {
-      kicker: "Contact",
-      title: "Let’s build the next trust-critical product system.",
-      intro: "Open to senior product roles, advisory conversations, and projects where onboarding, identity, KYC, authentication, fintech, crypto, and scalable product strategy need sharper execution.",
+      kicker: "07 / Contact",
+      title: "Let’s talk.",
+      intro: "Open to senior product roles, advisory conversations, and selected projects around product, identity, onboarding, and growth.",
       primaryCta: "Email Ignacio",
-      directConnection: "Start with the highest-signal channel",
-      body: "I’m most useful when teams need to improve conversion without weakening trust, simplify identity or authentication complexity, or turn regulated product constraints into clearer user experiences.",
-      bullets: ["Product leadership roles", "Identity / onboarding strategy", "Advisory or consulting conversations"],
+      bullets: ["Senior Product roles", "Advisory", "Selected projects"],
       metadata: ["Buenos Aires", "Remote-friendly", "Selected opportunities"],
       email: "ignacio.perezroca@gmail.com",
       secondaryLinkedin: "Connect on LinkedIn",
@@ -464,11 +471,12 @@ export const siteCopy = {
   },
   es: {
     nav: {
-      about: "Sobre mí",
-      timeline: "Trayectoria",
-      work: "Casos",
       impact: "Impacto",
+      work: "Casos",
+      timeline: "Trayectoria",
       expertise: "Expertise",
+      writing: "Escritura",
+      about: "Sobre mí",
       contact: "Contacto",
       letsTalk: "Hablemos",
       downloadResume: "Descargar CV"
@@ -476,8 +484,9 @@ export const siteCopy = {
     hero: {
       eyebrow: "Senior Product Manager | Identidad, Onboarding, KYC, Autenticación",
       name: "Ignacio Perez Roca",
-      headline: "Diseño sistemas de producto críticos para la confianza que escalan crecimiento sin romper seguridad, compliance ni UX.",
-      subheadline: "Senior Product Manager con más de 16 años en fintech, crypto e identidad digital. Ayudé a escalar onboarding e infraestructura de confianza para millones de usuarios en LatAm, conectando estrategia de producto, claridad de UX, restricciones técnicas e impacto medible de negocio.",
+      headline: "Senior Product Manager que construye journeys fintech críticos para la confianza.",
+      subheadline: "Ayudo a los equipos a simplificar onboarding, KYC, autenticación y activación combinando estrategia de producto, claridad de UX, content design, criterio técnico y ejecución basada en datos.",
+      supportingLine: "16+ años en fintech, crypto, identidad digital, UX y liderazgo de producto con foco técnico.",
       primaryCta: "Ver casos destacados",
       secondaryCta: "Descargar CV",
       contactCta: "Hablemos",
@@ -498,72 +507,81 @@ export const siteCopy = {
       {
         value: "+262%",
         label: "conversión de onboarding",
-        detail: "Mejoré la conversión de onboarding de 8% a 29% mediante experimentación, mejor diagnóstico y un funnel más claro."
+        detail: "Mejoré la conversión de onboarding de 8% a 29% mediante experimentación, mejor diagnóstico y un funnel más claro.",
+        category: "Onboarding"
       },
       {
         value: "60K a 2M",
         label: "usuarios",
-        detail: "Sostuve onboarding e infraestructura de confianza durante una de las etapas de mayor crecimiento crypto en LatAm."
+        detail: "Sostuve onboarding e infraestructura de confianza durante una de las etapas de mayor crecimiento crypto en LatAm.",
+        category: "Escala"
       },
       {
         value: "2.5M+",
         label: "ecosistema de usuarios",
-        detail: "Liderando estrategia de producto para identidad, autenticación e infraestructura de confianza en un gran ecosistema financiero."
+        detail: "Liderando estrategia de producto para identidad, autenticación e infraestructura de confianza en un gran ecosistema financiero.",
+        category: "Plataforma"
       },
       {
         value: "16+ años",
         label: "producto, UX y software",
-        detail: "Entre producto, UX y desarrollo de software, con una combinación poco común entre estrategia, diseño y ejecución técnica."
+        detail: "Entre producto, UX y desarrollo de software, con una combinación poco común entre estrategia, diseño y ejecución técnica.",
+        category: "Experiencia"
       },
       {
         value: "7 países",
         label: "expansión LatAm",
-        detail: "Experiencia en onboarding y delivery de producto en Argentina, Brasil, México, Perú, Colombia, Uruguay y Ecuador."
+        detail: "Experiencia en onboarding y delivery de producto en Argentina, Brasil, México, Perú, Colombia, Uruguay y Ecuador.",
+        category: "Mercados"
       },
       {
         value: "Confianza crítica",
         label: "foco de producto",
-        detail: "Especializado en onboarding, KYC, autenticación, identidad, migración de plataformas y activación bajo restricciones regulatorias y operativas."
+        detail: "Especializado en onboarding, KYC, autenticación, identidad, migración de plataformas y activación bajo restricciones regulatorias y operativas.",
+        category: "Foco"
       },
       {
         value: "Producto + UX",
         label: "fluidez técnica",
-        detail: "Conectando estrategia, experiencia de usuario, analytics e implementación en productos digitales de alta complejidad."
+        detail: "Conectando estrategia, experiencia de usuario, analytics e implementación en productos digitales de alta complejidad.",
+        category: "Fluidez"
       },
       {
         value: "Growth",
         label: "sin ignorar la confianza",
-        detail: "Enfocado en mejorar activación y conversión donde seguridad, compliance y confianza son parte del producto."
+        detail: "Enfocado en mejorar activación y conversión donde seguridad, compliance y confianza son parte del producto.",
+        category: "Tesis"
       }
     ],
     about: {
-      kicker: "Sobre mí / posicionamiento",
-      title: "Liderazgo de producto para identidad, onboarding y sistemas críticos para la confianza",
-      intro: "Trabajo en la intersección entre estrategia de producto, UX, sistemas técnicos y journeys regulados.",
-      p1: "Mi diferencial no es solo shippear features. Es ayudar a los equipos a tomar mejores decisiones de producto cuando crecimiento, confianza, compliance, riesgo y restricciones técnicas importan al mismo tiempo.",
-      p2: "Soy más útil en entornos donde el funnel pierde conversión y no está claro por qué, donde requisitos de identidad o seguridad generan fricción, o donde una decisión de plataforma tiene que mejorar la experiencia y no solo agregar complejidad por debajo.",
-      p3: "Mi background en diseño, frontend, analytics, onboarding, KYC, autenticación y trabajo de plataforma me permite conectar capas que muchas veces quedan fragmentadas entre equipos: confianza del usuario, resultado de negocio, claridad de producto, factibilidad técnica y realidad operativa.",
+      kicker: "Sobre mí",
+      title: "Un líder de producto moldeado por estrategia, diseño y ejecución técnica.",
+      intro: "Soy Senior Product Manager con más de 16 años de experiencia en fintech, crypto, identidad digital, UX y liderazgo de producto con foco técnico.",
+      p1: "Me especializo en simplificar journeys de onboarding, KYC, autenticación y activación para que los equipos puedan escalar sin debilitar seguridad, claridad o confianza.",
+      p2: "Mi trabajo vive en la intersección de growth, trust, compliance y experiencia de usuario, con preferencia por sistemas de producto fáciles de entender y difíciles de romper.",
+      p3: "La mezcla de estrategia de producto, pensamiento UX, content design y fluidez frontend me ayuda a conectar objetivos de negocio, necesidades de usuario y realidad de implementación.",
+      p4: "Me importa la claridad, la usabilidad y el costado emocional de la experiencia de producto, porque la confianza se construye en los detalles.",
       cards: [
         {
-          title: "Criterio de producto con fluidez técnica",
-          body: "Puedo encuadrar la apuesta, tensionar la UX y razonar las consecuencias técnicas antes de que el equipo se comprometa."
+          title: "Identidad, onboarding y KYC",
+          body: "Experiencia sólida diseñando y escalando journeys críticos para la confianza, donde compliance, seguridad y conversión tienen que convivir."
         },
         {
-          title: "Crecimiento donde la confianza también es métrica",
-          body: "Mejoro activación y conversión en entornos donde la calidad del usuario, el compliance y la confianza no pueden tratarse como algo secundario."
+          title: "Growth con credibilidad técnica",
+          body: "Un perfil formado por producto, diseño y frontend, capaz de conectar estrategia, UX, analytics e implementación."
         },
         {
-          title: "Sistemas de identidad más legibles",
-          body: "KYC, autenticación, recuperación y acceso son sistemas complejos. Los vuelvo más claros para usuarios y más operables para equipos."
+          title: "Escala probada en LatAm",
+          body: "Experiencia liderando equipos y productos en múltiples mercados, industrias y etapas de crecimiento, desde el build inicial hasta la adopción masiva."
         }
       ],
       cta: "Ver casos destacados"
     },
     timeline: {
-      kicker: "Trayectoria",
+      kicker: "03 / Trayectoria",
       title: "De diseño y frontend a liderazgo de producto en identidad, crypto y fintech.",
-      intro1: "Una progresión alineada con LinkedIn que muestra mayor alcance en cada etapa: craft de interfaz hands-on, infraestructura crypto, onboarding fintech, crecimiento a escala y plataformas unificadas de identidad.",
-      intro2: "El arco es deliberado: cada rol suma una capa de leverage, desde diseñar y codear interfaces hasta liderar sistemas de producto críticos para la confianza de millones de usuarios.",
+      intro1: "Una progresión que va de craft de diseño a crecimiento crypto, onboarding y plataformas de identidad.",
+      intro2: "Cada rol suma una capa de leverage: calidad de interfaz, sistemas de crecimiento y ownership de producto crítico para la confianza.",
       keyImpact: "Impacto principal",
       proofPoints: "Pruebas de trabajo",
       items: [
@@ -648,10 +666,14 @@ export const siteCopy = {
       ]
     },
     work: {
-      kicker: "Casos destacados",
-      title: "Casos armados alrededor de criterio de producto, no de screenshots.",
-      intro: "Cada caso está estructurado alrededor de contexto, restricciones, estrategia, ejecución, manejo de stakeholders e impacto, con foco en criterio de producto por encima de lo visual.",
+      kicker: "02 / Casos",
+      title: "Case studies armados alrededor de criterio de producto, no de screenshots.",
+      intro: "Casos enfocados en el problema, la estrategia, la ejecución y el impacto detrás de cada decisión de producto.",
       filterLabel: "Filtrar por tema",
+      caseStudyLabel: "Case Study",
+      problemLabel: "Problem",
+      approachLabel: "Approach",
+      impactLabel: "Impact",
       readCaseStudy: "Leer caso",
       filters: {
         All: "Todos",
@@ -746,15 +768,15 @@ export const siteCopy = {
       ]
     },
     impact: {
-      kicker: "Impacto",
+      kicker: "01 / Impacto",
       title: "Evidencia concreta en growth, confianza y escala de plataforma.",
       intro: "Una síntesis de resultados y rango operativo: conversión, escala, infraestructura de identidad y criterio de producto bajo restricciones reales.",
       categoryLabel: "Prueba"
     },
     expertise: {
-      kicker: "Skills y expertise",
-      title: "Un toolkit de producto organizado por leverage, no por etiquetas.",
-      intro: "Esto no es una nube de tags. Es el sistema operativo detrás de cómo encuadro problemas, lidero equipos y shippeo productos en entornos donde la confianza importa.",
+      kicker: "05 / Expertise",
+      title: "El sistema operativo de producto detrás del growth con confianza.",
+      intro: "Un toolkit compacto para transformar problemas ambiguos en dirección de producto medible en identidad, onboarding y experimentación.",
       groups: [
         {
           title: "Estrategia de producto",
@@ -762,39 +784,29 @@ export const siteCopy = {
           tags: ["Opportunity sizing", "estrategia narrativa", "roadmapping", "alineación ejecutiva"]
         },
         {
-          title: "Growth y activación",
-          body: "Mejorar conversión y tiempo a valor con mejor onboarding, instrumentación y sistemas de experimentación.",
-          tags: ["Diagnóstico de funnel", "diseño de experimentos", "métricas de activación", "loops PLG"]
+          title: "Onboarding y activación",
+          body: "Mejorar conversión y time-to-value con journeys más claros, mejor instrumentación y experimentación.",
+          tags: ["Diagnóstico de funnel", "métricas de activación", "loops PLG", "Experimentación"]
         },
         {
-          title: "Identidad / KYC / Auth",
+          title: "Identidad / KYC / Autenticación",
           body: "Construir flujos críticos para la confianza donde verificación, seguridad, compliance y confianza del usuario tienen que funcionar juntos.",
           tags: ["Estados de KYC", "MFA", "escalamiento por riesgo", "recuperación de cuenta"]
         },
         {
-          title: "Research y experimentación",
+          title: "Product Design y UX Architecture",
+          body: "Diseñar flujos, estados, arquitectura de información y paths de decisión que reduzcan confusión en journeys regulados.",
+          tags: ["User flows", "IA", "sistemas de UX", "state design"]
+        },
+        {
+          title: "Content Design para confianza",
+          body: "Usar copy más claro, microcopy y sistemas de mensaje para ayudar a entender riesgo, verificación y próximos pasos.",
+          tags: ["Microcopy", "lenguaje de confianza", "copy de onboarding", "flujos de recovery"]
+        },
+        {
+          title: "Analytics y experimentación",
           body: "Combinar data comportamental con insight cualitativo para entender por qué los usuarios avanzan, dudan o abandonan.",
-          tags: ["Entrevistas con usuarios", "análisis de soporte", "A/B tests", "decision readouts"]
-        },
-        {
-          title: "UX / colaboración con diseño",
-          body: "Usar un background en diseño para afinar definición del problema, jerarquía de información, calidad de interacción y claridad de producto.",
-          tags: ["Journey mapping", "prototipado", "crítica de diseño", "jerarquía de copy"]
-        },
-        {
-          title: "Datos y analytics",
-          body: "Definir métricas útiles, taxonomías de eventos y readouts que ayuden a tomar decisiones en vez de solo juntar dashboards.",
-          tags: ["Diseño de eventos", "análisis de cohortes", "metric trees", "QA de instrumentación"]
-        },
-        {
-          title: "Colaboración técnica / plataforma",
-          body: "Trabajar con ingeniería con fluidez sobre tradeoffs de arquitectura, caminos de migración, primitivas reutilizables y riesgo de delivery.",
-          tags: ["Pensamiento API", "modelos de estado", "secuencia de migración", "descubrimiento técnico"]
-        },
-        {
-          title: "Liderazgo y stakeholders",
-          body: "Crear criterio compartido entre producto, ingeniería, diseño, compliance, riesgo, data, soporte y liderazgo.",
-          tags: ["Cadencia operativa", "encuadre de tradeoffs", "decision docs", "mapas de stakeholders"]
+          tags: ["A/B tests", "event tracking", "Amplitude", "análisis de soporte"]
         }
       ]
     },
@@ -824,9 +836,9 @@ export const siteCopy = {
       ]
     },
     thinking: {
-      kicker: "Pensamiento de producto",
-      title: "Ensayos y perspectivas sobre estrategia de producto, onboarding, UX, analytics y sistemas críticos para la confianza.",
-      intro: "Una selección curada de artículos escritos por Ignacio Perez Roca sobre onboarding, pensamiento de producto, analytics comportamental, confianza digital y liderazgo de producto.",
+      kicker: "06 / Escritura",
+      title: "Pensamiento de producto, onboarding y sistemas de confianza.",
+      intro: "Una selección curada de escritura sobre onboarding, estrategia de producto, analytics conductual, confianza digital y liderazgo de producto.",
       footerCta: {
         title: "Explorar más escritura",
         copy: "Más ensayos, ideas y reflexiones de producto disponibles en Medium.",
@@ -840,6 +852,7 @@ export const siteCopy = {
           teaser: "Una guía práctica para construir un onboarding digital y un flujo de verificación de identidad que equilibre autenticación, KYC, fricción de usuario y conversión.",
           date: "8 ene 2021",
           readTime: "5 min de lectura",
+          tags: ["Onboarding", "KYC", "Identity"],
           cta: "Leer en Medium",
           directUrl: "https://ignacio-perezroca.medium.com/how-to-make-an-onboarding-and-dont-die-trying-9a02b725b92b"
         },
@@ -849,6 +862,7 @@ export const siteCopy = {
           teaser: "Un desglose claro de cómo funcionan las estafas modernas en procesos laborales, por qué incluso candidatos experimentados pueden caer y un marco simple para cuidarse.",
           date: "10 abr 2026",
           readTime: "3 min de lectura",
+          tags: ["Job Safety", "Trust", "Career"],
           cta: "Leer en Medium",
           directUrl: "https://ignacio-perezroca.medium.com/i-almost-got-scammed-during-a-job-interview-process-52352d3b80ac"
         },
@@ -858,6 +872,7 @@ export const siteCopy = {
           teaser: "Un plan estructurado de onboarding para PMs, con alineación de stakeholders, definición de KPIs, feedback de usuarios, experimentación y forecast de impacto.",
           date: "26 jul 2024",
           readTime: "5 min de lectura",
+          tags: ["Product Strategy", "Product Leadership", "Onboarding"],
           cta: "Leer en Medium",
           directUrl: "https://ignacio-perezroca.medium.com/mastering-the-product-life-cycle-7b2ca5265868"
         },
@@ -867,6 +882,7 @@ export const siteCopy = {
           teaser: "Un framework práctico para ramp-up más rápido como nuevo PM mediante reuniones con intención, mapeo de stakeholders, contexto de producto y aprendizaje activo.",
           date: "5 jul 2024",
           readTime: "3 min de lectura",
+          tags: ["Product Leadership", "Onboarding", "Career"],
           cta: "Leer en Medium",
           directUrl: "https://ignacio-perezroca.medium.com/employees-onboarding-hidden-secrets-of-step-0-b81ce000ab95"
         },
@@ -876,20 +892,19 @@ export const siteCopy = {
           teaser: "Una guía breve sobre event tracking y analytics comportamental, con convenciones de naming y pensamiento de funnel para medir mejor la performance del producto.",
           date: "16 ago 2021",
           readTime: "2 min de lectura",
+          tags: ["Analytics", "Experimentation", "UX"],
           cta: "Leer en Medium",
           directUrl: "https://ignacio-perezroca.medium.com/how-to-track-your-events-and-dont-die-trying-3a0809efd075"
         }
       ]
     },
     contact: {
-      kicker: "Contacto",
-      title: "Construyamos el próximo sistema de producto donde la confianza es crítica.",
-      intro: "Abierto a roles senior de producto, conversaciones de advisory y proyectos donde onboarding, identidad, KYC, autenticación, fintech, crypto y estrategia escalable necesitan ejecución más clara.",
+      kicker: "07 / Contacto",
+      title: "Hablemos.",
+      intro: "Abierto a roles senior de producto, conversaciones de advisory y proyectos selectos alrededor de producto, identidad, onboarding y growth.",
       primaryCta: "Escribirme por email",
-      directConnection: "Arranquemos por el canal más directo",
-      body: "Soy más útil cuando los equipos necesitan mejorar conversión sin debilitar confianza, simplificar complejidad de identidad o autenticación, o transformar restricciones regulatorias en experiencias más claras.",
-      bullets: ["Roles de liderazgo de producto", "Estrategia de identidad / onboarding", "Advisory o consultoría"],
-      metadata: ["Buenos Aires", "Remote-friendly", "Oportunidades seleccionadas"],
+      bullets: ["Roles senior de producto", "Advisory", "Proyectos selectos"],
+      metadata: ["Buenos Aires", "Remoto-friendly", "Oportunidades seleccionadas"],
       email: "ignacio.perezroca@gmail.com",
       secondaryLinkedin: "Conectar en LinkedIn",
       secondaryGithub: "Ver GitHub"

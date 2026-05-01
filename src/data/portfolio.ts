@@ -1,6 +1,5 @@
 import {
   BarChart3,
-  Binary,
   Fingerprint,
   FlaskConical,
   Layers3,
@@ -10,7 +9,6 @@ import {
   Network,
   ShieldCheck,
   Sparkles,
-  Users
 } from "lucide-react";
 
 // Primary content model.
@@ -96,21 +94,22 @@ export const personalInfo = {
   heroEyebrow:
     "Senior Product Manager | Identity, Onboarding, KYC, Authentication",
   heroHeadline:
-    "I build trust-critical product systems that scale growth without breaking security, compliance, or UX.",
+    "Senior Product Manager building trust-critical fintech journeys.",
   heroSubheadline:
-    "Senior Product Manager with 16+ years across fintech, crypto, and digital identity. I’ve helped scale onboarding and trust infrastructure for millions of users across LatAm, bridging product strategy, UX clarity, technical constraints, and measurable business impact.",
+    "I help teams simplify onboarding, KYC, authentication, and activation flows by combining product strategy, UX clarity, content design, technical judgment, and data-driven execution.",
   shortPositioning:
-    "I design and build the infrastructure of digital trust",
+    "16+ years across fintech, crypto, digital identity, UX, and frontend-aware product leadership.",
   availability:
     "Open to conversations about onboarding, identity, authentication, growth, and platform product roles."
 };
 
 export const navItems = [
-  { label: "About", href: "#about" },
-  { label: "Timeline", href: "#timeline" },
-  { label: "Work", href: "#work" },
   { label: "Impact", href: "#impact" },
+  { label: "Work", href: "#work" },
+  { label: "Timeline", href: "#timeline" },
   { label: "Expertise", href: "#expertise" },
+  { label: "Writing", href: "#writing" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" }
 ];
 
@@ -169,7 +168,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Itti",
     logoText: "ITTI",
-    logoSrc: "https://www.itti.digital/wp-content/uploads/2022/08/itti_logo.svg",
+    logoSrc: "/logos/itti-logo.png",
     logoAlt: "Itti logo",
     detailTitle: "Current scope",
     role: "Senior Product Manager",
@@ -194,7 +193,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Bitso",
     logoText: "BIT",
-    logoSrc: "/logos/bitso.svg",
+    logoSrc: "/logos/bitso-logo.png",
     logoAlt: "Bitso logo",
     role: "Product Manager - Onboarding",
     dates: "Oct 2022 - 2024",
@@ -216,7 +215,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Lemon Cash",
     logoText: "LEM",
-    logoSrc: "https://framerusercontent.com/assets/Rd3Vepv2BCGVA2ynwKixOHHA0.png",
+    logoSrc: "/logos/lemon-logo.png",
     logoAlt: "Lemon Cash logo",
     role: "Product Manager - Acquisition",
     dates: "Oct 2021 - Oct 2022",
@@ -238,7 +237,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Personal Pay",
     logoText: "PAY",
-    logoSrc: "https://www.personal.com.ar/content/dam/teco-cms-ecosystem/componentes-cross/vidrieras/iso-pay.svg",
+    logoSrc: "/logos/personalpay-logo.png",
     logoAlt: "Personal Pay logo",
     role: "Product Manager",
     dates: "Jul 2020 - Oct 2021",
@@ -260,7 +259,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "IUNIGO",
     logoText: "IUN",
-    logoSrc: "/logos/iunigo.svg",
+    logoSrc: "/logos/iunigo-logo.png",
     logoAlt: "IUNIGO logo",
     role: "Product Manager",
     dates: "Jul 2019 - Jul 2020",
@@ -282,7 +281,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Ripio",
     logoText: "RIP",
-    logoSrc: "https://cdn.prod.website-files.com/5f17344acf2c6d3c3a1d6238/68223e2a6a651095b0183f04_Logo%20Nav.svg",
+    logoSrc: "/logos/ripio-logo.png",
     logoAlt: "Ripio logo",
     role: "Product Owner - Credit Crypto Product",
     dates: "Sep 2017 - Jul 2019",
@@ -304,7 +303,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Personal - Telecom",
     logoText: "TEL",
-    logoSrc: "https://www.personal.com.ar/content/dam/teco-cms-ecosystem/componentes-cross/header/logo-personal-brand-new.svg",
+    logoSrc: "/logos/telecom-logo.png",
     logoAlt: "Personal Telecom logo",
     role: "Designer & Frontend Developer",
     dates: "Mar 2015 - Sep 2017",
@@ -326,7 +325,7 @@ export const timelineRoles: TimelineRole[] = [
   {
     company: "Thet Studio",
     logoText: "TH",
-    logoSrc: "/logos/thet-studio.svg",
+    logoSrc: "/logos/thet-logo.png",
     logoAlt: "Thet Studio logo",
     role: "Designer & Frontend Developer",
     dates: "Feb 2011 - Mar 2015",
@@ -353,7 +352,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Case Study: Migrating 2.5M users to a Unified Authentication Hub",
     kicker: "KYC / Onboarding / Conversion",
     summary:
-      "Centralizing authentication and identity into a scalable trust layer for a multi-brand financial ecosystem.",
+      "Centralizing authentication and identity into a reusable trust layer.",
     topics: ["KYC", "Onboarding", "Growth"],
     stage: "Scale-up optimization",
     scope: "Consumer fintech / crypto",
@@ -447,7 +446,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Case Study: Scaling a Crypto-Wallet to 2M users in hyper-growth",
     kicker: "Authentication / Security / Platform",
     summary:
-      "Managing identity infrastructure and onboarding quality while Lemon Cash scaled from 60K to 2M users.",
+      "Managing identity infrastructure and onboarding quality during hyper-growth.",
     topics: ["Authentication", "Identity", "Platform"],
     stage: "Platform consolidation",
     scope: "Multi-surface product ecosystem",
@@ -537,7 +536,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Case Study: A data-driven approach to a +262% conversion increase",
     kicker: "Growth / Experimentation / Activation",
     summary:
-      "Redesigning the Bitso onboarding funnel with sharper diagnosis, cleaner UX, and conversion-focused execution.",
+      "Redesigning the Bitso onboarding funnel with sharper diagnosis and cleaner execution.",
     topics: ["Growth", "Experimentation", "Onboarding"],
     stage: "Growth acceleration",
     scope: "Self-serve and assisted onboarding",
@@ -813,54 +812,40 @@ export const skillCategories: SkillCategory[] = [
     icon: Layers3
   },
   {
-    title: "Growth & Activation",
+    title: "Onboarding & Activation",
     description:
-      "Improving conversion and time-to-value through better onboarding, instrumentation, and experimentation systems.",
-    methods: ["Funnel diagnosis", "Experiment design", "Activation metrics", "PLG loops"],
+      "Improving conversion and time-to-value through clearer journeys, better instrumentation, and experimentation.",
+    methods: ["Funnel diagnosis", "Activation metrics", "PLG loops", "Experimentation"],
     icon: LineChart
   },
   {
-    title: "Identity / KYC / Auth",
+    title: "Identity / KYC / Authentication",
     description:
       "Building trust-critical flows where verification, security, compliance, and user confidence have to work together.",
     methods: ["KYC states", "MFA", "Risk step-up", "Account recovery"],
     icon: Fingerprint
   },
   {
-    title: "Research & Experimentation",
+    title: "Product Design & UX Architecture",
     description:
-      "Combining behavioral data with qualitative insight to understand why users move, hesitate, or abandon.",
-    methods: ["User interviews", "Support mining", "A/B tests", "Decision readouts"],
+      "Designing flows, states, information architecture, and decision paths that reduce confusion in regulated journeys.",
+    methods: ["User flows", "IA", "UX systems", "State design"],
     icon: FlaskConical
   },
   {
-    title: "UX / Design Collaboration",
+    title: "Content Design for Trust",
     description:
-      "Using a design background to sharpen problem definition, information hierarchy, interaction quality, and product clarity.",
-    methods: ["Journey mapping", "Prototyping", "Design critique", "Copy hierarchy"],
+      "Using clearer copy, microcopy, and messaging systems to help users understand risk, verification, and next steps.",
+    methods: ["Microcopy", "Trust language", "Onboarding copy", "Recovery flows"],
     icon: Sparkles
   },
   {
-    title: "Data & Analytics",
+    title: "Analytics & Experimentation",
     description:
-      "Defining useful metrics, event taxonomies, and readouts that help teams make decisions rather than collect dashboards.",
-    methods: ["Event design", "Cohort analysis", "Metric trees", "Instrumentation QA"],
+      "Combining behavioral data with qualitative insight to understand why users move, hesitate, or abandon.",
+    methods: ["A/B tests", "Event tracking", "Amplitude", "Support mining"],
     icon: BarChart3
   },
-  {
-    title: "Technical / Platform Collaboration",
-    description:
-      "Working fluently with engineering on architecture tradeoffs, migration paths, reusable primitives, and delivery risk.",
-    methods: ["API thinking", "State models", "Migration sequencing", "Technical discovery"],
-    icon: Binary
-  },
-  {
-    title: "Leadership & Stakeholders",
-    description:
-      "Creating shared judgment across product, engineering, design, compliance, risk, data, support, and leadership.",
-    methods: ["Operating cadence", "Tradeoff framing", "Decision docs", "Stakeholder maps"],
-    icon: Users
-  }
 ];
 
 export const workingPrinciples = [
@@ -900,6 +885,7 @@ export const thoughts = Object.assign(
         "A practical guide to building a powerful digital onboarding and identity verification flow that balances authentication, KYC, user friction, and conversion.",
       date: "Jan 8, 2021",
       readTime: "5 min read",
+      tags: ["Onboarding", "KYC", "Identity"],
       cta: "Read on Medium",
       directUrl: "https://ignacio-perezroca.medium.com/how-to-make-an-onboarding-and-dont-die-trying-9a02b725b92b"
     },
@@ -910,6 +896,7 @@ export const thoughts = Object.assign(
         "A sharp breakdown of how modern interview scams work, why even experienced candidates are vulnerable, and a simple framework to stay safe.",
       date: "Apr 10, 2026",
       readTime: "3 min read",
+      tags: ["Job Safety", "Trust", "Career"],
       cta: "Read on Medium",
       directUrl: "https://ignacio-perezroca.medium.com/i-almost-got-scammed-during-a-job-interview-process-52352d3b80ac"
     },
@@ -920,6 +907,7 @@ export const thoughts = Object.assign(
         "A structured onboarding plan for product managers, covering stakeholder alignment, KPI definition, user feedback, experimentation, and impact forecasting.",
       date: "Jul 26, 2024",
       readTime: "5 min read",
+      tags: ["Product Strategy", "Product Leadership", "Onboarding"],
       cta: "Read on Medium",
       directUrl: "https://ignacio-perezroca.medium.com/mastering-the-product-life-cycle-7b2ca5265868"
     },
@@ -930,6 +918,7 @@ export const thoughts = Object.assign(
         "A practical framework to ramp up faster as a new product manager through purposeful meetings, stakeholder mapping, product context, and active learning.",
       date: "Jul 5, 2024",
       readTime: "3 min read",
+      tags: ["Product Leadership", "Onboarding", "Career"],
       cta: "Read on Medium",
       directUrl: "https://ignacio-perezroca.medium.com/employees-onboarding-hidden-secrets-of-step-0-b81ce000ab95"
     },
@@ -940,6 +929,7 @@ export const thoughts = Object.assign(
         "A concise guide to event tracking and behavioral analytics, with practical naming conventions and funnel thinking to measure product performance better.",
       date: "Aug 16, 2021",
       readTime: "2 min read",
+      tags: ["Analytics", "Experimentation", "UX"],
       cta: "Read on Medium",
       directUrl: "https://ignacio-perezroca.medium.com/how-to-track-your-events-and-dont-die-trying-3a0809efd075"
     }

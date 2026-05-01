@@ -29,7 +29,7 @@ html {
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 0.46s;
+  animation-duration: 0.42s;
   animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -59,6 +59,13 @@ body::before {
     linear-gradient(90deg, rgba(18, 17, 15, 0.035) 1px, transparent 1px);
   background-size: 32px 32px;
   mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body::before {
+    animation: ambient-grid 28s ease-in-out infinite alternate;
+    will-change: transform, opacity;
+  }
 }
 
 .dark body::before {
@@ -104,11 +111,11 @@ a {
 
 .motion-surface {
   transition:
-    border-color 260ms ease,
-    background-color 260ms ease,
-    color 260ms ease,
-    opacity 260ms ease,
-    box-shadow 360ms cubic-bezier(0.22, 1, 0.36, 1);
+    border-color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .motion-surface:hover {
@@ -117,6 +124,19 @@ a {
 
 .dark .motion-surface:hover {
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+}
+
+.transition-premium {
+  transition:
+    border-color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-stable:hover {
+  transform: none;
 }
 
 .spotlight-card {
@@ -146,33 +166,6 @@ a {
 .spotlight-card:hover::before,
 .spotlight-card:focus-within::before {
   opacity: 1;
-}
-
-.kinetic-link {
-  position: relative;
-  overflow: hidden;
-}
-
-.kinetic-link::before {
-  position: absolute;
-  inset: 0;
-  content: "";
-  background: linear-gradient(110deg, transparent, rgba(255, 255, 255, 0.24), transparent);
-  transform: translateX(-120%);
-  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.kinetic-link:hover::before,
-.kinetic-link:focus-visible::before {
-  transform: translateX(120%);
-}
-
-.kinetic-link > * {
-  position: relative;
-}
-
-.float-slow {
-  animation: float-slow 7s ease-in-out infinite;
 }
 
 .text-reveal {
@@ -216,16 +209,6 @@ a {
   }
 }
 
-@keyframes float-slow {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-  50% {
-    transform: translate3d(0, -10px, 0) rotate(0.35deg);
-  }
-}
-
 @keyframes text-reveal {
   from {
     opacity: 0;
@@ -263,6 +246,17 @@ a {
   }
 }
 
+@keyframes ambient-grid {
+  from {
+    opacity: 0.95;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
 @media (max-width: 640px) {
   .section-shell {
     width: min(100% - 28px, 1180px);
@@ -276,11 +270,20 @@ a {
     scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
     transition-duration: 0.01ms !important;
   }
 
-  .motion-surface:hover,
-  .float-slow {
+  .motion-surface:hover {
     transform: none !important;
+  }
+
+  .hover-stable:hover {
+    transform: none !important;
+  }
+
+  .text-reveal,
+  .line-draw {
+    animation: none !important;
   }
 }

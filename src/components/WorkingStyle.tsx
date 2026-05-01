@@ -65,14 +65,14 @@ export function WorkingStyle({ previewLimit }: { previewLimit?: number }) {
           </div>
           {isPreview ? (
             <FadeIn delay={0.18}>
-              <button
-                type="button"
-                onClick={() => setExpanded(true)}
-                className="focus-ring motion-surface inline-flex items-center gap-2 rounded-md border border-ink/10 bg-white/62 px-4 py-3 text-sm font-semibold text-ink shadow-line transition hover:border-ink/25 hover:bg-white dark:border-paper/10 dark:bg-paper/5 dark:text-paper dark:hover:border-paper/25"
-              >
-                {copy.ui.viewAll}
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </button>
+            <button
+              type="button"
+              onClick={() => setExpanded(true)}
+              className="focus-ring group motion-surface transition-premium inline-flex items-center gap-2 rounded-md border border-ink/10 bg-white/62 px-4 py-3 text-sm font-semibold text-ink shadow-line hover:border-ink/25 hover:bg-white dark:border-paper/10 dark:bg-paper/5 dark:text-paper dark:hover:border-paper/25"
+            >
+              {copy.ui.viewAll}
+              <ArrowRight className="h-4 w-4 transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0.5" aria-hidden />
+            </button>
             </FadeIn>
           ) : null}
         </div>
