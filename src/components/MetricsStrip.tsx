@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { staggerContainer, staggerItem } from "@/lib/motion";
 
 type ImpactCard = {
   value: string;
@@ -173,8 +171,7 @@ function ImpactMetricCard({
   evidenceChip: string;
 }) {
   return (
-    <motion.article
-      variants={staggerItem}
+    <article
       className="group motion-surface relative flex h-full min-h-[28rem] flex-col overflow-hidden rounded-[1rem] border border-ink/12 bg-paper/88 p-6 shadow-[0_1px_0_rgba(255,255,255,0.65),0_18px_42px_rgba(18,17,15,0.06)] transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:border-ink/20 hover:bg-white dark:border-paper/10 dark:bg-ink/72 dark:shadow-[0_1px_0_rgba(255,255,255,0.04),0_18px_42px_rgba(0,0,0,0.22)] dark:hover:border-paper/25 dark:hover:bg-paper/8"
     >
       <div
@@ -206,14 +203,13 @@ function ImpactMetricCard({
           {metric.detail}
         </p>
       </div>
-    </motion.article>
+    </article>
   );
 }
 
 function ImpactCapabilityCard({ metric }: { metric: ImpactCard }) {
   return (
-    <motion.article
-      variants={staggerItem}
+    <article
       className="group motion-surface relative flex h-full min-h-[14rem] flex-col justify-between overflow-hidden rounded-[1rem] border border-ink/10 bg-white/70 p-5 shadow-[0_1px_0_rgba(255,255,255,0.6),0_10px_30px_rgba(18,17,15,0.04)] transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-ink/20 hover:bg-white dark:border-paper/10 dark:bg-paper/5 dark:shadow-[0_1px_0_rgba(255,255,255,0.03),0_10px_30px_rgba(0,0,0,0.18)] dark:hover:border-paper/25 dark:hover:bg-paper/8"
     >
       <div
@@ -234,13 +230,12 @@ function ImpactCapabilityCard({ metric }: { metric: ImpactCard }) {
       <p className="relative mt-6 border-t border-ink/10 pt-4 text-sm leading-6 text-ink-muted dark:border-paper/10 dark:text-paper/62">
         {metric.detail}
       </p>
-    </motion.article>
+    </article>
   );
 }
 
 export function MetricsStrip({ previewLimit }: { previewLimit?: number }) {
   const { copy } = useLanguage();
-  const reduceMotion = useReducedMotion();
   const [expanded, setExpanded] = useState(false);
   const isPreview = typeof previewLimit === "number" && !expanded;
   const metrics = isPreview
@@ -248,20 +243,6 @@ export function MetricsStrip({ previewLimit }: { previewLimit?: number }) {
     : copy.heroImpactCards;
   const topMetrics = metrics.slice(0, 3);
   const secondaryMetrics = metrics.slice(3);
-  const containerVariants = reduceMotion
-    ? { hidden: {}, visible: {} }
-    : staggerContainer;
-  const secondaryVariants = reduceMotion
-    ? { hidden: {}, visible: {} }
-    : {
-        hidden: {},
-        visible: {
-          transition: {
-            staggerChildren: 0.07,
-            delayChildren: 0.14
-          }
-        }
-      };
 
   const visualKinds: MiniVisualKind[] = ["conversion", "growth", "identity"];
 
@@ -303,13 +284,7 @@ export function MetricsStrip({ previewLimit }: { previewLimit?: number }) {
           </div>
         </FadeIn>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={containerVariants}
-          className="mt-16 grid gap-4 md:grid-cols-2 xl:grid-cols-3"
-        >
+        <div className="mt-16 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {topMetrics.map((metric, index) => {
             const visualKind = visualKinds[index];
 
@@ -326,20 +301,14 @@ export function MetricsStrip({ previewLimit }: { previewLimit?: number }) {
               />
             );
           })}
-        </motion.div>
+        </div>
 
         {secondaryMetrics.length ? (
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.16 }}
-            variants={secondaryVariants}
-            className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-5"
-          >
+          <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
             {secondaryMetrics.map((metric) => (
               <ImpactCapabilityCard key={`${metric.value}-${metric.label}`} metric={metric} />
             ))}
-          </motion.div>
+          </div>
         ) : null}
       </div>
     </section>

@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { staggerContainer, staggerItem } from "@/lib/motion";
 
 function getArticleUrl(article: { title: string; directUrl?: string }) {
   if (!article.directUrl) {
@@ -22,16 +21,11 @@ function getArticleUrl(article: { title: string; directUrl?: string }) {
 
 export function Thoughts({ previewLimit }: { previewLimit?: number }) {
   const { copy } = useLanguage();
-  const reduceMotion = useReducedMotion();
   const [expanded, setExpanded] = useState(false);
   const isPreview = typeof previewLimit === "number" && !expanded;
   const articles = isPreview
     ? copy.thinking.articles.slice(0, previewLimit)
     : copy.thinking.articles;
-  const containerVariants = reduceMotion ? { hidden: {}, visible: {} } : staggerContainer;
-  const itemVariants = reduceMotion
-    ? { hidden: { opacity: 0 }, visible: { opacity: 1 } }
-    : staggerItem;
 
   return (
     <section className="scroll-mt-24 border-y border-ink/10 bg-white/48 py-20 dark:border-paper/10 dark:bg-paper/5 sm:scroll-mt-28 sm:py-28" id="writing">
@@ -44,20 +38,13 @@ export function Thoughts({ previewLimit }: { previewLimit?: number }) {
           />
         </FadeIn>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.16 }}
-          variants={containerVariants}
-          className="mt-10 grid gap-4 md:grid-cols-3"
-        >
+        <div className="mt-10 grid gap-4 md:grid-cols-3">
           {articles.map((thought) => (
             <motion.a
               key={thought.title}
               href={getArticleUrl(thought)}
               target="_blank"
               rel="noopener noreferrer"
-              variants={itemVariants}
               className="group transition-premium block h-full rounded-md border border-ink/10 bg-paper/72 p-5 shadow-line hover:border-ink/25 hover:bg-white dark:border-paper/10 dark:bg-ink/60 dark:hover:border-paper/25 dark:hover:bg-paper/8"
             >
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-green dark:text-paper-warm">
@@ -90,7 +77,7 @@ export function Thoughts({ previewLimit }: { previewLimit?: number }) {
                 </div>
               </motion.a>
           ))}
-        </motion.div>
+        </div>
         {isPreview ? (
           <div className="mt-10">
             <button

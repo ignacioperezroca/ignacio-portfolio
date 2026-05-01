@@ -1,26 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { skillCategories } from "@/data/portfolio";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { staggerContainer, staggerItem } from "@/lib/motion";
 
 export function Skills({ previewLimit }: { previewLimit?: number }) {
   const { copy } = useLanguage();
-  const reduceMotion = useReducedMotion();
   const [expanded, setExpanded] = useState(false);
   const isPreview = typeof previewLimit === "number" && !expanded;
   const visibleCategories = isPreview
     ? skillCategories.slice(0, previewLimit)
     : skillCategories;
-  const containerVariants = reduceMotion ? { hidden: {}, visible: {} } : staggerContainer;
-  const itemVariants = reduceMotion
-    ? { hidden: { opacity: 0 }, visible: { opacity: 1 } }
-    : staggerItem;
 
   return (
     <section className="scroll-mt-24 py-20 sm:scroll-mt-28 sm:py-28" id="expertise">
@@ -33,21 +27,14 @@ export function Skills({ previewLimit }: { previewLimit?: number }) {
           />
         </FadeIn>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.18 }}
-          variants={containerVariants}
-          className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3"
-        >
+        <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {visibleCategories.map((category, index) => {
             const localized = copy.expertise.groups[index] ?? copy.expertise.groups[0];
 
             return (
-            <motion.article
-              key={category.title}
-              variants={itemVariants}
-              className="transition-premium h-full rounded-md border border-ink/10 bg-white/65 p-5 shadow-line hover:border-ink/25 hover:bg-white dark:border-paper/10 dark:bg-paper/5 dark:hover:border-paper/25 dark:hover:bg-paper/8"
+              <motion.article
+                key={category.title}
+                className="transition-premium h-full rounded-md border border-ink/10 bg-white/65 p-5 shadow-line hover:border-ink/25 hover:bg-white dark:border-paper/10 dark:bg-paper/5 dark:hover:border-paper/25 dark:hover:bg-paper/8"
             >
                 <category.icon className="h-6 w-6 text-accent-green dark:text-paper-warm" aria-hidden />
                 <h3 className="mt-5 text-lg font-semibold text-ink dark:text-paper">
@@ -69,7 +56,7 @@ export function Skills({ previewLimit }: { previewLimit?: number }) {
               </motion.article>
           );
           })}
-        </motion.div>
+        </div>
         {isPreview ? (
           <div className="mt-10">
             <button

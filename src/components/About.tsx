@@ -1,23 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeader } from "@/components/SectionHeader";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { staggerContainer, staggerItem } from "@/lib/motion";
 
 export function About({ preview = false }: { preview?: boolean }) {
   const { copy } = useLanguage();
-  const reduceMotion = useReducedMotion();
   const [expanded, setExpanded] = useState(false);
   const isPreview = preview && !expanded;
   const cards = isPreview ? copy.about.cards.slice(0, 2) : copy.about.cards;
-  const containerVariants = reduceMotion ? { hidden: {}, visible: {} } : staggerContainer;
-  const itemVariants = reduceMotion
-    ? { hidden: { opacity: 0 }, visible: { opacity: 1 } }
-    : staggerItem;
 
   return (
     <section className="scroll-mt-24 py-20 sm:scroll-mt-28 sm:py-28" id="about">
@@ -61,17 +55,10 @@ export function About({ preview = false }: { preview?: boolean }) {
             </FadeIn>
           ) : null}
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.16 }}
-            variants={containerVariants}
-            className="grid gap-4 md:grid-cols-3"
-          >
+          <div className="grid gap-4 md:grid-cols-3">
             {cards.map((point) => (
               <motion.article
                 key={point.title}
-                variants={itemVariants}
                 className="transition-premium h-full rounded-md border border-ink/10 bg-white/62 p-5 shadow-line hover:border-ink/20 hover:bg-white dark:border-paper/10 dark:bg-paper/5 dark:hover:border-paper/25 dark:hover:bg-paper/8"
               >
                   <CheckCircle2 className="mb-5 h-5 w-5 text-accent-green dark:text-paper-warm" />
@@ -81,9 +68,9 @@ export function About({ preview = false }: { preview?: boolean }) {
                   <p className="mt-3 text-sm leading-6 text-ink-muted dark:text-paper/62">
                     {point.body}
                   </p>
-                </motion.article>
+              </motion.article>
             ))}
-          </motion.div>
+          </div>
 
           <FadeIn delay={0.32}>
             {isPreview ? (

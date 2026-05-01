@@ -8,7 +8,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { SectionHeader } from "@/components/SectionHeader";
 import { timelineRoles, type TimelineRole } from "@/data/portfolio";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { motionDuration, motionEase, staggerContainer, staggerItem } from "@/lib/motion";
+import { motionDuration, motionEase } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 const logoTreatments: Record<string, string> = {
@@ -68,8 +68,6 @@ export function Timeline({ previewLimit }: { previewLimit?: number }) {
   const [expanded, setExpanded] = useState(false);
   const isPreview = typeof previewLimit === "number" && !expanded;
   const visibleRoles = isPreview ? timelineRoles.slice(0, previewLimit) : timelineRoles;
-  const listVariants = staggerContainer;
-  const itemVariants = staggerItem;
 
   return (
     <section className="scroll-mt-24 border-y border-ink/10 bg-white/48 py-20 dark:border-paper/10 dark:bg-paper/5 sm:scroll-mt-28 sm:py-28" id="timeline">
@@ -92,13 +90,7 @@ export function Timeline({ previewLimit }: { previewLimit?: number }) {
           </div>
 
           <div className="relative">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.16 }}
-              variants={listVariants}
-              className="grid gap-5"
-            >
+            <div className="grid gap-5">
               {visibleRoles.map((item, index) => {
                 const isOpen = openIndex === index;
                 const localized = copy.timeline.items[index];
@@ -109,7 +101,6 @@ export function Timeline({ previewLimit }: { previewLimit?: number }) {
                 return (
                   <motion.article
                     key={`${item.company}-${item.dates}`}
-                    variants={itemVariants}
                     className="relative"
                   >
                     <button
@@ -218,7 +209,7 @@ export function Timeline({ previewLimit }: { previewLimit?: number }) {
                   </motion.article>
                 );
               })}
-            </motion.div>
+            </div>
             {isPreview ? (
               <div className="mt-8">
                 <button
