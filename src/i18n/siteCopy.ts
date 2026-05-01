@@ -14,11 +14,11 @@ export const siteCopy = {
       downloadResume: "Download resume"
     },
     hero: {
-      eyebrow: "Senior Product Manager | Identity, Onboarding, KYC, Authentication",
+      eyebrow: "Senior Product Manager",
       name: "Ignacio Perez Roca",
-      headline: "Senior Product Manager building trust-critical fintech journeys.",
-      subheadline: "I help teams simplify onboarding, KYC, authentication, and activation flows by combining product strategy, UX clarity, content design, technical judgment, and data-driven execution.",
-      supportingLine: "16+ years across fintech, crypto, digital identity, UX, and frontend-aware product leadership.",
+      headline: "I build trust-critical product systems that scale growth without breaking security, compliance, or UX.",
+      subheadline: "Senior Product Manager with 16+ years across fintech, crypto, and digital identity. I help companies onboard and protect millions of users while driving measurable business impact.",
+      supportingLine: "Buenos Aires, Argentina",
       primaryCta: "View selected work",
       secondaryCta: "Download resume",
       contactCta: "Let’s talk",
@@ -482,11 +482,11 @@ export const siteCopy = {
       downloadResume: "Descargar CV"
     },
     hero: {
-      eyebrow: "Senior Product Manager | Identidad, Onboarding, KYC, Autenticación",
+      eyebrow: "Senior Product Manager",
       name: "Ignacio Perez Roca",
-      headline: "Senior Product Manager que construye journeys fintech críticos para la confianza.",
-      subheadline: "Ayudo a los equipos a simplificar onboarding, KYC, autenticación y activación combinando estrategia de producto, claridad de UX, content design, criterio técnico y ejecución basada en datos.",
-      supportingLine: "16+ años en fintech, crypto, identidad digital, UX y liderazgo de producto con foco técnico.",
+      headline: "Construyo sistemas de producto críticos para la confianza que escalan growth sin romper seguridad, compliance ni UX.",
+      subheadline: "Senior Product Manager con más de 16 años en fintech, crypto e identidad digital. Ayudo a las empresas a incorporar y proteger a millones de usuarios mientras generan impacto medible en negocio.",
+      supportingLine: "Buenos Aires, Argentina",
       primaryCta: "Ver casos destacados",
       secondaryCta: "Descargar CV",
       contactCta: "Hablemos",

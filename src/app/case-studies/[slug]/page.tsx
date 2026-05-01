@@ -6,8 +6,15 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { FadeIn } from "@/components/FadeIn";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { caseStudies, personalInfo } from "@/data/portfolio";
+import { caseStudies } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
+import {
+  robotsMetadata,
+  siteName,
+  siteUrl,
+  socialImageAlt,
+  socialImageUrl
+} from "@/lib/seo";
 
 type CaseStudyPageProps = {
   params: Promise<{
@@ -32,16 +39,23 @@ export async function generateMetadata({
   return {
     title: study.title,
     description: study.summary,
+    alternates: {
+      canonical: `${siteUrl}/case-studies/${study.slug}`
+    },
+    robots: robotsMetadata,
     openGraph: {
-      title: `${study.title} - ${personalInfo.displayName}`,
+      title: `${study.title} | ${siteName}`,
       description: study.summary,
+      url: `${siteUrl}/case-studies/${study.slug}`,
       type: "article",
+      siteName,
+      locale: "en_US",
       images: [
         {
-          url: "/social-preview-v3.png",
+          url: socialImageUrl,
           width: 1200,
           height: 630,
-          alt: `${personalInfo.displayName} | Senior Product Manager`
+          alt: socialImageAlt
         }
       ]
     },
@@ -49,7 +63,12 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: study.title,
       description: study.summary,
-      images: ["/social-preview-v3.png"]
+      images: [
+        {
+          url: socialImageUrl,
+          alt: socialImageAlt
+        }
+      ]
     }
   };
 }

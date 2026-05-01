@@ -1,61 +1,70 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { MotionConfig } from "framer-motion";
-import { personalInfo } from "@/data/portfolio";
 import { LanguageProvider } from "@/i18n/LanguageContext";
+import {
+  robotsMetadata,
+  siteDescription,
+  siteKeywords,
+  siteName,
+  siteTitle,
+  siteUrl,
+  socialImageAlt,
+  socialImageUrl
+} from "@/lib/seo";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ignacio-product.vercel.app"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: `${personalInfo.displayName} | Senior Product Manager`,
-    template: `%s | ${personalInfo.displayName}`
+    default: siteTitle,
+    template: `%s | ${siteName}`
   },
-  description:
-    "Senior Product Manager specialized in fintech, crypto, digital identity, KYC, onboarding, authentication and product-led growth across LatAm.",
-  keywords: [
-    "Senior Product Manager",
-    "Fintech Product Manager",
-    "Crypto Product Manager",
-    "KYC",
-    "Authentication",
-    "Digital Identity",
-    "Onboarding",
-    "Product-Led Growth",
-    "Buenos Aires"
-  ],
-  authors: [{ name: personalInfo.displayName }],
-  creator: personalInfo.displayName,
+  description: siteDescription,
+  keywords: siteKeywords,
+  authors: [{ name: siteName }],
+  creator: siteName,
+  publisher: siteName,
+  robots: robotsMetadata,
   icons: {
-    icon: "/favicon.svg",
-    apple: "/apple-touch-icon.svg"
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" }
+    ],
+    apple: "/apple-touch-icon.png"
   },
   manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
-    url: "https://ignacio-product.vercel.app",
-    title: `${personalInfo.displayName} | Senior Product Manager`,
-    description:
-      "Senior Product Manager specialized in fintech, crypto, digital identity, KYC, onboarding, authentication and product-led growth across LatAm.",
-    siteName: personalInfo.displayName,
+    url: siteUrl,
+    title: siteTitle,
+    description: siteDescription,
+    siteName,
+    locale: "en_US",
     images: [
       {
-        url: "/social-preview-v3.png",
+        url: socialImageUrl,
         width: 1200,
         height: 630,
-        alt: `${personalInfo.displayName} | Senior Product Manager`
+        alt: socialImageAlt
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: `${personalInfo.displayName} | Senior Product Manager`,
-    description:
-      "Senior Product Manager specialized in fintech, crypto, digital identity, KYC, onboarding, authentication and product-led growth across LatAm.",
-    images: ["/social-preview-v3.png"]
+    title: siteTitle,
+    description: siteDescription,
+    images: [
+      {
+        url: socialImageUrl,
+        alt: socialImageAlt
+      }
+    ]
   },
   alternates: {
-    canonical: "/"
+    canonical: siteUrl
   }
 };
 

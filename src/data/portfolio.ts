@@ -90,15 +90,14 @@ export const personalInfo = {
   linkedinUrl: "https://www.linkedin.com/in/ignacio-perez-roca-10101010/",
   githubUrl: "https://github.com/ignacioperezroca",
   resumeUrl: "/resume/ignacio-perez-roca-product-manager-cv.pdf",
-  profileImage: "/images/profile-portrait.svg",
-  heroEyebrow:
-    "Senior Product Manager | Identity, Onboarding, KYC, Authentication",
+  profileImage: "/images/profile-ignacio-24-max-ed.jpg",
+  heroEyebrow: "Senior Product Manager",
   heroHeadline:
-    "Senior Product Manager building trust-critical fintech journeys.",
+    "I build trust-critical product systems that scale growth without breaking security, compliance, or UX.",
   heroSubheadline:
-    "I help teams simplify onboarding, KYC, authentication, and activation flows by combining product strategy, UX clarity, content design, technical judgment, and data-driven execution.",
+    "Senior Product Manager with 16+ years across fintech, crypto, and digital identity. I help companies onboard and protect millions of users while driving measurable business impact.",
   shortPositioning:
-    "16+ years across fintech, crypto, digital identity, UX, and frontend-aware product leadership.",
+    "Senior Product Manager with 16+ years across fintech, crypto, digital identity, UX, and frontend-aware product leadership.",
   availability:
     "Open to conversations about onboarding, identity, authentication, growth, and platform product roles."
 };
