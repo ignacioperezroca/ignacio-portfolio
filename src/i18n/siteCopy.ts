@@ -16,8 +16,8 @@ export const siteCopy = {
     hero: {
       eyebrow: "Senior Product Manager",
       name: "Ignacio Perez Roca",
-      headline: "I build trust-critical product systems that scale growth without breaking security, compliance, or UX.",
-      subheadline: "Senior Product Manager with 16+ years across fintech, crypto, and digital identity. I help companies onboard and protect millions of users while driving measurable business impact.",
+      headline: "Senior Product Manager simplifying Onboarding and Activation for complex digital products.",
+      subheadline: "I lead teams to simplify onboarding, KYC, authentication, and activation flows by combining product strategy, UX clarity, content design, and technical judgment.",
       supportingLine: "Buenos Aires, Argentina",
       primaryCta: "View selected work",
       secondaryCta: "Download resume",
@@ -89,18 +89,18 @@ export const siteCopy = {
       kicker: "About",
       title: "A product leader shaped by strategy, design, and technical execution.",
       intro: "I’m a Senior Product Manager with 16+ years of experience across fintech, crypto, digital identity, UX, and frontend-aware product leadership.",
-      p1: "I specialize in simplifying onboarding, KYC, authentication, and activation journeys so teams can scale without weakening security, clarity, or user confidence.",
-      p2: "My work sits at the intersection of growth, trust, compliance, and user experience, with a bias toward product systems that are easy to understand and hard to break.",
-      p3: "The combination of product strategy, UX thinking, content design, and frontend fluency helps me connect business goals, user needs, and implementation realities.",
+      p1: "I specialize in simplifying onboarding, KYC, authentication, and activation flows so teams can scale without trading away security, clarity, or trust.",
+      p2: "My work sits at the intersection of conversion, access, risk, and user experience, with a bias toward product systems that are easy to understand and hard to break.",
+      p3: "Product strategy, UX thinking, content design, and frontend fluency help me connect business goals, user needs, and implementation reality.",
       p4: "I care about clarity, usability, and the emotional side of product experience, because trust is built in the details.",
       cards: [
         {
           title: "Identity, onboarding, and KYC",
-          body: "Deep experience designing and scaling trust-critical user journeys where compliance, security, and conversion have to work together."
+          body: "Deep experience designing and scaling trust-critical journeys where compliance, security, and conversion have to move together."
         },
         {
           title: "Growth with technical credibility",
-          body: "A profile shaped by product, design, and frontend development, able to bridge strategy, UX, analytics, and implementation."
+          body: "Shaped by product, design, and frontend development, with the range to bridge strategy, UX, analytics, and implementation."
         },
         {
           title: "Proven scale across LatAm",
@@ -199,7 +199,7 @@ export const siteCopy = {
     },
     work: {
       kicker: "02 / Work",
-      title: "Case studies built around product judgment, not screenshots.",
+      title: "Cases built around product judgment, not screenshots.",
       intro: "Case studies focused on the problem, the strategy, the execution, and the impact behind each product decision.",
       filterLabel: "Filter by theme",
       caseStudyLabel: "Case Study",
@@ -369,19 +369,19 @@ export const siteCopy = {
     },
     thinking: {
       kicker: "06 / Writing",
-      title: "Product thinking, onboarding, and trust systems.",
-      intro: "A curated selection of writing on onboarding, product strategy, behavioral analytics, digital trust, and product leadership.",
+      title: "Product essays from the field.",
+      intro: "Product essays shaped by real work across onboarding, trust, identity, and product decisions. A curated selection of writing drawn from hands-on experience in fintech, crypto, KYC, authentication, behavioral friction, and trust-critical user journeys.",
       footerCta: {
-        title: "Explore more writing",
-        copy: "More essays, ideas, and product reflections available on Medium.",
-        buttonLabel: "View Medium profile",
+        title: "More on Medium",
+        copy: "More essays and product reflections drawn from real operating experience are available on Medium.",
+        buttonLabel: "Explore more on Medium",
         buttonUrl: "https://ignacio-perezroca.medium.com"
       },
       articles: [
         {
           label: "Published article",
           title: "How to make an Onboarding and don’t die trying",
-          teaser: "A practical guide to building a powerful digital onboarding and identity verification flow that balances authentication, KYC, user friction, and conversion.",
+          teaser: "A practical breakdown of how to design digital onboarding flows that balance user friction, identity verification, authentication, KYC requirements, and conversion without weakening trust.",
           date: "Jan 8, 2021",
           readTime: "5 min read",
           tags: ["Onboarding", "KYC", "Identity"],
@@ -391,42 +391,22 @@ export const siteCopy = {
         {
           label: "Published article",
           title: "🚨 I almost got scammed during a job interview process.",
-          teaser: "A sharp breakdown of how modern interview scams work, why even experienced candidates are vulnerable, and a simple framework to stay safe.",
+          teaser: "A first-hand reflection on how modern interview scams work, why trust can fail even for experienced candidates, and what better systems, signals, and decision frameworks should look like.",
           date: "Apr 10, 2026",
           readTime: "3 min read",
-          tags: ["Job Safety", "Trust", "Career"],
+          tags: ["Trust", "Risk Signals", "Career Safety"],
           cta: "Read on Medium",
           directUrl: "https://ignacio-perezroca.medium.com/i-almost-got-scammed-during-a-job-interview-process-52352d3b80ac"
         },
         {
           label: "Published article",
           title: "Onboarding Plan for Mastering the Product Life Cycle",
-          teaser: "A structured onboarding plan for product managers, covering stakeholder alignment, KPI definition, user feedback, experimentation, and impact forecasting.",
+          teaser: "A structured view of how product leaders should ramp up fast: align stakeholders, define metrics, understand users, build feedback loops, and turn early context into execution leverage.",
           date: "Jul 26, 2024",
           readTime: "5 min read",
           tags: ["Product Strategy", "Product Leadership", "Onboarding"],
           cta: "Read on Medium",
           directUrl: "https://ignacio-perezroca.medium.com/mastering-the-product-life-cycle-7b2ca5265868"
-        },
-        {
-          label: "Published article",
-          title: "Mastering Your First Days as a Product Manager: A Comprehensive Onboarding Guide",
-          teaser: "A practical framework to ramp up faster as a new product manager through purposeful meetings, stakeholder mapping, product context, and active learning.",
-          date: "Jul 5, 2024",
-          readTime: "3 min read",
-          tags: ["Product Leadership", "Onboarding", "Career"],
-          cta: "Read on Medium",
-          directUrl: "https://ignacio-perezroca.medium.com/employees-onboarding-hidden-secrets-of-step-0-b81ce000ab95"
-        },
-        {
-          label: "Published article",
-          title: "How to track your events and don’t die trying",
-          teaser: "A concise guide to event tracking and behavioral analytics, with practical naming conventions and funnel thinking to measure product performance better.",
-          date: "Aug 16, 2021",
-          readTime: "2 min read",
-          tags: ["Analytics", "Experimentation", "UX"],
-          cta: "Read on Medium",
-          directUrl: "https://ignacio-perezroca.medium.com/how-to-track-your-events-and-dont-die-trying-3a0809efd075"
         }
       ]
     },
@@ -466,7 +446,7 @@ export const siteCopy = {
       readFullStory: "Read the full story",
       seeFullExperience: "See full experience",
       exploreExpertise: "Explore expertise",
-      viewWritingHub: "View writing hub"
+      viewWritingHub: "Explore more on Medium"
     }
   },
   es: {
@@ -484,8 +464,8 @@ export const siteCopy = {
     hero: {
       eyebrow: "Senior Product Manager",
       name: "Ignacio Perez Roca",
-      headline: "Construyo sistemas de producto críticos para la confianza que escalan growth sin romper seguridad, compliance ni UX.",
-      subheadline: "Senior Product Manager con más de 16 años en fintech, crypto e identidad digital. Ayudo a las empresas a incorporar y proteger a millones de usuarios mientras generan impacto medible en negocio.",
+      headline: "Senior Product Manager simplificando onboarding y activación para productos digitales complejos.",
+      subheadline: "Lidero equipos para simplificar flujos de onboarding, KYC, autenticación y activación combinando estrategia de producto, claridad de UX, content design y criterio técnico.",
       supportingLine: "Buenos Aires, Argentina",
       primaryCta: "Ver casos destacados",
       secondaryCta: "Descargar CV",
@@ -557,18 +537,18 @@ export const siteCopy = {
       kicker: "Sobre mí",
       title: "Un líder de producto moldeado por estrategia, diseño y ejecución técnica.",
       intro: "Soy Senior Product Manager con más de 16 años de experiencia en fintech, crypto, identidad digital, UX y liderazgo de producto con foco técnico.",
-      p1: "Me especializo en simplificar journeys de onboarding, KYC, autenticación y activación para que los equipos puedan escalar sin debilitar seguridad, claridad o confianza.",
-      p2: "Mi trabajo vive en la intersección de growth, trust, compliance y experiencia de usuario, con preferencia por sistemas de producto fáciles de entender y difíciles de romper.",
+      p1: "Me especializo en simplificar flujos de onboarding, KYC, autenticación y activación para que los equipos puedan escalar sin sacrificar seguridad, claridad o confianza.",
+      p2: "Mi trabajo vive en la intersección de conversión, acceso, riesgo y experiencia de usuario, con preferencia por sistemas de producto fáciles de entender y difíciles de romper.",
       p3: "La mezcla de estrategia de producto, pensamiento UX, content design y fluidez frontend me ayuda a conectar objetivos de negocio, necesidades de usuario y realidad de implementación.",
       p4: "Me importa la claridad, la usabilidad y el costado emocional de la experiencia de producto, porque la confianza se construye en los detalles.",
       cards: [
         {
           title: "Identidad, onboarding y KYC",
-          body: "Experiencia sólida diseñando y escalando journeys críticos para la confianza, donde compliance, seguridad y conversión tienen que convivir."
+          body: "Experiencia sólida diseñando y escalando journeys críticos para la confianza, donde compliance, seguridad y conversión tienen que moverse juntas."
         },
         {
           title: "Growth con credibilidad técnica",
-          body: "Un perfil formado por producto, diseño y frontend, capaz de conectar estrategia, UX, analytics e implementación."
+          body: "Un perfil formado por producto, diseño y frontend, con rango para conectar estrategia, UX, analytics e implementación."
         },
         {
           title: "Escala probada en LatAm",
@@ -837,19 +817,19 @@ export const siteCopy = {
     },
     thinking: {
       kicker: "06 / Escritura",
-      title: "Pensamiento de producto, onboarding y sistemas de confianza.",
-      intro: "Una selección curada de escritura sobre onboarding, estrategia de producto, analytics conductual, confianza digital y liderazgo de producto.",
+      title: "Ensayos de producto desde el campo.",
+      intro: "Ensayos de producto moldeados por trabajo real en onboarding, confianza, identidad y decisiones de producto. Una selección curada de escritura nacida de experiencia práctica en fintech, crypto, KYC, autenticación, fricción de comportamiento y recorridos críticos de confianza.",
       footerCta: {
-        title: "Explorar más escritura",
-        copy: "Más ensayos, ideas y reflexiones de producto disponibles en Medium.",
-        buttonLabel: "Ver perfil de Medium",
+        title: "Más en Medium",
+        copy: "Más ensayos y reflexiones de producto surgidas de experiencia real están disponibles en Medium.",
+        buttonLabel: "Explorar más en Medium",
         buttonUrl: "https://ignacio-perezroca.medium.com"
       },
       articles: [
         {
           label: "Artículo publicado",
           title: "How to make an Onboarding and don’t die trying",
-          teaser: "Una guía práctica para construir un onboarding digital y un flujo de verificación de identidad que equilibre autenticación, KYC, fricción de usuario y conversión.",
+          teaser: "Un desglose práctico de cómo diseñar flujos de onboarding digital que equilibren fricción, verificación de identidad, autenticación, requisitos de KYC y conversión sin debilitar la confianza.",
           date: "8 ene 2021",
           readTime: "5 min de lectura",
           tags: ["Onboarding", "KYC", "Identity"],
@@ -859,42 +839,22 @@ export const siteCopy = {
         {
           label: "Artículo publicado",
           title: "🚨 I almost got scammed during a job interview process.",
-          teaser: "Un desglose claro de cómo funcionan las estafas modernas en procesos laborales, por qué incluso candidatos experimentados pueden caer y un marco simple para cuidarse.",
+          teaser: "Una reflexión en primera persona sobre cómo funcionan las estafas modernas en entrevistas, por qué la confianza puede fallar incluso en candidatos con experiencia y cómo deberían verse mejores sistemas, señales y marcos de decisión.",
           date: "10 abr 2026",
           readTime: "3 min de lectura",
-          tags: ["Job Safety", "Trust", "Career"],
+          tags: ["Trust", "Risk Signals", "Career Safety"],
           cta: "Leer en Medium",
           directUrl: "https://ignacio-perezroca.medium.com/i-almost-got-scammed-during-a-job-interview-process-52352d3b80ac"
         },
         {
           label: "Artículo publicado",
           title: "Onboarding Plan for Mastering the Product Life Cycle",
-          teaser: "Un plan estructurado de onboarding para PMs, con alineación de stakeholders, definición de KPIs, feedback de usuarios, experimentación y forecast de impacto.",
+          teaser: "Una mirada estructurada a cómo deberían ponerse al día rápido los líderes de producto: alinear stakeholders, definir métricas, entender usuarios, construir loops de feedback y convertir el contexto inicial en ventaja de ejecución.",
           date: "26 jul 2024",
           readTime: "5 min de lectura",
           tags: ["Product Strategy", "Product Leadership", "Onboarding"],
           cta: "Leer en Medium",
           directUrl: "https://ignacio-perezroca.medium.com/mastering-the-product-life-cycle-7b2ca5265868"
-        },
-        {
-          label: "Artículo publicado",
-          title: "Mastering Your First Days as a Product Manager: A Comprehensive Onboarding Guide",
-          teaser: "Un framework práctico para ramp-up más rápido como nuevo PM mediante reuniones con intención, mapeo de stakeholders, contexto de producto y aprendizaje activo.",
-          date: "5 jul 2024",
-          readTime: "3 min de lectura",
-          tags: ["Product Leadership", "Onboarding", "Career"],
-          cta: "Leer en Medium",
-          directUrl: "https://ignacio-perezroca.medium.com/employees-onboarding-hidden-secrets-of-step-0-b81ce000ab95"
-        },
-        {
-          label: "Artículo publicado",
-          title: "How to track your events and don’t die trying",
-          teaser: "Una guía breve sobre event tracking y analytics comportamental, con convenciones de naming y pensamiento de funnel para medir mejor la performance del producto.",
-          date: "16 ago 2021",
-          readTime: "2 min de lectura",
-          tags: ["Analytics", "Experimentation", "UX"],
-          cta: "Leer en Medium",
-          directUrl: "https://ignacio-perezroca.medium.com/how-to-track-your-events-and-dont-die-trying-3a0809efd075"
         }
       ]
     },
@@ -934,7 +894,7 @@ export const siteCopy = {
       readFullStory: "Leer la historia completa",
       seeFullExperience: "Ver experiencia completa",
       exploreExpertise: "Explorar expertise",
-      viewWritingHub: "Ver hub de escritura"
+      viewWritingHub: "Explorar más en Medium"
     }
   }
 } as const;
