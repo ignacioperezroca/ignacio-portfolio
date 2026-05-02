@@ -172,7 +172,7 @@ function ImpactMetricCard({
 }) {
   return (
     <article
-      className="group motion-surface relative flex h-full min-h-[28rem] flex-col overflow-hidden rounded-[1rem] border border-ink/12 bg-paper/88 p-6 shadow-[0_1px_0_rgba(255,255,255,0.65),0_18px_42px_rgba(18,17,15,0.06)] transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:border-ink/20 hover:bg-white dark:border-paper/10 dark:bg-ink/72 dark:shadow-[0_1px_0_rgba(255,255,255,0.04),0_18px_42px_rgba(0,0,0,0.22)] dark:hover:border-paper/25 dark:hover:bg-paper/8"
+      className="group motion-surface relative flex h-full min-h-[28rem] flex-col overflow-hidden rounded-[1rem] border border-ink/12 bg-paper/88 p-6 shadow-[0_1px_0_rgba(255,255,255,0.65),0_18px_42px_rgba(18,17,15,0.06)] transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:border-ink/20 hover:bg-white dark:border-paper/10 dark:bg-ink/72 dark:shadow-[0_1px_0_rgba(255,255,255,0.04),0_18px_42px_rgba(0,0,0,0.22)] dark:hover:border-paper/35 dark:hover:bg-[#181512] dark:hover:shadow-[0_1px_0_rgba(255,255,255,0.06),0_20px_46px_rgba(0,0,0,0.3)]"
     >
       <div
         aria-hidden
@@ -210,7 +210,7 @@ function ImpactMetricCard({
 function ImpactCapabilityCard({ metric }: { metric: ImpactCard }) {
   return (
     <article
-      className="group motion-surface relative flex h-full min-h-[14rem] flex-col justify-between overflow-hidden rounded-[1rem] border border-ink/10 bg-white/70 p-5 shadow-[0_1px_0_rgba(255,255,255,0.6),0_10px_30px_rgba(18,17,15,0.04)] transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-ink/20 hover:bg-white dark:border-paper/10 dark:bg-paper/5 dark:shadow-[0_1px_0_rgba(255,255,255,0.03),0_10px_30px_rgba(0,0,0,0.18)] dark:hover:border-paper/25 dark:hover:bg-paper/8"
+      className="group motion-surface relative flex h-full min-h-[14rem] flex-col justify-between overflow-hidden rounded-[1rem] border border-ink/10 bg-white/70 p-5 shadow-[0_1px_0_rgba(255,255,255,0.6),0_10px_30px_rgba(18,17,15,0.04)] transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-ink/20 hover:bg-white dark:border-paper/10 dark:bg-paper/5 dark:shadow-[0_1px_0_rgba(255,255,255,0.03),0_10px_30px_rgba(0,0,0,0.18)] dark:hover:border-paper/30 dark:hover:bg-[#181512] dark:hover:shadow-[0_1px_0_rgba(255,255,255,0.05),0_14px_34px_rgba(0,0,0,0.24)]"
     >
       <div
         aria-hidden

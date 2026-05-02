@@ -51,7 +51,7 @@ export function SelectedWork({ previewLimit }: { previewLimit?: number }) {
 
           {!isPreview ? (
             <FadeIn delay={0.06} className="lg:justify-self-end">
-              <div>
+              <div className="w-full rounded-[1rem] border border-ink/10 bg-white/55 p-3 shadow-[0_1px_0_rgba(255,255,255,0.7),0_12px_30px_rgba(18,17,15,0.04)] dark:border-paper/10 dark:bg-paper/5 dark:shadow-[0_1px_0_rgba(255,255,255,0.03),0_12px_30px_rgba(0,0,0,0.16)]">
                 <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-muted dark:text-paper/55">
                   <SlidersHorizontal className="h-4 w-4" />
                   {copy.work.filterLabel}
@@ -62,11 +62,12 @@ export function SelectedWork({ previewLimit }: { previewLimit?: number }) {
                       type="button"
                       key={filter}
                       onClick={() => setActiveFilter(filter)}
+                      aria-pressed={activeFilter === filter}
                       className={cn(
-                        "focus-ring transition-premium rounded-md border px-3 py-2 text-sm font-semibold",
+                        "focus-ring transition-premium inline-flex items-center rounded-full border px-3.5 py-2 text-sm font-semibold leading-none",
                         activeFilter === filter
-                          ? "border-ink bg-ink text-paper dark:border-paper dark:bg-paper dark:text-ink"
-                          : "border-ink/10 bg-white/55 text-ink-muted hover:border-ink/25 hover:text-ink dark:border-paper/10 dark:bg-paper/5 dark:text-paper/60 dark:hover:border-paper/25 dark:hover:text-paper"
+                          ? "border-ink bg-ink text-paper shadow-[0_1px_0_rgba(255,255,255,0.18)] dark:border-paper dark:bg-paper dark:text-ink"
+                          : "border-ink/10 bg-white/70 text-ink-muted hover:border-ink/20 hover:bg-white hover:text-ink dark:border-paper/10 dark:bg-paper/5 dark:text-paper/60 dark:hover:border-paper/30 dark:hover:bg-paper/12 dark:hover:text-paper"
                       )}
                     >
                       {filterLabelFor(filter)}
@@ -101,7 +102,7 @@ export function SelectedWork({ previewLimit }: { previewLimit?: number }) {
             return (
               <article
                 key={study.slug}
-                className="group flex h-full flex-col overflow-hidden rounded-[1.1rem] border border-ink/10 bg-paper/92 p-6 shadow-[0_1px_0_rgba(255,255,255,0.85),0_18px_40px_rgba(18,17,15,0.05)] transition-premium hover:border-ink/20 hover:bg-white hover:shadow-[0_1px_0_rgba(255,255,255,0.92),0_20px_46px_rgba(18,17,15,0.07)] dark:border-paper/10 dark:bg-ink/72 dark:shadow-[0_1px_0_rgba(255,255,255,0.04),0_18px_40px_rgba(0,0,0,0.22)] dark:hover:border-paper/25 dark:hover:bg-paper/8"
+                className="group flex h-full flex-col overflow-hidden rounded-[1.1rem] border border-ink/10 bg-paper/92 p-6 shadow-[0_1px_0_rgba(255,255,255,0.85),0_18px_40px_rgba(18,17,15,0.05)] transition-premium hover:border-ink/20 hover:bg-white hover:shadow-[0_1px_0_rgba(255,255,255,0.92),0_20px_46px_rgba(18,17,15,0.07)] dark:border-paper/10 dark:bg-ink/72 dark:shadow-[0_1px_0_rgba(255,255,255,0.04),0_18px_40px_rgba(0,0,0,0.22)] dark:hover:border-paper/35 dark:hover:bg-[#181512] dark:hover:shadow-[0_1px_0_rgba(255,255,255,0.06),0_20px_46px_rgba(0,0,0,0.3)]"
               >
                 <Link href={`/case-studies/${study.slug}`} className="focus-ring block h-full">
                   <div className="flex h-full flex-col">
