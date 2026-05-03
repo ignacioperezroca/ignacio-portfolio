@@ -178,9 +178,9 @@ export function Navbar() {
       />
       <header
         className={cn(
-          "sticky top-0 z-40 transition-[background-color,backdrop-filter,box-shadow] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
+          "sticky top-0 z-40 transition-[background-color,backdrop-filter,box-shadow,border-color] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]",
           hasScrolled || open
-            ? "bg-paper/80 backdrop-blur-2xl dark:bg-ink/80"
+            ? "border-b border-ink/10 bg-paper/94 shadow-[0_1px_0_rgba(255,255,255,0.72),0_14px_34px_rgba(18,17,15,0.08)] backdrop-blur-xl dark:border-paper/10 dark:bg-ink/94 dark:shadow-[0_1px_0_rgba(255,255,255,0.05),0_14px_34px_rgba(0,0,0,0.34)]"
             : "bg-transparent"
         )}
       >
