@@ -200,7 +200,7 @@ export const siteCopy = {
     work: {
       kicker: "02 / Work",
       title: "Cases built around product judgment, not screenshots.",
-      intro: "Case studies focused on the problem, the strategy, the execution, and the impact behind each product decision.",
+      intro: "A curated overview of work across onboarding, identity, KYC, and growth. Click a card to open the full case study.",
       filterLabel: "Filter by theme",
       caseStudyLabel: "Case Study",
       problemLabel: "Problem",
@@ -248,6 +248,21 @@ export const siteCopy = {
             "Connected user trust, risk signals, and product access decisions into a reusable model.",
             "Reduced one-off authentication patterns across product surfaces.",
             "Improved recovery clarity without weakening account protection."
+          ],
+          cta: "Read case study"
+        },
+        {
+          artifactLabel: "Profiling artifact",
+          artifactTitle: "Risk profile map",
+          artifactMeta: "Signals, recommendations, activation",
+          tags: ["Onboarding", "Growth", "Experimentation", "Crypto"],
+          meta: "Onboarding / Growth / Experimentation",
+          title: "Case Study: Turning onboarding into a personalized activation engine",
+          body: "Designing a profiling layer to classify user risk appetite, improve product fit, and turn onboarding into a more adaptive activation model.",
+          bullets: [
+            "Moved Bitso beyond a one-size-fits-all onboarding flow toward a more adaptive activation model.",
+            "Validated profiling hypotheses through research, usability testing, and recommendation logic.",
+            "Reached Stage with Clevertap events validated and internal Production testing prepared."
           ],
           cta: "Read case study"
         },
@@ -443,6 +458,7 @@ export const siteCopy = {
       nextImpact: "Next impact cards",
       impactCarousel: "Impact carousel",
       viewAll: "View all",
+      viewLess: "Show less",
       readFullStory: "Read the full story",
       seeFullExperience: "See full experience",
       exploreExpertise: "Explore expertise",
@@ -648,7 +664,7 @@ export const siteCopy = {
     work: {
       kicker: "02 / Casos",
       title: "Case studies armados alrededor de criterio de producto, no de screenshots.",
-      intro: "Casos enfocados en el problema, la estrategia, la ejecución y el impacto detrás de cada decisión de producto.",
+      intro: "Un overview curado del trabajo en onboarding, identidad, KYC y growth. Tocá una card para abrir el caso completo.",
       filterLabel: "Filtrar por tema",
       caseStudyLabel: "Case Study",
       problemLabel: "Problem",
@@ -696,6 +712,21 @@ export const siteCopy = {
             "Conecté confianza del usuario, señales de riesgo y decisiones de acceso en un modelo reutilizable.",
             "Reduje patrones aislados de autenticación entre distintas superficies del producto.",
             "Mejoré la claridad de recuperación sin debilitar la protección de cuentas."
+          ],
+          cta: "Leer caso"
+        },
+        {
+          artifactLabel: "Artefacto de profiling",
+          artifactTitle: "Mapa de riesgo",
+          artifactMeta: "Señales, recomendaciones, activación",
+          tags: ["Onboarding", "Growth", "Experimentación", "Crypto"],
+          meta: "Onboarding / Growth / Experimentación",
+          title: "Caso: Convertir el onboarding en un motor de activación personalizado",
+          body: "Diseñar una capa de profiling para clasificar la aversión al riesgo de cada usuario, mejorar el fit del producto y transformar el onboarding en un modelo de activación más adaptable.",
+          bullets: [
+            "Llevé Bitso más allá de un onboarding one-size-fits-all hacia un modelo de activación más adaptativo.",
+            "Validé hipótesis de profiling con research, pruebas de usabilidad y lógica de recomendaciones.",
+            "Llegué a Stage con los eventos de Clevertap validados y el testing interno en Production preparado."
           ],
           cta: "Leer caso"
         },
@@ -891,6 +922,7 @@ export const siteCopy = {
       nextImpact: "Tarjetas de impacto siguientes",
       impactCarousel: "Carrusel de impacto",
       viewAll: "Ver todo",
+      viewLess: "Ver menos",
       readFullStory: "Leer la historia completa",
       seeFullExperience: "Ver experiencia completa",
       exploreExpertise: "Explorar expertise",

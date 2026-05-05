@@ -369,65 +369,65 @@ export const caseStudies: CaseStudy[] = [
     ],
     story: {
       context: [
-        "The product team was building a single secure onboarding path for all services in the Grupo Vázquez ecosystem.",
-        "Identity had to become a platform capability, not a brand-by-brand patchwork."
+        "The product team was building a **single secure onboarding path** for all services in the Grupo Vázquez ecosystem.",
+        "Identity had to become a **platform capability**, not a brand-by-brand patchwork."
       ],
       problem: [
-        "Users were moving through fragmented login and verification experiences depending on the service they entered from.",
-        "Internally, funnel metrics, vendor states, and operational review queues were not aligned into one shared model."
+        "Users were moving through **fragmented login and verification experiences** depending on the service they entered from.",
+        "Internally, funnel metrics, vendor states, and operational review queues were not aligned into **one shared model**."
       ],
       userPain: [
-        "Users could not distinguish a normal pending state from a problem state.",
-        "Rejected or retry states felt final, even when the path was recoverable.",
-        "The flow asked for trust before the product had earned it."
+        "Users could not distinguish a **normal pending state** from a problem state.",
+        "Rejected or retry states felt final, even when the path was **recoverable**.",
+        "The flow asked for **trust** before the product had earned it."
       ],
       businessPain: [
-        "Every failed verification created acquisition waste, lower activation, and avoidable support contacts.",
-        "The team lacked a shared language for where conversion loss was caused by UX, risk rules, vendor behavior, or user quality."
+        "Every failed verification created **acquisition waste**, lower activation, and avoidable support contacts.",
+        "The team lacked a **shared language** for where conversion loss was caused by UX, risk rules, vendor behavior, or user quality."
       ],
       constraints: [
-        "Compliance and risk thresholds could not be treated as negotiable UX variables.",
+        "Compliance and risk thresholds could not be treated as **negotiable UX variables**.",
         "Vendor events were imperfect and sometimes lagged behind the user's mental model.",
-        "Engineering had to work inside existing onboarding architecture while improving observability."
+        "Engineering had to work inside existing onboarding architecture while improving **observability**."
       ],
       myRole: [
         "Owned the product framing, migration sequencing, funnel diagnosis, and cross-functional alignment.",
-        "Partnered with design, engineering, data, compliance, risk, support, operations, Globant, and Ingenia to ship in weekly releases.",
+        "Partnered with design, engineering, data, compliance, risk, support, operations, Globant, and Ingenia to ship in **weekly releases**.",
         "Coordinated 9-person technical squads and incident response during security events and migration spikes."
       ],
       strategy: [
-        "Map every user-facing state against the underlying risk/vendor state and business objective.",
+        "Map every user-facing state against the underlying **risk/vendor state** and business objective.",
         "Prioritize interventions where confusion was high and compliance risk was low.",
-        "Move from generic status screens to precise, confidence-building guidance."
+        "Move from generic status screens to **precise, confidence-building guidance**."
       ],
       research: [
         "Reviewed funnel data, support tickets, user session patterns, and qualitative feedback from failed or delayed verifications.",
-        "Separated drop-off into intent loss, comprehension loss, technical failure, and risk-driven rejection."
+        "Separated drop-off into **intent loss, comprehension loss, technical failure, and risk-driven rejection**."
       ],
       solution: [
         "Redesigned the onboarding state model, copy hierarchy, retry guidance, and success criteria.",
         "Added clearer next steps for pending, retry, failed, and manual review states.",
-        "Defined an Amplitude event architecture by vertical so auth, login, edit, and delete events could drive funnels, cohorts, and alerts.",
+        "Defined an **Amplitude event architecture** by vertical so auth, login, edit, and delete events could drive funnels, cohorts, and alerts.",
         "Instrumented dashboards in Amplitude and New Relic to track conversions, critical errors, and system-level drop-offs."
       ],
       execution: [
-        "Sequenced the work into high-confidence UX fixes, instrumentation improvements, and deeper platform changes.",
+        "Sequenced the work into **high-confidence UX fixes**, instrumentation improvements, and deeper platform changes.",
         "Used release gates tied to approval quality, conversion, retry rate, and support volume."
       ],
       stakeholderManagement: [
-        "Created a shared decision frame so growth, compliance, and risk were not arguing from different scorecards.",
+        "Created a shared decision frame so growth, compliance, and risk were not arguing from **different scorecards**.",
         "Kept tradeoffs explicit: conversion uplift was valuable only when verified user quality and operational load remained healthy."
       ],
       metrics: [
         {
           value: "1M",
           label: "Users onboarded",
-          detail: "Reached one million onboardings in less than 12 months."
+          detail: "Reached **one million onboardings** in less than 12 months."
         },
         {
           value: "40%",
           label: "Faster access",
-          detail: "Centralized the login strategy with Keycloak and cut access time."
+          detail: "Centralized the login strategy with Keycloak and **cut access time by 40%**."
         },
         {
           value: "2.5M+",
@@ -441,9 +441,9 @@ export const caseStudies: CaseStudy[] = [
         }
       ],
       lessons: [
-        "In regulated onboarding, the best UX is not always fewer steps. It is the right amount of clarity at the right moment.",
-        "Trust flows need a shared state model before teams can make high-quality tradeoffs.",
-        "Conversion improvements are strongest when the team also measures quality, risk, and operational side effects."
+        "In regulated onboarding, the best UX is not always fewer steps. It is the **right amount of clarity** at the right moment.",
+        "Trust flows need a **shared state model** before teams can make high-quality tradeoffs.",
+        "Conversion improvements are strongest when the team also measures **quality, risk, and operational side effects**."
       ]
     }
   },
@@ -470,56 +470,56 @@ export const caseStudies: CaseStudy[] = [
     ],
     story: {
       context: [
-        "Bitso was growing quickly, and onboarding had to support both acquisition efficiency and product trust.",
-        "The team needed to understand whether drop-off came from UX confusion, trust gaps, or product friction."
+        "Bitso was growing quickly, and onboarding had to support both acquisition efficiency and **product trust**.",
+        "The team needed to understand whether drop-off came from UX confusion, **trust gaps**, or product friction."
       ],
       problem: [
-        "The funnel showed where users dropped, but not why they lost momentum.",
-        "Teams were debating tactics without a shared definition of activation quality."
+        "The funnel showed where users dropped, but not **why they lost momentum**.",
+        "Teams were debating tactics without a shared definition of **activation quality**."
       ],
       userPain: [
-        "Users encountered too many unclear choices before experiencing core product value.",
-        "The flow optimized for screen completion rather than confidence in the next action."
+        "Users encountered too many **unclear choices** before experiencing core product value.",
+        "The flow optimized for screen completion rather than **confidence in the next action**."
       ],
       businessPain: [
-        "Acquisition spend and top-of-funnel growth were under-monetized because activation leaked.",
+        "Acquisition spend and top-of-funnel growth were under-monetized because **activation leaked**.",
         "Experiments were difficult to compare without a consistent learning model."
       ],
       constraints: [
-        "The work had to ship in small increments without destabilizing regulated or trust-sensitive steps.",
+        "The work had to ship in small increments without destabilizing **regulated or trust-sensitive steps**.",
         "Some events and attribution paths needed cleanup before deeper optimization."
       ],
       myRole: [
-        "Owned the activation strategy, experiment roadmap, and cross-functional operating cadence.",
+        "Owned the **activation strategy**, experiment roadmap, and cross-functional operating cadence.",
         "Led onboarding, authentication, KYC, and home products while managing a 16-person team.",
         "Worked with the C-suite to shape the growth strategy, vision, mission, roadmap, and OKRs."
       ],
       strategy: [
-        "Define activation milestones that represented real user progress, not vanity events.",
-        "Use a portfolio of experiments: copy and hierarchy, flow simplification, progressive disclosure, trust signals, and personalized next steps."
+        "Define activation milestones that represented **real user progress**, not vanity events.",
+        "Use a portfolio of experiments: copy and hierarchy, flow simplification, progressive disclosure, **trust signals**, and personalized next steps."
       ],
       research: [
         "Combined funnel analytics, behavioral data, and product health metrics with support feedback and targeted user analysis.",
-        "Defined and analyzed conversion, critical errors, and drop-off patterns across onboarding and home surfaces."
+        "Defined and analyzed conversion, critical errors, and **drop-off patterns** across onboarding and home surfaces."
       ],
       solution: [
-        "Created a clearer first-session journey, stronger trust language, and fewer ambiguous decisions.",
-        "Built a new home screen as a scalable information hub for discoverability and promotions.",
+        "Created a clearer first-session journey, stronger **trust language**, and fewer ambiguous decisions.",
+        "Built a new home screen as a **scalable information hub** for discoverability and promotions.",
         "Used the product work to support customer-facing growth as well as technical and risk products."
       ],
       execution: [
         "Ran the onboarding roadmap from inception to release and kept the team aligned on measurable outcomes.",
-        "Reduced product costs by $350K in 2023 while the product ecosystem expanded."
+        "Reduced product costs by **$350K in 2023** while the product ecosystem expanded."
       ],
       stakeholderManagement: [
-        "Aligned product, design, engineering, data, risk, compliance, and support around a shared activation model.",
-        "Kept leadership conversations focused on compounding learning, not isolated wins."
+        "Aligned product, design, engineering, data, risk, compliance, and support around a **shared activation model**.",
+        "Kept leadership conversations focused on **compounding learning**, not isolated wins."
       ],
       metrics: [
         {
           value: "+262%",
           label: "Onboarding conversion",
-          detail: "Improved conversion from 8% to 29% through diagnosis, experimentation, and cleaner funnel design."
+          detail: "Improved conversion from **8% to 29%** through diagnosis, experimentation, and cleaner funnel design."
         },
         {
           value: "4M → 7M",
@@ -538,9 +538,108 @@ export const caseStudies: CaseStudy[] = [
         }
       ],
       lessons: [
-        "Authentication is one of the highest-leverage places to earn or lose user trust.",
+        "Authentication is one of the **highest-leverage** places to earn or lose user trust.",
         "A platform is not a backend concept only. It is a repeatable product promise.",
-        "The right state model reduces both user anxiety and internal decision cost."
+        "The right state model reduces both user anxiety and **internal decision cost**."
+      ]
+    }
+  },
+  {
+    slug: "profiler-personalized-activation-engine",
+    title: "Case Study: Turning onboarding into a personalized activation engine",
+    kicker: "Onboarding / Growth / Experimentation",
+    summary:
+      "Designing a profiling layer to classify user risk appetite, improve product fit, and turn onboarding into a more adaptive activation model.",
+    topics: ["Onboarding", "Growth", "Experimentation", "Crypto", "Identity"],
+    stage: "Stage-tested personalization",
+    scope: "Risk profiling, recommendation logic, activation, and analytics",
+    impactMetric: "Adaptive onboarding engine",
+    accentClass: "from-accent-green/18 via-paper-cool to-accent-bronze/10",
+    artifact: {
+      label: "Profiling artifact",
+      primary: "Risk profile map",
+      secondary: "Signals, recommendations, and activation logic"
+    },
+    previewBullets: [
+      "Moved Bitso beyond a one-size-fits-all onboarding flow toward a more adaptive activation model.",
+      "Validated profiling hypotheses through research, usability testing, and recommendation logic.",
+      "Reached Stage with Clevertap events validated and internal Production testing prepared."
+    ],
+    story: {
+      context: [
+        "The Profiler was designed as a **personalization layer** inside Bitso onboarding to better understand new users before recommending their next step.",
+        "The goal was to move the experience away from generic guidance and toward **product-fit-aware activation**."
+      ],
+      problem: [
+        "Generic onboarding could not distinguish between users with different levels of **risk aversion, intent, or readiness to act**.",
+        "The team needed a way to connect onboarding inputs with more relevant **recommendation logic**."
+      ],
+      userPain: [
+        "New users saw the same journey regardless of their comfort with volatility or their investment intent.",
+        "That made it harder to understand **what to do next** and why a recommendation should feel relevant."
+      ],
+      businessPain: [
+        "A one-size-fits-all flow left personalization opportunities on the table and made activation less **adaptive** than it could be.",
+        "The team needed cleaner data to support recommendation quality, communication, and downstream experimentation."
+      ],
+      constraints: [
+        "The experience had to stay simple enough for onboarding while still capturing meaningful user signals.",
+        "Recommendation logic, analytics, and stakeholder alignment all had to be validated before wider rollout.",
+        "Legal, Marketing, and Data Science needed to stay aligned on framing and next steps."
+      ],
+      myRole: [
+        "Led product framing, workshop alignment, and the definition of the profiling experience.",
+        "Partnered on research, prototype iteration, usability testing, and analytics instrumentation.",
+        "Worked with stakeholders across product, data science, marketing, and legal to keep the model **actionable and compliant**."
+      ],
+      strategy: [
+        "Capture user signals about risk appetite and intent early enough to improve **recommendation quality**.",
+        "Treat onboarding as a profiling layer that informs activation instead of a fixed funnel.",
+        "Use the result to guide **better-fit product recommendations** and more relevant communication."
+      ],
+      research: [
+        "Validated the concept through workshops, prototypes, PM reviews, and usability testing.",
+        "Used the research feedback to refine the profiling questions, recommendation framing, and **signal structure**."
+      ],
+      solution: [
+        "Introduced a profiling experience to classify user risk profile and connect onboarding inputs to **recommendation logic**.",
+        "Instrumented Clevertap events and confirmed the event flow on Stage.",
+        "Prepared the internal Production testing phase with the team’s stakeholder validation workflow."
+      ],
+      execution: [
+        "Moved the initiative through C2 planning, PRD definition, design iteration, workshop validation, and testing milestones.",
+        "Kept the implementation path lightweight enough to support early learning without losing product depth."
+      ],
+      stakeholderManagement: [
+        "Aligned Product Managers, squad leads, Marketing, Legal, and Data Science around the profiling model and recommendation approach.",
+        "Kept the discussion focused on user trust, product fit, and the quality of the activation system."
+      ],
+      metrics: [
+        {
+          value: "Stage-tested",
+          label: "Flow readiness",
+          detail: "Profiler flows were validated on Stage."
+        },
+        {
+          value: "Clevertap",
+          label: "Event tracking",
+          detail: "Events were integrated and validated as expected."
+        },
+        {
+          value: "Production",
+          label: "Internal testing",
+          detail: "Internal Production testing was being prepared."
+        },
+        {
+          value: "Risk profiles",
+          label: "Personalization layer",
+          detail: "Built the basis for more adaptive onboarding recommendations."
+        }
+      ],
+      lessons: [
+        "Personalization is strongest when it changes the **next best action**, not just the copy.",
+        "Onboarding can act as a signal-capturing layer without becoming cluttered or **heavy**.",
+        "Good profiling depends on shared alignment across product, data, and compliance."
       ]
     }
   },

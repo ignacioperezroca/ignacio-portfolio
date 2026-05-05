@@ -31,7 +31,7 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden pb-16 pt-10 sm:pb-20 sm:pt-12 lg:pb-24 lg:pt-14" id="top">
-      <div className="section-shell grid items-start gap-10 py-4 lg:min-h-[calc(82svh-4rem)] lg:grid-cols-[1.03fr_0.97fr] lg:items-center lg:gap-16 lg:py-10">
+      <div className="section-shell grid items-start gap-10 py-4 lg:min-h-[calc(82svh-4rem)] lg:grid-cols-[1.03fr_0.97fr] lg:items-center lg:gap-16 lg:py-8">
         <div className="max-w-3xl">
           <p
             className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent-green dark:text-paper-warm sm:text-[0.8rem]"
@@ -73,10 +73,8 @@ export function Hero() {
             </ButtonLink>
           </div>
 
-          <div
-            className="mt-6 flex flex-wrap items-center gap-3 text-sm text-ink-muted dark:text-paper/60 sm:mt-8"
-          >
-            <span className="inline-flex items-center gap-2 rounded-md border border-ink/10 bg-white/50 px-3 py-2 dark:border-paper/10 dark:bg-paper/5">
+          <div className="mt-6 grid gap-2 text-sm text-ink-muted dark:text-paper/60 sm:mt-8">
+            <span className="inline-flex w-fit items-center gap-2 rounded-md border border-ink/10 bg-white/50 px-3 py-2 dark:border-paper/10 dark:bg-paper/5">
               <MapPin className="h-4 w-4 text-accent-bronze" aria-hidden />
               {copy.hero.location}
             </span>
@@ -84,7 +82,7 @@ export function Hero() {
               href={personalInfo.linkedinUrl}
               target="_blank"
               rel="noreferrer"
-              className="focus-ring transition-premium inline-flex items-center gap-2 rounded-md px-1 py-2 hover:text-ink dark:hover:text-paper"
+              className="focus-ring transition-premium inline-flex w-fit items-center gap-2 rounded-md px-1 py-2 hover:text-ink dark:hover:text-paper"
             >
               <Linkedin className="h-4 w-4" aria-hidden />
               LinkedIn
@@ -93,7 +91,7 @@ export function Hero() {
               href={personalInfo.githubUrl}
               target="_blank"
               rel="noreferrer"
-              className="focus-ring transition-premium inline-flex items-center gap-2 rounded-md px-1 py-2 hover:text-ink dark:hover:text-paper"
+              className="focus-ring transition-premium inline-flex w-fit items-center gap-2 rounded-md px-1 py-2 hover:text-ink dark:hover:text-paper"
             >
               <Github className="h-4 w-4" aria-hidden />
               GitHub
@@ -102,7 +100,7 @@ export function Hero() {
         </div>
 
         <FadeIn delay={0.1} className="relative" variant="scaleIn">
-          <div className="relative mx-auto w-full max-w-[560px] lg:ml-auto lg:pb-20">
+          <div className="relative mx-auto w-full max-w-[560px] lg:ml-auto lg:pb-12">
             <div
               aria-hidden
               className="absolute inset-[-14px] rounded-[2rem] border border-ink/10 bg-white/30 dark:border-paper/10 dark:bg-paper/5"
